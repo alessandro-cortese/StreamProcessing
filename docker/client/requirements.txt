@@ -1,2 +1,3 @@
 scikit-learn
-apache-flink==1.18.1
+apache-flink
+numpy
