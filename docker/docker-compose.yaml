@@ -1,0 +1,46 @@
+networks:
+  stream_processing_network:
+    driver: bridge
+    name: stream_processing_network
+
+
+services:
+
+  ## FLINK
+  flink-jobmanager:
+    build: ./flink/
+    container_name: flink-jobmanager
+    networks:
+      - stream_processing_network
+    tty: true
+    ports:
+      - "8081:8081"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+    command: jobmanager
+
+  flink-taskmanager:
+    build: ./flink/
+    container_name: flink-taskmanager
+    depends_on:
+      - flink-jobmanager
+    networks:
+      - stream_processing_network
+    tty: true
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+    command: taskmanager
+
+
+  ## BHO - I don't know if this make sense to use for now...
+  rest-client:
+    build: ./client/
+    container_name: rest-client
+    networks:
+      - stream_processing_network
+    tty: true
+    volumes:
+      - ../data:/data        
+    depends_on:
+      - flink-jobmanager
+    command: python3 /app/src/rest_client.py http://micro-challenger:8866
