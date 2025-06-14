@@ -13,6 +13,8 @@ services:
     networks:
       - stream_processing_network
     tty: true
+    volumes:
+      - ../src:/opt/flink/src
     ports:
       - "8081:8081"
     environment:
@@ -22,25 +24,27 @@ services:
   flink-taskmanager:
     build: ./flink/
     container_name: flink-taskmanager
-    depends_on:
-      - flink-jobmanager
-    networks:
-      - stream_processing_network
-    tty: true
+    volumes:
+      - ../src:/opt/flink/src
     environment:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
     command: taskmanager
-
-
-  ## BHO - I don't know if this make sense to use for now...
-  rest-client:
-    build: ./client/
-    container_name: rest-client
     networks:
       - stream_processing_network
     tty: true
-    volumes:
-      - ../data:/data        
     depends_on:
       - flink-jobmanager
-    command: python3 /app/src/rest_client.py http://micro-challenger:8866
+
+
+  # ## BHO - I don't know if this make sense to use for now...
+  # rest-client:
+  #   build: ./client/
+  #   container_name: rest-client
+  #   networks:
+  #     - stream_processing_network
+  #   tty: true
+  #   volumes:
+  #     - ../data:/data        
+  #   depends_on:
+  #     - flink-jobmanager
+  #   command: python3 /app/src/rest_client.py http://micro-challenger:8866

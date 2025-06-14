@@ -1,3 +1,6 @@
+apache-flink==1.18.1
 scikit-learn
-apache-flink
 numpy
+requests
+Pillow
+msgpack
