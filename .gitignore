@@ -1,3 +1,4 @@
 # Dataset Directory
 data/
 *.tar
+*.tgz
