@@ -1,0 +1,3 @@
+env.java.home: /usr/lib/jvm/java-11-openjdk-amd64
+taskmanager.numberOfTaskSlots: 1
+parallelism.default: 1

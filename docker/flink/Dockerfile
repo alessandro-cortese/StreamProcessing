@@ -18,7 +18,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 
 #RUN curl -o /opt/flink/lib/flink-metrics-prometheus-1.19.1.jar https://repo.maven.apache.org/maven2/org/apache/flink/flink-metrics-prometheus/1.17.1/flink-metrics-prometheus-1.17.1.jar
 
-
+COPY flink-conf.yaml /opt/flink/conf/flink-conf.yaml
 COPY requirements.txt /opt/flink/conf/requirements.txt
 
 RUN pip3 install -r /opt/flink/conf/requirements.txt
