@@ -1,0 +1,37 @@
+networks:
+  stream_processing_network:
+    driver: bridge
+    name: stream_processing_network
+
+services:
+
+  ## FLINK
+  flink-jobmanager:
+    build: ./flink/
+    container_name: flink-jobmanager
+    networks:
+      - stream_processing_network
+    tty: true
+    volumes:
+      - ../src:/opt/flink/src
+      - ../Results:/Results
+      - ../target:/opt/flink/usrlib
+    ports:
+      - "8081:8081"
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+    command: jobmanager
+
+  flink-taskmanager:
+    build: ./flink/
+    container_name: flink-taskmanager
+    volumes:
+      - ../src:/opt/flink/src
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
+    command: taskmanager
+    networks:
+      - stream_processing_network
+    tty: true
+    depends_on:
+      - flink-jobmanager
