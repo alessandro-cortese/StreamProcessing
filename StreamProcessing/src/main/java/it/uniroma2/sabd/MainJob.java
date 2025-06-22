@@ -19,7 +19,13 @@ public class MainJob {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
-        DataStream<Batch> source = env.addSource(new ChallengerSource());
+        DataStream<Batch> source = env.addSource(new ChallengerSource()).disableChaining();
+
+        source.map((MapFunction<Batch, String>) batch -> {
+            System.out.println(">>> Trigger batch: " + batch.batch_id);
+            return "";
+        }).print();
+
         DataStream<Batch> q1 = source.map(new Q1SaturationMapFunction());
 
         // CSV con intestazione simulata (aggiunta a inizio file)

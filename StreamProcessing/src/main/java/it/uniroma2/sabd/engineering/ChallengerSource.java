@@ -23,9 +23,24 @@ public class ChallengerSource implements SourceFunction<Batch> {
 
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
-        System.out.println("run() di ChallengerSource avviato");
         CloseableHttpClient http = HttpClients.createDefault();
-        String benchId = createAndStartBench(http);
+        String benchId;
+
+        System.out.println(">>> run() INVOCATO");
+
+        Thread.sleep(1000);
+
+        System.out.println(">>> run() INVOCATO");
+        try {
+            // start bench
+            benchId = createAndStartBench(http);
+            System.out.println(">>> Bench creato: " + benchId);
+        } catch (Exception e) {
+            System.err.println(">>> Errore nella sorgente: " + e.getMessage());
+            e.printStackTrace();
+            return;
+        }
+
         int received = 0;
 
         while (running) {
@@ -33,6 +48,12 @@ public class ChallengerSource implements SourceFunction<Batch> {
             if (blob == null) break;
 
             Map<String, Object> record = unpack(blob);
+            System.out.println(">>> Record ricevuto: " + record);
+            System.out.printf(">>> tif.length = %d%n", ((byte[]) record.get("tif")).length);
+            if (!record.containsKey("tif") || record.get("tif") == null || ((byte[]) record.get("tif")).length == 0) {
+                System.err.println(">>> Batch ignorato: TIFF mancante o vuoto.");
+                continue;
+            }
             Batch batch = Batch.fromMap(record);
             ctx.collect(batch);
             received++;
@@ -41,7 +62,8 @@ public class ChallengerSource implements SourceFunction<Batch> {
         // Solo se abbiamo ricevuto almeno un batch, chiamiamo end
         if (received > 0) {
             try {
-                endBench(http, benchId);
+                System.out.println(">>> Bench finalizato: " + benchId);
+                //endBench(http, benchId);
             } catch (Exception e) {
                 System.err.println("Errore chiamando /api/end: " + e.getMessage());
             }
@@ -56,6 +78,7 @@ public class ChallengerSource implements SourceFunction<Batch> {
     }
 
     private String createAndStartBench(CloseableHttpClient http) throws IOException {
+        System.out.println(">>> createAndStartBench() INVOCATO");
         HttpPost create = new HttpPost(API_URL + "/api/create");
         create.setHeader("Content-Type", "application/json");
 
