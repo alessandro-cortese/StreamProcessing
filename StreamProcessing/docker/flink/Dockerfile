@@ -18,6 +18,7 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Copia configurazione Flink
 COPY requirements.txt /opt/flink/conf/requirements.txt
+COPY start_job.sh /opt/flink
 
 # Installa requirements Python se servono
 RUN pip3 install -r /opt/flink/conf/requirements.txt

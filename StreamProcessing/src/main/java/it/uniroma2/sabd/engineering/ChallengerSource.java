@@ -19,11 +19,14 @@ import java.util.Map;
 public class ChallengerSource implements SourceFunction<Batch> {
 
     private volatile boolean running = true;
-    private String API_URL = "gc25-challenger:8866";
+    private String API_URL = "http://gc25-challenger:8866";
+
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
+        System.out.println("run() di ChallengerSource avviato");
         CloseableHttpClient http = HttpClients.createDefault();
         String benchId = createAndStartBench(http);
+        int received = 0;
 
         while (running) {
             byte[] blob = fetchNextBatch(http, benchId);
@@ -32,9 +35,19 @@ public class ChallengerSource implements SourceFunction<Batch> {
             Map<String, Object> record = unpack(blob);
             Batch batch = Batch.fromMap(record);
             ctx.collect(batch);
+            received++;
         }
 
-        endBench(http, benchId);
+        // Solo se abbiamo ricevuto almeno un batch, chiamiamo end
+        if (received > 0) {
+            try {
+                endBench(http, benchId);
+            } catch (Exception e) {
+                System.err.println("Errore chiamando /api/end: " + e.getMessage());
+            }
+        } else {
+            System.err.println("Nessun batch ricevuto. Salto chiamata /api/end");
+        }
     }
 
     @Override
@@ -43,12 +56,13 @@ public class ChallengerSource implements SourceFunction<Batch> {
     }
 
     private String createAndStartBench(CloseableHttpClient http) throws IOException {
-        HttpPost create = new HttpPost("API_URL" + "/api/create");
+        HttpPost create = new HttpPost(API_URL + "/api/create");
         create.setHeader("Content-Type", "application/json");
 
         Map<String, Object> body = new HashMap<>();
         body.put("name", "Flink_1");
         body.put("test", false);
+        body.put("apitoken", "token");
 
         String json = new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(body);
         create.setEntity(new StringEntity(json, ContentType.APPLICATION_JSON));

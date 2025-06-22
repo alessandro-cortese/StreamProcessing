@@ -2,76 +2,44 @@ package it.uniroma2.sabd;
 
 import it.uniroma2.sabd.engineering.ChallengerSource;
 import it.uniroma2.sabd.model.Batch;
-//import it.uniroma2.sabd.query.Q1SaturationMapFunction;
-//import it.uniroma2.sabd.query.Q2SlidingWindowProcessFunction;
-import org.apache.flink.api.common.functions.FilterFunction;
+import it.uniroma2.sabd.query.Q1SaturationMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
-import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
-import org.apache.flink.util.Collector;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class MainJob {
-
     public static void main(String[] args) throws Exception {
 
-        System.out.println("PROVA 2");
+        System.out.println("Avvio pipeline: Query 1 - Saturation Detection");
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
-        // Add source
         DataStream<Batch> source = env.addSource(new ChallengerSource());
+        DataStream<Batch> q1 = source.map(new Q1SaturationMapFunction());
 
-        // Query 1: Saturation detection
-        // DataStream<Batch> q1Processed = source.map(new Q1SaturationMapFunction());
+        // CSV con intestazione simulata (aggiunta a inizio file)
+        String header = "batch_id,tile_id,print_id,saturated,latency_ms,timestamp";
+        String path = "/Results/query1.csv";
 
-//        q1Processed
-//                .map(new MapFunction<Batch, String>() {
-//                    @Override
-//                    public String map(Batch batch) {
-//                        return String.format("%d,%s,%s,%d,%d,%s",
-//                                batch.batch_id,
-//                                batch.tile_id,
-//                                batch.print_id,
-//                                batch.saturated,
-//                                batch.latency_ms,
-//                                batch.timestamp);
-//                    }
-//                })
-//                .writeAsText("/Results/query1.csv").name("Write Q1");
+        DataStream<String> csvHeader = env.fromElements(header);
+        DataStream<String> csvData = q1.map((MapFunction<Batch, String>) batch ->
+                String.format("%d,%d,%s,%d,%d,%s",
+                        batch.batch_id,
+                        batch.tile_id,
+                        batch.print_id,
+                        batch.saturated,
+                        batch.latency_ms,
+                        batch.timestamp));
 
-        // Query 2: Sliding window deviation analysis
-//        q1Processed
-//                .filter(new FilterFunction<Batch>() {
-//                    @Override
-//                    public boolean filter(Batch batch) {
-//                        return batch.saturated > 0;
-//                    }
-//                })
-//                .keyBy(batch -> Tuple2.of(batch.print_id, batch.tile_id))
-//                .process(new Q2SlidingWindowProcessFunction())
-//                .map(new MapFunction<Batch, String>() {
-//                    @Override
-//                    public String map(Batch batch) {
-//                        StringBuilder line = new StringBuilder();
-//                        line.append(String.format("%d,%s,%s",
-//                                batch.batch_id,
-//                                batch.tile_id,
-//                                batch.print_id));
-//                        for (int i = 1; i <= 5; i++) {
-//                            Object pos = batch.q2_outliers.getOrDefault("P" + i, new int[]{-1, -1});
-//                            Object delta = batch.q2_outliers.getOrDefault("\u03b4P" + i, "-");
-//                            int[] point = (int[]) pos;
-//                            line.append(String.format(",%d,%d,%s", point[0], point[1], delta));
-//                        }
-//                        line.append(String.format(",%d,%s", batch.latency_ms, batch.timestamp));
-//                        return line.toString();
-//                    }
-//                })
-//                .writeAsText("/Results/query2.csv").name("Write Q2");
+        csvHeader.union(csvData)
+                .writeAsText(path, FileSystem.WriteMode.OVERWRITE)
+                .name("Write Q1 CSV");
 
-        env.execute("Thermal Defect Analysis Pipeline");
+        env.execute("Thermal Defect Analysis Pipeline - Query 1");
     }
 }

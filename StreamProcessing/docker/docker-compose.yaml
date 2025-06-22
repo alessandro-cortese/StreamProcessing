@@ -27,6 +27,8 @@ services:
     container_name: flink-taskmanager
     volumes:
       - ../src:/opt/flink/src
+      - ../Results:/Results
+      - ../target:/opt/flink/usrlib
     environment:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
     command: taskmanager
