@@ -3,7 +3,6 @@ package it.uniroma2.sabd.utils;
 import org.apache.hc.core5.http.io.HttpClientResponseHandler;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 
-// extracted from BatchProcessingOrchestrator
 public class HTTPClient {
     public static HttpClientResponseHandler<String> toStringResponseHandler(){
         return response -> {

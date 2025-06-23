@@ -15,10 +15,8 @@ import java.util.List;
 
 /*
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-*                                                                                                                     *
 * Q1 - Count the number of saturated pixels in each image (tif) by marking them in the saturated field                *
 * Q2 -  It analyses saturated batches to find local thermal outliers on 3D time windows.                              *
-*                                                                                                                     *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * */
 
@@ -100,5 +98,6 @@ public class MainJob {
                 .name("Write Q2 Results");
 
         env.execute("Thermal Defect Analysis Pipeline - Q1 + Q2");
+        System.out.println("Thermal Defect Analysis Pipeline - Q1 + Q2");
     }
 }

@@ -15,32 +15,35 @@ import org.msgpack.value.Value;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /*
 * * * * * * * * * * * * * * * * * * * * * *
-*                                         *
 * Create a source for Flink               *
-*                                         *
 * * * * * * * * * * * * * * * * * * * * * *
 */
 
+@SuppressWarnings("deprecation")
 public class ChallengerSource implements SourceFunction<Batch> {
 
     private volatile boolean running = true;                        // <- used to interrupt the source in thread safe mode
     private final String API_URL = "http://gc25-challenger:8866";   // <- url of challenger
+    private static final Logger LOG = LoggerFactory.getLogger(ChallengerSource.class);
 
     // Flink Source
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
+        LOG.info("Invoke of run()");
         CloseableHttpClient http = HttpClients.createDefault();
         String benchId;
 
         try {
             // start bench
             benchId = createAndStartBench(http);
-            System.out.println(">>> Bench creato: " + benchId);
+            LOG.info(">>> Bench creato: " + benchId);
         } catch (Exception e) {
-            System.err.println(">>> Errore nella sorgente: " + e.getMessage());
+            LOG.info(">>> Errore nella sorgente: " + e.getMessage());
             e.printStackTrace();
             return;
         }
@@ -52,10 +55,10 @@ public class ChallengerSource implements SourceFunction<Batch> {
             if (blob == null) break;
 
             Map<String, Object> record = unpack(blob);
-            System.out.println(">>> Record ricevuto: " + record);
-            System.out.printf(">>> tif.length = %d%n", ((byte[]) record.get("tif")).length);
+            LOG.info(">>> Record ricevuto: " + record);
+            LOG.info(">>> tif.length = %d%n" + ((byte[]) record.get("tif")).length);
             if (!record.containsKey("tif") || record.get("tif") == null || ((byte[]) record.get("tif")).length == 0) {
-                System.err.println(">>> Batch ignorato: TIFF mancante o vuoto.");
+                LOG.info(">>> Batch ignorato: TIFF mancante o vuoto.");
                 continue;
             }
             Batch batch = Batch.fromMap(record);
@@ -65,13 +68,13 @@ public class ChallengerSource implements SourceFunction<Batch> {
 
         if (received > 0) {
             try {
-                System.out.println(">>> Bench finalizato: " + benchId);
+                LOG.info(">>> Bench finalizato: " + benchId);
                 //endBench(http, benchId);
             } catch (Exception e) {
-                System.err.println("Errore chiamando /api/end: " + e.getMessage());
+                LOG.info("Errore chiamando /api/end: " + e.getMessage());
             }
         } else {
-            System.err.println("Nessun batch ricevuto. Salto chiamata /api/end");
+            LOG.info("Nessun batch ricevuto. Salto chiamata /api/end");
         }
     }
 
@@ -81,7 +84,7 @@ public class ChallengerSource implements SourceFunction<Batch> {
     }
 
     private String createAndStartBench(CloseableHttpClient http) throws IOException {
-        System.out.println(">>> createAndStartBench() INVOCATO");
+        LOG.info(">>> createAndStartBench() invoked");
         HttpPost create = new HttpPost(API_URL + "/api/create");
         create.setHeader("Content-Type", "application/json");
 
