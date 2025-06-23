@@ -16,21 +16,25 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+* * * * * * * * * * * * * * * * * * * * * *
+*                                         *
+* Create a source for Flink               *
+*                                         *
+* * * * * * * * * * * * * * * * * * * * * *
+*/
+
 public class ChallengerSource implements SourceFunction<Batch> {
 
-    private volatile boolean running = true;
-    private String API_URL = "http://gc25-challenger:8866";
+    private volatile boolean running = true;                        // <- used to interrupt the source in thread safe mode
+    private final String API_URL = "http://gc25-challenger:8866";   // <- url of challenger
 
+    // Flink Source
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
         CloseableHttpClient http = HttpClients.createDefault();
         String benchId;
 
-        System.out.println(">>> run() INVOCATO");
-
-        Thread.sleep(1000);
-
-        System.out.println(">>> run() INVOCATO");
         try {
             // start bench
             benchId = createAndStartBench(http);
@@ -59,7 +63,6 @@ public class ChallengerSource implements SourceFunction<Batch> {
             received++;
         }
 
-        // Solo se abbiamo ricevuto almeno un batch, chiamiamo end
         if (received > 0) {
             try {
                 System.out.println(">>> Bench finalizato: " + benchId);

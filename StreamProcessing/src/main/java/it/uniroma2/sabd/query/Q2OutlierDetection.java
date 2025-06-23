@@ -73,19 +73,9 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
                 float val = padded[2][y + MAX_DIST][x + MAX_DIST];
                 if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
 
-                List<Float> internal = new ArrayList<>();
-                for (int[] off : INTERNAL_OFFSETS) {
-                    int dz = off[0], dx = off[1], dy = off[2];
-                    float v = padded[dz][y + dy + MAX_DIST][x + dx + MAX_DIST];
-                    if (v > EMPTY_THRESHOLD && v < SATURATION_THRESHOLD) internal.add(v);
-                }
+                List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
 
-                List<Float> external = new ArrayList<>();
-                for (int[] off : EXTERNAL_OFFSETS) {
-                    int dz = off[0], dx = off[1], dy = off[2];
-                    float v = padded[dz][y + dy + MAX_DIST][x + dx + MAX_DIST];
-                    if (v > EMPTY_THRESHOLD && v < SATURATION_THRESHOLD) external.add(v);
-                }
+                List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
 
                 if (internal.isEmpty() || external.isEmpty()) continue;
 
@@ -105,6 +95,16 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
         }
 
         return result;
+    }
+
+    private static List<Float> getInternal(List<int[]> internalOffsets, float[][][] padded, int y, int x) {
+        List<Float> internal = new ArrayList<>();
+        for (int[] off : internalOffsets) {
+            int dz = off[0], dx = off[1], dy = off[2];
+            float v = padded[dz][y + dy + MAX_DIST][x + dx + MAX_DIST];
+            if (v > EMPTY_THRESHOLD && v < SATURATION_THRESHOLD) internal.add(v);
+        }
+        return internal;
     }
 
     private static float mean(List<Float> values) {

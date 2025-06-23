@@ -9,24 +9,43 @@ import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.sink.DiscardingSink;
 
 import java.util.List;
 
+/*
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+*                                                                                                                     *
+* Q1 - Count the number of saturated pixels in each image (tif) by marking them in the saturated field                *
+* Q2 -  It analyses saturated batches to find local thermal outliers on 3D time windows.                              *
+*                                                                                                                     *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* */
+
+
 public class MainJob {
     public static void main(String[] args) throws Exception {
+
         System.out.println("Avvio pipeline: Query 1 - Saturation Detection + Query 2 - Outlier Detection");
 
+        // Create Flink environment
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
+        // Set the data source for batches to be processed.
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
-        // Query 1
+        source.map((MapFunction<Batch, String>) batch -> {
+            System.out.println(">>> Batch ricevuto: " + batch.batch_id); // stampa lato JobManager/TaskManager
+            return ">>> Batch ricevuto: " + batch.batch_id; // ritorna una stringa vuota, ignora
+        }).addSink(new DiscardingSink<>());
+
+        // Query 1 - Transforms each batch by calculating how many pixels are saturated
         DataStream<Batch> q1Result = source.map(new Q1SaturationMapFunction());
 
-        // Salvataggio risultati Q1
+        // Saving Q1 results
         String q1Header = "batch_id,tile_id,print_id,saturated,latency_ms,timestamp";
-        DataStream<String> q1HeaderStream = env.fromElements(q1Header);
+        DataStream<String> q1HeaderStream = env.fromData(q1Header);
         DataStream<String> q1DataStream = q1Result.map((MapFunction<Batch, String>) batch ->
                 String.format("%d,%d,%s,%d,%d,%s",
                         batch.batch_id,
@@ -36,18 +55,19 @@ public class MainJob {
                         batch.latency_ms,
                         batch.timestamp));
 
+        // Only batches with at least one saturated pixel are analysed by Query 2.
         q1HeaderStream.union(q1DataStream)
                 .writeAsText("/Results/query1.csv", FileSystem.WriteMode.OVERWRITE)
                 .name("Write Q1 Results");
 
-        // Query 2
+        // Query 2 - Outlier Detection
         DataStream<Batch> filteredQ1 = q1Result.filter((FilterFunction<Batch>) batch -> batch.saturated > 0);
 
         DataStream<Batch> q2Result = filteredQ1
                 .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
                 .process(new Q2OutlierDetection());
 
-        // Salvataggio risultati Q2
+        // Saving Q2 Results
         String q2Header = "batch_id,print_id,tile_id," +
                 "P1_x,P1_y,δP1," +
                 "P2_x,P2_y,δP2," +
@@ -55,8 +75,7 @@ public class MainJob {
                 "P4_x,P4_y,δP4," +
                 "P5_x,P5_y,δP5," +
                 "latency_ms,timestamp";
-
-        DataStream<String> q2HeaderStream = env.fromElements(q2Header);
+        DataStream<String> q2HeaderStream = env.fromData(q2Header);
         DataStream<String> q2DataStream = q2Result.map((MapFunction<Batch, String>) batch -> {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format("%d,%s,%d", batch.batch_id, batch.print_id, batch.tile_id));
