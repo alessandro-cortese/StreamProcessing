@@ -1,5 +1,6 @@
 package it.uniroma2.sabd.engineering;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.utils.HTTPClient;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
@@ -8,42 +9,46 @@ import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.ContentType;
+import org.apache.hc.core5.http.io.entity.ByteArrayEntity;
 import org.apache.hc.core5.http.io.entity.StringEntity;
 import org.msgpack.core.MessagePack;
 import org.msgpack.core.MessageUnpacker;
+import org.msgpack.jackson.dataformat.MessagePackFactory;
 import org.msgpack.value.Value;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 * * * * * * * * * * * * * * * * * * * * * *
+*                                         *
 * Create a source for Flink               *
+*                                         *
 * * * * * * * * * * * * * * * * * * * * * *
 */
 
-@SuppressWarnings("deprecation")
 public class ChallengerSource implements SourceFunction<Batch> {
 
     private volatile boolean running = true;                        // <- used to interrupt the source in thread safe mode
-    private final String API_URL = "http://gc25-challenger:8866";   // <- url of challenger
+    private final static String API_URL = "http://gc25-challenger:8866";   // <- url of challenger
+    public static String BENCH_ID = null;
     private static final Logger LOG = LoggerFactory.getLogger(ChallengerSource.class);
-
     // Flink Source
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
-        LOG.info("Invoke of run()");
         CloseableHttpClient http = HttpClients.createDefault();
         String benchId;
 
         try {
             // start bench
             benchId = createAndStartBench(http);
-            LOG.info(">>> Bench creato: " + benchId);
+            BENCH_ID = benchId;
+            System.out.println(">>> Bench creato: " + benchId);
         } catch (Exception e) {
-            LOG.info(">>> Errore nella sorgente: " + e.getMessage());
+            System.err.println(">>> Errore nella sorgente: " + e.getMessage());
             e.printStackTrace();
             return;
         }
@@ -55,10 +60,10 @@ public class ChallengerSource implements SourceFunction<Batch> {
             if (blob == null) break;
 
             Map<String, Object> record = unpack(blob);
-            LOG.info(">>> Record ricevuto: " + record);
-            LOG.info(">>> tif.length = %d%n" + ((byte[]) record.get("tif")).length);
+            System.out.println(">>> Record ricevuto: " + record);
+            System.out.printf(">>> tif.length = %d%n", ((byte[]) record.get("tif")).length);
             if (!record.containsKey("tif") || record.get("tif") == null || ((byte[]) record.get("tif")).length == 0) {
-                LOG.info(">>> Batch ignorato: TIFF mancante o vuoto.");
+                System.err.println(">>> Batch ignorato: TIFF mancante o vuoto.");
                 continue;
             }
             Batch batch = Batch.fromMap(record);
@@ -68,13 +73,13 @@ public class ChallengerSource implements SourceFunction<Batch> {
 
         if (received > 0) {
             try {
-                LOG.info(">>> Bench finalizato: " + benchId);
+                System.out.println(">>> Bench finalizato: " + benchId);
                 //endBench(http, benchId);
             } catch (Exception e) {
-                LOG.info("Errore chiamando /api/end: " + e.getMessage());
+                System.err.println("Errore chiamando /api/end: " + e.getMessage());
             }
         } else {
-            LOG.info("Nessun batch ricevuto. Salto chiamata /api/end");
+            System.err.println("Nessun batch ricevuto. Salto chiamata /api/end");
         }
     }
 
@@ -84,7 +89,7 @@ public class ChallengerSource implements SourceFunction<Batch> {
     }
 
     private String createAndStartBench(CloseableHttpClient http) throws IOException {
-        LOG.info(">>> createAndStartBench() invoked");
+        System.out.println(">>> createAndStartBench() INVOCATO");
         HttpPost create = new HttpPost(API_URL + "/api/create");
         create.setHeader("Content-Type", "application/json");
 
@@ -142,6 +147,35 @@ public class ChallengerSource implements SourceFunction<Batch> {
         }
         up.close();
         return m;
+    }
+
+    public static void uploadResult(Batch batch, String benchId) {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.batch_id);
+
+            ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
+
+            Map<String, Object> resultMap = new HashMap<>();
+            resultMap.put("batch_id", batch.batch_id);
+            resultMap.put("query", 0);
+            resultMap.put("print_id", batch.print_id);
+            resultMap.put("tile_id", batch.tile_id);
+            resultMap.put("saturated", batch.saturated);
+            resultMap.put("centroids", batch.q3_clusters);
+
+            byte[] payload = mapper.writeValueAsBytes(resultMap);
+
+            HttpPost post = new HttpPost(url);
+            post.setHeader("Content-Type", "application/msgpack");
+            post.setEntity(new ByteArrayEntity(payload, ContentType.create("application/msgpack")));
+
+            String response = httpClient.execute(post, response1 ->
+                    new String(response1.getEntity().getContent().readAllBytes())
+            );
+            LOG.debug("Uploaded result for tile_id={}, response={}", batch.tile_id, response);
+        } catch (Exception e) {
+            LOG.error("Failed to upload result for tile_id={}: {}", batch.tile_id, e.getMessage(), e);
+        }
     }
 }
 

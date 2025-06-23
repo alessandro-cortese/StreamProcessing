@@ -4,6 +4,7 @@ import it.uniroma2.sabd.engineering.ChallengerSource;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.Q1SaturationMapFunction;
 import it.uniroma2.sabd.query.Q2OutlierDetection;
+import it.uniroma2.sabd.query.Q3ClusteringMapFunction;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.core.fs.FileSystem;
@@ -30,7 +31,7 @@ public class MainJob {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
-        // Set the data source for batches to be processed.
+
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
         source.map((MapFunction<Batch, String>) batch -> {
@@ -97,7 +98,33 @@ public class MainJob {
                 .writeAsText("/Results/query2.csv", FileSystem.WriteMode.OVERWRITE)
                 .name("Write Q2 Results");
 
-        env.execute("Thermal Defect Analysis Pipeline - Q1 + Q2");
-        System.out.println("Thermal Defect Analysis Pipeline - Q1 + Q2");
+        // Q3
+        DataStream<Batch> q3Result = q2Result
+                .map(new Q3ClusteringMapFunction())
+                .map((MapFunction<Batch, Batch>) batch -> {
+                    String benchId = ChallengerSource.BENCH_ID;
+                    if (benchId != null && batch.q3_clusters != null && !batch.q3_clusters.isEmpty()) {
+                        ChallengerSource.uploadResult(batch, benchId);
+                    }
+                    return batch;
+                });
+
+
+        String q3Header = "batch_id,print_id,tile_id,saturated,centroids";
+        DataStream<String> q3HeaderStream = env.fromData(q3Header);
+        DataStream<String> q3DataStream = q3Result.map((MapFunction<Batch, String>) batch -> {
+            String centroids = String.join(";", batch.q3_clusters);
+            return String.format("%d,%s,%d,%d,%s",
+                    batch.batch_id,
+                    batch.print_id,
+                    batch.tile_id,
+                    batch.saturated,
+                    centroids);
+        });
+        q3HeaderStream.union(q3DataStream)
+                .writeAsText("/Results/query3.csv", FileSystem.WriteMode.OVERWRITE)
+                .name("Write Q3 Results");
+
+        env.execute("Thermal Defect Analysis Pipeline - Q1 + Q2 + Q3");
     }
 }

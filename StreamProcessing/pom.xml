@@ -39,6 +39,20 @@
 
         <dependency>
             <groupId>org.msgpack</groupId>
+            <artifactId>jackson-dataformat-msgpack</artifactId>
+            <version>0.8.22</version>
+        </dependency>
+
+        <!-- Smile library for DBSCAN algo-->
+        <dependency>
+            <groupId>com.github.haifengl</groupId>
+            <artifactId>smile-core</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.msgpack</groupId>
             <artifactId>msgpack-core</artifactId>
             <version>0.8.16</version>
         </dependency>

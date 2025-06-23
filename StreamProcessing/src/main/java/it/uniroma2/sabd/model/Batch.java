@@ -1,13 +1,11 @@
 package it.uniroma2.sabd.model;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.MemoryCacheImageInputStream;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
-import java.util.Iterator;
 
 public class Batch {
     public int batch_id;
@@ -20,6 +18,8 @@ public class Batch {
     public int[][] pixels;
     public long ingestion_time = 0;
     public Map<String, Object> q2_outliers = new HashMap<>();
+    public List<String> q3_clusters = new ArrayList<>();
+
 
     public static Batch fromMap(Map<String, Object> map) {
         Batch b = new Batch();
