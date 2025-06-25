@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
 
-    private static final double EPSILON = 20.0;
+    private static final double EPSILON = 20;
     private static final int MIN_POINTS = 5;
 
     @Override
@@ -44,6 +44,7 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
 
         // Raggruppa per cluster
         Map<Integer, List<double[]>> clusters = new HashMap<>();
+
         for (int i = 0; i < labels.length; i++) {
             if (labels[i] == -1) continue; // noise
             clusters.computeIfAbsent(labels[i], k -> new ArrayList<>()).add(points[i]);
