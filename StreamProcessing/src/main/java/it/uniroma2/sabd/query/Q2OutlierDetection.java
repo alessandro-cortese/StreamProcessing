@@ -46,55 +46,103 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
         windowState.update(window);
 
         if (window.size() == 3) {
-            Map<String, Object> q2_outliers = analyzeOutliers(window);
-            batch.q2_outliers = q2_outliers;
+            Map<String, Object> q2_top5_outliers = analyzeOutliers(window, batch);
+            batch.q2_top5_outliers = q2_top5_outliers;
         }
         out.collect(batch);
     }
 
-    private Map<String, Object> analyzeOutliers(List<int[][]> window) {
-        int height = window.get(0).length;
-        int width = window.get(0)[0].length;
+//    private Map<String, Object> analyzeOutliers(List<int[][]> window) {
+//        int height = window.get(0).length;
+//        int width = window.get(0)[0].length;
+//
+//        float[][][] padded = new float[3][height + 2 * MAX_DIST][width + 2 * MAX_DIST];
+//        for (int z = 0; z < 3; z++) {
+//            for (int y = 0; y < height; y++) {
+//                for (int x = 0; x < width; x++) {
+//                    padded[z][y + MAX_DIST][x + MAX_DIST] = window.get(z)[y][x];
+//                }
+//            }
+//        }
+//
+//        List<Outlier> candidates = new ArrayList<>();
+//
+//        for (int y = 0; y < height; y++) {
+//            for (int x = 0; x < width; x++) {
+//                float val = padded[2][y + MAX_DIST][x + MAX_DIST];
+//                if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
+//
+//                List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
+//
+//                List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
+//
+//                if (internal.isEmpty() || external.isEmpty()) continue;
+//
+//                float dev = Math.abs(mean(internal) - mean(external));
+//                if (dev > OUTLIER_THRESHOLD) {
+//                    candidates.add(new Outlier(x, y, dev));
+//                }
+//            }
+//        }
+//
+//        candidates.sort(Comparator.comparingDouble(o -> -o.delta));
+//        Map<String, Object> result = new HashMap<>();
+//        for (int i = 0; i < Math.min(5, candidates.size()); i++) {
+//            Outlier o = candidates.get(i);
+//            result.put("P" + (i + 1), Arrays.asList(o.x, o.y));  // <-- questa è mutabile
+//            result.put("δP" + (i + 1), o.delta);                // float è già OK
+//        }
+//
+//        return result;
+//    }
+private Map<String, Object> analyzeOutliers(List<int[][]> window, Batch batch) {
+    int height = window.get(0).length;
+    int width = window.get(0)[0].length;
 
-        float[][][] padded = new float[3][height + 2 * MAX_DIST][width + 2 * MAX_DIST];
-        for (int z = 0; z < 3; z++) {
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
-                    padded[z][y + MAX_DIST][x + MAX_DIST] = window.get(z)[y][x];
-                }
-            }
-        }
-
-        List<Outlier> candidates = new ArrayList<>();
-
+    float[][][] padded = new float[3][height + 2 * MAX_DIST][width + 2 * MAX_DIST];
+    for (int z = 0; z < 3; z++) {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                float val = padded[2][y + MAX_DIST][x + MAX_DIST];
-                if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
-
-                List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
-
-                List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
-
-                if (internal.isEmpty() || external.isEmpty()) continue;
-
-                float dev = Math.abs(mean(internal) - mean(external));
-                if (dev > OUTLIER_THRESHOLD) {
-                    candidates.add(new Outlier(x, y, dev));
-                }
+                padded[z][y + MAX_DIST][x + MAX_DIST] = window.get(z)[y][x];
             }
         }
-
-        candidates.sort(Comparator.comparingDouble(o -> -o.delta));
-        Map<String, Object> result = new HashMap<>();
-        for (int i = 0; i < Math.min(5, candidates.size()); i++) {
-            Outlier o = candidates.get(i);
-            result.put("P" + (i + 1), Arrays.asList(o.x, o.y));  // <-- questa è mutabile
-            result.put("δP" + (i + 1), o.delta);                // float è già OK
-        }
-
-        return result;
     }
+
+    List<Outlier> candidates = new ArrayList<>();
+    List<List<Number>> allOutliers = new ArrayList<>();
+
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            float val = padded[2][y + MAX_DIST][x + MAX_DIST];
+            if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
+
+            List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
+            List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
+
+            if (internal.isEmpty() || external.isEmpty()) continue;
+
+            float dev = Math.abs(mean(internal) - mean(external));
+            if (dev > OUTLIER_THRESHOLD) {
+                candidates.add(new Outlier(x, y, dev));
+                allOutliers.add(Arrays.asList(x, y));
+            }
+        }
+    }
+
+    // save all outliers 
+    batch.q2_all_outliers = allOutliers;
+
+    // top-5 per query2
+    candidates.sort(Comparator.comparingDouble(o -> -o.delta));
+    Map<String, Object> result = new HashMap<>();
+    for (int i = 0; i < Math.min(5, candidates.size()); i++) {
+        Outlier o = candidates.get(i);
+        result.put("P" + (i + 1), Arrays.asList(o.x, o.y));
+        result.put("δP" + (i + 1), o.delta);
+    }
+
+    return result;
+}
 
     private static List<Float> getInternal(List<int[]> internalOffsets, float[][][] padded, int y, int x) {
         List<Float> internal = new ArrayList<>();

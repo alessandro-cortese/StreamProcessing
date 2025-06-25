@@ -82,8 +82,8 @@ public class MainJob {
             sb.append(String.format("%d,%s,%d", batch.batch_id, batch.print_id, batch.tile_id));
 
             for (int i = 1; i <= 5; i++) {
-                Object pos = batch.q2_outliers.getOrDefault("P" + i, List.of(0, 0));
-                Object delta = batch.q2_outliers.getOrDefault("δP" + i, 0);
+                Object pos = batch.q2_top5_outliers.getOrDefault("P" + i, List.of(0, 0));
+                Object delta = batch.q2_top5_outliers.getOrDefault("δP" + i, 0);
 
                 if (pos instanceof List<?> l && l.size() == 2) {
                     sb.append(String.format(",%s,%s,%s", l.get(0), l.get(1), delta));
@@ -126,6 +126,18 @@ public class MainJob {
         q3HeaderStream.union(q3DataStream)
                 .writeAsText("/Results/query3.csv", FileSystem.WriteMode.OVERWRITE)
                 .name("Write Q3 Results");
+        DataStream<String> q3TextClusters = q3Result.map((MapFunction<Batch, String>) batch -> {
+            StringBuilder sb = new StringBuilder();
+            sb.append(String.format("batch_id: %d, print_id: %s, tile_id: %d\n", batch.batch_id, batch.print_id, batch.tile_id));
+            for (String cluster : batch.q3_clusters) {
+                sb.append("Cluster: ").append(cluster).append("\n");
+            }
+            sb.append("\n");
+            return sb.toString();
+        });
+
+        q3TextClusters.writeAsText("/Results/query3_clusters.txt", FileSystem.WriteMode.OVERWRITE)
+                .name("Write Q3 Clusters as TXT");
 
         env.execute("Thermal Defect Analysis Pipeline - Q1 + Q2 + Q3");
     }

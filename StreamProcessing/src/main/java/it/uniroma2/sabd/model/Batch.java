@@ -17,7 +17,8 @@ public class Batch {
     public String timestamp = "";
     public int[][] pixels;
     public long ingestion_time = 0;
-    public Map<String, Object> q2_outliers = new HashMap<>();
+    public Map<String, Object> q2_top5_outliers = new HashMap<>();
+    public List<List<Number>> q2_all_outliers;
     public List<String> q3_clusters = new ArrayList<>();
 
 
