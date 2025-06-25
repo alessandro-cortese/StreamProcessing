@@ -19,14 +19,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 /*
 * * * * * * * * * * * * * * * * * * * * * *
-*                                         *
 * Create a source for Flink               *
-*                                         *
 * * * * * * * * * * * * * * * * * * * * * *
 */
 
@@ -74,7 +73,7 @@ public class ChallengerSource implements SourceFunction<Batch> {
         if (received > 0) {
             try {
                 System.out.println(">>> Bench finalizato: " + benchId);
-                //endBench(http, benchId);
+                endBench(http, benchId);
             } catch (Exception e) {
                 System.err.println("Errore chiamando /api/end: " + e.getMessage());
             }
@@ -94,9 +93,9 @@ public class ChallengerSource implements SourceFunction<Batch> {
         create.setHeader("Content-Type", "application/json");
 
         Map<String, Object> body = new HashMap<>();
-        body.put("name", "Flink_1");
+        body.put("name", "Flink-Analysis");
         body.put("test", false);
-        body.put("apitoken", "token");
+        body.put("apitoken", "uniroma2");
 
         String json = new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(body);
         create.setEntity(new StringEntity(json, ContentType.APPLICATION_JSON));
@@ -177,5 +176,34 @@ public class ChallengerSource implements SourceFunction<Batch> {
             LOG.error("Failed to upload result for tile_id={}: {}", batch.tile_id, e.getMessage(), e);
         }
     }
+
+    public static void uploadResultQ0(Batch batch, String benchId) {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.batch_id);
+
+            ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
+
+            Map<String, Object> resultMap = new HashMap<>();
+            resultMap.put("batch_id", batch.batch_id);
+            resultMap.put("print_id", batch.print_id);
+            resultMap.put("tile_id", batch.tile_id);
+            resultMap.put("saturated", 0); // Dummy value per Q0
+            resultMap.put("centroids", new ArrayList<>()); // Nessun cluster per Q0
+
+            byte[] payload = mapper.writeValueAsBytes(resultMap);
+
+            HttpPost post = new HttpPost(url);
+            post.setHeader("Content-Type", "application/msgpack");
+            post.setEntity(new ByteArrayEntity(payload, ContentType.create("application/msgpack")));
+
+            String response = httpClient.execute(post, response1 ->
+                    new String(response1.getEntity().getContent().readAllBytes())
+            );
+            LOG.info("Q0: Result uploaded for batch_id={}, tile_id={}", batch.batch_id, batch.tile_id);
+        } catch (Exception e) {
+            LOG.error("Q0: Failed to upload result for batch_id={}: {}", batch.batch_id, e.getMessage(), e);
+        }
+    }
+
 }
 

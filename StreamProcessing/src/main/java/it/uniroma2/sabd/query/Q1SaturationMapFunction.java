@@ -21,7 +21,7 @@ public class Q1SaturationMapFunction implements MapFunction<Batch, Batch> {
         }
 
         batch.saturated = count;
-        batch.latency_ms = System.currentTimeMillis() - batch.ingestion_time; 
+        batch.latency_ms = System.currentTimeMillis() - batch.ingestion_time;
         return batch;
     }
 }

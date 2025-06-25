@@ -8,8 +8,8 @@ import java.util.*;
 
 public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
 
-    private static final double EPSILON = 5.0;
-    private static final int MIN_POINTS = 1;
+    private static final double EPSILON = 20;
+    private static final int MIN_POINTS = 5;
 
     @Override
     public Batch map(Batch batch) throws Exception {

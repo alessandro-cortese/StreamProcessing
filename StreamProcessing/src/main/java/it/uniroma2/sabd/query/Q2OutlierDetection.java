@@ -49,7 +49,6 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
             Map<String, Object> q2_outliers = analyzeOutliers(window);
             batch.q2_outliers = q2_outliers;
         }
-
         out.collect(batch);
     }
 

@@ -13,7 +13,7 @@ RUN apt-get update -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Imposta JAVA_HOME per Java 16
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Copia configurazione Flink

@@ -1,6 +1,8 @@
 package it.uniroma2.sabd;
 
 import it.uniroma2.sabd.engineering.ChallengerSource;
+import it.uniroma2.sabd.engineering.UploadResultSinkQ0;
+import it.uniroma2.sabd.engineering.UploadResultSinkQ3;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.Q1SaturationMapFunction;
 import it.uniroma2.sabd.query.Q2OutlierDetection;
@@ -31,17 +33,17 @@ public class MainJob {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
-
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
         source.map((MapFunction<Batch, String>) batch -> {
             System.out.println(">>> Batch ricevuto: " + batch.batch_id); // stampa lato JobManager/TaskManager
             return ">>> Batch ricevuto: " + batch.batch_id; // ritorna una stringa vuota, ignora
-        }).addSink(new DiscardingSink<>());
+        });
 
         // Query 1 - Transforms each batch by calculating how many pixels are saturated
         DataStream<Batch> q1Result = source.map(new Q1SaturationMapFunction());
 
+        q1Result.addSink(new UploadResultSinkQ0());
         // Saving Q1 results
         String q1Header = "batch_id,tile_id,print_id,saturated,latency_ms,timestamp";
         DataStream<String> q1HeaderStream = env.fromData(q1Header);
@@ -103,13 +105,13 @@ public class MainJob {
                 .map(new Q3ClusteringMapFunction())
                 .map((MapFunction<Batch, Batch>) batch -> {
                     String benchId = ChallengerSource.BENCH_ID;
-                    if (benchId != null && batch.q3_clusters != null && !batch.q3_clusters.isEmpty()) {
-                        ChallengerSource.uploadResult(batch, benchId);
-                    }
+                    ChallengerSource.uploadResult(batch, benchId);
                     return batch;
                 });
 
+        //DataStream<Batch> q3Result = q2Result.map(new Q3ClusteringMapFunction());
 
+        q3Result.addSink(new UploadResultSinkQ3());
         String q3Header = "batch_id,print_id,tile_id,saturated,centroids";
         DataStream<String> q3HeaderStream = env.fromData(q3Header);
         DataStream<String> q3DataStream = q3Result.map((MapFunction<Batch, String>) batch -> {
