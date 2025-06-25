@@ -12,40 +12,34 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
     private static final int MIN_POINTS = 5;
 
     @Override
-    public Batch map(Batch batch) throws Exception {
+    public Batch map(Batch batch) {
         if (batch.q2_outliers == null || batch.q2_outliers.isEmpty()) {
             batch.q3_clusters = new ArrayList<>();
             return batch;
         }
 
-        // Extract P1..P5 from q2_outliers
-        List<double[]> pointsList = new ArrayList<>();
+        List<double[]> points = new ArrayList<>();
         for (int i = 1; i <= 5; i++) {
-            Object pos = batch.q2_outliers.get("P" + i);
-            if (pos instanceof List<?> l && l.size() == 2) {
+            Object p = batch.q2_outliers.get("P" + i);
+            if (p instanceof List<?> l && l.size() == 2) {
                 double x = ((Number) l.get(0)).doubleValue();
                 double y = ((Number) l.get(1)).doubleValue();
-                pointsList.add(new double[]{x, y});
+                points.add(new double[]{x, y});
             }
         }
 
-        if (pointsList.isEmpty()) {
+        if (points.size() < MIN_POINTS) {
             batch.q3_clusters = new ArrayList<>();
             return batch;
         }
 
-
-        double[][] points = pointsList.toArray(new double[0][]);
-
-        DBSCAN<double[]> dbscan = DBSCAN.fit(points, MIN_POINTS, EPSILON);
-
-        // Group points for cluster
+        DBSCAN<double[]> dbscan = DBSCAN.fit(points.toArray(new double[0][]), MIN_POINTS, EPSILON);
         int[] labels = dbscan.y;
-        Map<Integer, List<double[]>> clusters = new HashMap<>();
 
+        Map<Integer, List<double[]>> clusters = new HashMap<>();
         for (int i = 0; i < labels.length; i++) {
-            if (labels[i] == -1) continue; // noise
-            clusters.computeIfAbsent(labels[i], k -> new ArrayList<>()).add(points[i]);
+            if (labels[i] == -1) continue;
+            clusters.computeIfAbsent(labels[i], k -> new ArrayList<>()).add(points.get(i));
         }
 
         List<String> centroids = new ArrayList<>();
@@ -55,10 +49,9 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
                 sumX += p[0];
                 sumY += p[1];
             }
-            int size = cluster.size();
-            int cx = (int) Math.round(sumX / size);
-            int cy = (int) Math.round(sumY / size);
-            centroids.add(String.format("(%d,%d,%d)", cx, cy, size));
+            int cx = (int) Math.round(sumX / cluster.size());
+            int cy = (int) Math.round(sumY / cluster.size());
+            centroids.add(String.format("(%d,%d,%d)", cx, cy, cluster.size()));
         }
 
         batch.q3_clusters = centroids;

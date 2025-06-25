@@ -20,18 +20,23 @@ import java.util.List;
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * Q1 - Count the number of saturated pixels in each image (tif) by marking them in the saturated field                *
 * Q2 -  It analyses saturated batches to find local thermal outliers on 3D time windows.                              *
+* Q3 -  Clustering with DB SCAN                                                                                       *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * */
 
 
+
 public class MainJob {
+
+    private static final int PARALLELISM_LEVEL = 8;
+
     public static void main(String[] args) throws Exception {
 
         System.out.println("Avvio pipeline: Query 1 - Saturation Detection + Query 2 - Outlier Detection");
 
         // Create Flink environment
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(1);
+        env.setParallelism(PARALLELISM_LEVEL);
 
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
@@ -41,7 +46,7 @@ public class MainJob {
         });
 
         // Query 1 - Transforms each batch by calculating how many pixels are saturated
-        DataStream<Batch> q1Result = source.map(new Q1SaturationMapFunction());
+        DataStream<Batch> q1Result = source.map(new Q1SaturationMapFunction()).setParallelism(PARALLELISM_LEVEL);
 
         q1Result.addSink(new UploadResultSinkQ0());
         // Saving Q1 results
@@ -66,7 +71,7 @@ public class MainJob {
 
         DataStream<Batch> q2Result = filteredQ1
                 .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
-                .process(new Q2OutlierDetection());
+                .process(new Q2OutlierDetection()).setParallelism(PARALLELISM_LEVEL);
 
         // Saving Q2 Results
         String q2Header = "batch_id,print_id,tile_id," +
@@ -105,11 +110,11 @@ public class MainJob {
                 .map(new Q3ClusteringMapFunction())
                 .map((MapFunction<Batch, Batch>) batch -> {
                     String benchId = ChallengerSource.BENCH_ID;
-                    ChallengerSource.uploadResult(batch, benchId);
+                    //ChallengerSource.uploadResult(batch, benchId);
                     return batch;
                 });
 
-        //DataStream<Batch> q3Result = q2Result.map(new Q3ClusteringMapFunction());
+        q3Result = q2Result.map(new Q3ClusteringMapFunction()).setParallelism(PARALLELISM_LEVEL);
 
         q3Result.addSink(new UploadResultSinkQ3());
         String q3Header = "batch_id,print_id,tile_id,saturated,centroids";

@@ -3,7 +3,6 @@ package it.uniroma2.sabd.query;
 import it.uniroma2.sabd.model.Batch;
 import org.apache.flink.api.common.state.ListState;
 import org.apache.flink.api.common.state.ListStateDescriptor;
-import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
 import org.apache.flink.util.Collector;
@@ -46,8 +45,7 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
         windowState.update(window);
 
         if (window.size() == 3) {
-            Map<String, Object> q2_outliers = analyzeOutliers(window);
-            batch.q2_outliers = q2_outliers;
+            batch.q2_outliers = analyzeOutliers(window);
         }
         out.collect(batch);
     }
