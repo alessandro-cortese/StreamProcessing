@@ -44,14 +44,20 @@ public class Batch {
 
             int width = image.getWidth();
             int height = image.getHeight();
-            pixels = new int[height][width];
+            int[][] temp = new int[height][width];
 
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
-                    pixels[y][x] = image.getRaster().getSample(x, y, 0); // 16-bit value
+                    temp[y][x] = image.getRaster().getSample(x, y, 0); // 16-bit value
                 }
             }
-
+            // transpose the matrix
+            pixels = new int[width][height];
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    pixels[x][y] = temp[y][x];
+                }
+            }
             reader.dispose();
         } catch (Exception e) {
             throw new RuntimeException("TIFF decoding error.", e);

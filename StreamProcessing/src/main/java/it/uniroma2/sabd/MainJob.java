@@ -36,7 +36,6 @@ public class MainJob {
         writeCsv(env, q1Result.map(toCsvQ1()), "query1.csv", getHeaderQ1());
 
         DataStream<Batch> q2Result = q1Result
-                .filter((FilterFunction<Batch>) batch -> batch.saturated > 0)
                 .rebalance()
                 .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
                 .process(new Q2OutlierDetection())

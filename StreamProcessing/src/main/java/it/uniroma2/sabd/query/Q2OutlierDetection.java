@@ -3,7 +3,6 @@ package it.uniroma2.sabd.query;
 import it.uniroma2.sabd.model.Batch;
 import org.apache.flink.api.common.state.ListState;
 import org.apache.flink.api.common.state.ListStateDescriptor;
-import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
 import org.apache.flink.util.Collector;
@@ -13,177 +12,139 @@ import java.util.*;
 public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batch> {
 
     private transient ListState<int[][]> windowState;
+
     private static final int EMPTY_THRESHOLD = 5000;
     private static final int SATURATION_THRESHOLD = 65000;
     private static final int OUTLIER_THRESHOLD = 6000;
-    private static final int MAX_DIST = 4;
-
-    private static final List<int[]> INTERNAL_OFFSETS = computeOffsets(2);
-    private static final List<int[]> EXTERNAL_OFFSETS = computeOffsets(MAX_DIST);
+    private static final int DISTANCE_THRESHOLD = 2;
 
     @Override
     public void open(Configuration parameters) {
-        ListStateDescriptor<int[][]> descriptor =
-                new ListStateDescriptor<>(
-                        "window_state",
-                        (Class<int[][]>) int[][].class
-                );
+        ListStateDescriptor<int[][]> descriptor = new ListStateDescriptor<>(
+                "window_state", int[][].class);
         windowState = getRuntimeContext().getListState(descriptor);
     }
 
     @Override
     public void processElement(Batch batch, Context ctx, Collector<Batch> out) throws Exception {
         batch.decodeTIFF();
+
         List<int[][]> window = new ArrayList<>();
         for (int[][] img : windowState.get()) {
             window.add(img);
         }
 
         window.add(batch.pixels);
-        if (window.size() > 3) {
-            window.remove(0);
-        }
+        if (window.size() > 3) window.remove(0);
         windowState.update(window);
 
         if (window.size() == 3) {
-            Map<String, Object> q2_top5_outliers = analyzeOutliers(window, batch);
-            batch.q2_top5_outliers = q2_top5_outliers;
+            batch.q2_top5_outliers = analyzeOutliers(window, batch);
         }
+
         out.collect(batch);
     }
 
-//    private Map<String, Object> analyzeOutliers(List<int[][]> window) {
-//        int height = window.get(0).length;
-//        int width = window.get(0)[0].length;
-//
-//        float[][][] padded = new float[3][height + 2 * MAX_DIST][width + 2 * MAX_DIST];
-//        for (int z = 0; z < 3; z++) {
-//            for (int y = 0; y < height; y++) {
-//                for (int x = 0; x < width; x++) {
-//                    padded[z][y + MAX_DIST][x + MAX_DIST] = window.get(z)[y][x];
-//                }
-//            }
-//        }
-//
-//        List<Outlier> candidates = new ArrayList<>();
-//
-//        for (int y = 0; y < height; y++) {
-//            for (int x = 0; x < width; x++) {
-//                float val = padded[2][y + MAX_DIST][x + MAX_DIST];
-//                if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
-//
-//                List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
-//
-//                List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
-//
-//                if (internal.isEmpty() || external.isEmpty()) continue;
-//
-//                float dev = Math.abs(mean(internal) - mean(external));
-//                if (dev > OUTLIER_THRESHOLD) {
-//                    candidates.add(new Outlier(x, y, dev));
-//                }
-//            }
-//        }
-//
-//        candidates.sort(Comparator.comparingDouble(o -> -o.delta));
-//        Map<String, Object> result = new HashMap<>();
-//        for (int i = 0; i < Math.min(5, candidates.size()); i++) {
-//            Outlier o = candidates.get(i);
-//            result.put("P" + (i + 1), Arrays.asList(o.x, o.y));  // <-- questa è mutabile
-//            result.put("δP" + (i + 1), o.delta);                // float è già OK
-//        }
-//
-//        return result;
-//    }
+    private Map<String, Object> analyzeOutliers(List<int[][]> window, Batch batch) {
+        int height = window.get(0).length;
+        int width = window.get(0)[0].length;
+        int depth = window.size();
 
+        List<Outlier> candidates = new ArrayList<>();
+        List<List<Number>> allOutliers = new ArrayList<>();
 
-private Map<String, Object> analyzeOutliers(List<int[][]> window, Batch batch) {
-    int height = window.get(0).length;
-    int width = window.get(0)[0].length;
-
-    float[][][] padded = new float[3][height + 2 * MAX_DIST][width + 2 * MAX_DIST];
-    for (int z = 0; z < 3; z++) {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                padded[z][y + MAX_DIST][x + MAX_DIST] = window.get(z)[y][x];
-            }
-        }
-    }
+                // Check on the current pixel (last layer)
+                int val = window.get(depth - 1)[y][x];
+                if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
 
-    List<Outlier> candidates = new ArrayList<>();
-    List<List<Number>> allOutliers = new ArrayList<>();
+                // Compute Close Neighbors (CN) - distance <= DISTANCE_THRESHOLD
+                double cnSum = 0.0;
+                int cnCount = 0;
 
-    for (int y = 0; y < height; y++) {
-        for (int x = 0; x < width; x++) {
-            float val = padded[2][y + MAX_DIST][x + MAX_DIST];
-            if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
+                for (int d = 0; d < depth; d++) {
+                    for (int dy = -DISTANCE_THRESHOLD * 2; dy <= DISTANCE_THRESHOLD * 2; dy++) {
+                        for (int dx = -DISTANCE_THRESHOLD * 2; dx <= DISTANCE_THRESHOLD * 2; dx++) {
+                            // Compute distance as abs(dx) + abs(dy) + abs(depth - 1 - d)
+                            int distance = Math.abs(dx) + Math.abs(dy) + Math.abs(depth - 1 - d);
 
-            List<Float> internal = getInternal(INTERNAL_OFFSETS, padded, y, x);
-            List<Float> external = getInternal(EXTERNAL_OFFSETS, padded, y, x);
-
-            if (internal.isEmpty() || external.isEmpty()) continue;
-
-            float dev = Math.abs(mean(internal) - mean(external));
-            if (dev > OUTLIER_THRESHOLD) {
-                candidates.add(new Outlier(x, y, dev));
-                allOutliers.add(Arrays.asList(x, y));
-            }
-        }
-    }
-
-    // save all outliers 
-    batch.q2_all_outliers = allOutliers;
-
-    // top-5 per query2
-    candidates.sort(Comparator.comparingDouble(o -> -o.delta));
-    Map<String, Object> result = new HashMap<>();
-    for (int i = 0; i < Math.min(5, candidates.size()); i++) {
-        Outlier o = candidates.get(i);
-        result.put("P" + (i + 1), Arrays.asList(o.x, o.y));
-        result.put("δP" + (i + 1), o.delta);
-    }
-
-    return result;
-}
-
-    private static List<Float> getInternal(List<int[]> internalOffsets, float[][][] padded, int y, int x) {
-        List<Float> internal = new ArrayList<>();
-        for (int[] off : internalOffsets) {
-            int dz = off[0], dx = off[1], dy = off[2];
-            float v = padded[dz][y + dy + MAX_DIST][x + dx + MAX_DIST];
-            if (v > EMPTY_THRESHOLD && v < SATURATION_THRESHOLD) internal.add(v);
-        }
-        return internal;
-    }
-
-    private static float mean(List<Float> values) {
-        float sum = 0;
-        for (float v : values) sum += v;
-        return sum / values.size();
-    }
-
-    private static List<int[]> computeOffsets(int maxDist) {
-        List<int[]> offsets = new ArrayList<>();
-        for (int dz = 0; dz < 3; dz++) {
-            for (int dx = -MAX_DIST; dx <= MAX_DIST; dx++) {
-                for (int dy = -MAX_DIST; dy <= MAX_DIST; dy++) {
-                    int dist = Math.abs(dx) + Math.abs(dy) + Math.abs(2 - dz);
-                    if (maxDist == 2 && dist <= 2 && dist >= 1) {
-                        offsets.add(new int[]{dz, dx, dy});
-                    } else if (maxDist == 4 && dist > 2 && dist <= MAX_DIST) {
-                        offsets.add(new int[]{dz, dx, dy});
+                            if (distance <= DISTANCE_THRESHOLD) {
+                                cnSum += getPaddedValue(window, d, x + dx, y + dy);
+                                cnCount++;
+                            }
+                        }
                     }
+                }
+
+                // Compute Outer Neighbors (ON) - distance > DISTANCE_THRESHOLD && <= 2*DISTANCE_THRESHOLD
+                double onSum = 0.0;
+                int onCount = 0;
+
+                for (int d = 0; d < depth; d++) {
+                    for (int dy = -DISTANCE_THRESHOLD * 2; dy <= DISTANCE_THRESHOLD * 2; dy++) {
+                        for (int dx = -DISTANCE_THRESHOLD * 2; dx <= DISTANCE_THRESHOLD * 2; dx++) {
+                            int distance = Math.abs(dx) + Math.abs(dy) + Math.abs(depth - 1 - d);
+
+                            if (distance > DISTANCE_THRESHOLD && distance <= 2 * DISTANCE_THRESHOLD) {
+                                onSum += getPaddedValue(window, d, x + dx, y + dy);
+                                onCount++;
+                            }
+                        }
+                    }
+                }
+
+                double closeMean = cnCount > 0 ? cnSum / cnCount : 0.0;
+                double outerMean = onCount > 0 ? onSum / onCount : 0.0;
+                double dev = Math.abs(closeMean - outerMean);
+
+
+                if (val > EMPTY_THRESHOLD && val < SATURATION_THRESHOLD && dev > OUTLIER_THRESHOLD) {
+                    candidates.add(new Outlier(x, y, dev));
+                    allOutliers.add(Arrays.asList(x, y));
                 }
             }
         }
-        return offsets;
+
+        batch.q2_all_outliers = allOutliers;
+
+        candidates.sort(Comparator.comparingDouble(o -> -o.delta));
+
+        Map<String, Object> result = new LinkedHashMap<>();
+        for (int i = 0; i < Math.min(5, candidates.size()); i++) {
+            Outlier o = candidates.get(i);
+            result.put("P" + (i + 1), Arrays.asList(o.x, o.y));
+            result.put("δP" + (i + 1), Math.round(o.delta));
+        }
+
+        return result;
+    }
+
+    /**
+     * Obtain value with zero-padding
+     */
+    private double getPaddedValue(List<int[][]> window, int d, int x, int y) {
+        // Check temporal bounds
+        if (d < 0 || d >= window.size()) {
+            return 0.0;
+        }
+
+        int[][] img = window.get(d);
+
+        // Check bounds spatial
+        if (x < 0 || x >= img[0].length || y < 0 || y >= img.length) {
+            return 0.0;
+        }
+
+
+        return (double) img[y][x];
     }
 
     private static class Outlier {
         int x, y;
-        float delta;
+        double delta;
 
-        Outlier(int x, int y, float delta) {
+        Outlier(int x, int y, double delta) {
             this.x = x;
             this.y = y;
             this.delta = delta;
