@@ -29,8 +29,8 @@ public class Batch {
         b.print_id = (String) map.get("print_id");
         b.tif = (byte[]) map.get("tif");
 
-        b.timestamp = java.time.Instant.now().toString(); // ⬅️ timestamp corrente
-        b.ingestion_time = System.currentTimeMillis();     // ⬅️ salva istante ricezione
+        b.timestamp = java.time.Instant.now().toString();   // timestamp
+        b.ingestion_time = System.currentTimeMillis();      // save instant reception
         return b;
     }
 
@@ -54,7 +54,7 @@ public class Batch {
 
             reader.dispose();
         } catch (Exception e) {
-            throw new RuntimeException("Errore nella decodifica TIFF", e);
+            throw new RuntimeException("TIFF decoding error.", e);
         }
     }
 

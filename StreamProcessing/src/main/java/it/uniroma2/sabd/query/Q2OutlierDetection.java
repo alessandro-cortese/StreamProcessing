@@ -95,6 +95,8 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
 //
 //        return result;
 //    }
+
+
 private Map<String, Object> analyzeOutliers(List<int[][]> window, Batch batch) {
     int height = window.get(0).length;
     int width = window.get(0)[0].length;

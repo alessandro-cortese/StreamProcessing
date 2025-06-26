@@ -1,7 +1,5 @@
 package it.uniroma2.sabd.engineering;
 
-
-import it.uniroma2.sabd.engineering.ChallengerSource;
 import it.uniroma2.sabd.model.Batch;
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 

@@ -21,27 +21,9 @@ services:
       - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
     command: jobmanager
 
-  ## FLINK - TASKMANAGER 1
-  flink-taskmanager-1:
+  ## FLINK - TASKMANAGER
+  flink-taskmanager:
     build: ./flink/
-    container_name: flink-taskmanager-1
-    networks:
-      - stream_processing_network
-    tty: true
-    volumes:
-      - ../src:/opt/flink/src
-      - ../Results:/Results
-      - ../target:/opt/flink/usrlib
-    environment:
-      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-    command: taskmanager
-    depends_on:
-      - flink-jobmanager
-
-  ## FLINK - TASKMANAGER 2
-  flink-taskmanager-2:
-    build: ./flink/
-    container_name: flink-taskmanager-2
     networks:
       - stream_processing_network
     tty: true

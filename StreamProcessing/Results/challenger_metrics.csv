@@ -1,0 +1,2 @@
+parallelism,bench_id,throughput,latency_mean,latency_max
+1,01JYP83KX12ATSVGX4DJEC1QVA,108.30,5ms469µs728ns,55ms976µs638ns

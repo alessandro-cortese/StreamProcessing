@@ -19,6 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -45,24 +46,29 @@ public class ChallengerSource implements SourceFunction<Batch> {
             // start bench
             benchId = createAndStartBench(http);
             BENCH_ID = benchId;
-            System.out.println(">>> Bench creato: " + benchId);
+            LOG.info("Created Bench: " + benchId);
+            try (PrintWriter out = new PrintWriter("/Results/current_bench_id.txt")) {
+                out.println(benchId);
+            } catch (IOException e) {
+                LOG.info("Impossible write bench ID on file: " + e.getMessage());
+            }
+
         } catch (Exception e) {
-            System.err.println(">>> Errore nella sorgente: " + e.getMessage());
+            LOG.info("Error in source: " + e.getMessage());
             e.printStackTrace();
             return;
         }
 
         int received = 0;
-
         while (running) {
             byte[] blob = fetchNextBatch(http, benchId);
             if (blob == null) break;
 
             Map<String, Object> record = unpack(blob);
-            System.out.println(">>> Record ricevuto: " + record);
-            System.out.printf(">>> tif.length = %d%n", ((byte[]) record.get("tif")).length);
+            System.out.println("Record received: " + record);
+            System.out.printf("tif.length = %d%n", ((byte[]) record.get("tif")).length);
             if (!record.containsKey("tif") || record.get("tif") == null || ((byte[]) record.get("tif")).length == 0) {
-                System.err.println(">>> Batch ignorato: TIFF mancante o vuoto.");
+                System.err.println("Batch ignored: TIFF missing or empty.");
                 continue;
             }
             Batch batch = Batch.fromMap(record);
@@ -72,13 +78,13 @@ public class ChallengerSource implements SourceFunction<Batch> {
 
         if (received > 0) {
             try {
-                System.out.println(">>> Bench finalizato: " + benchId);
+                System.out.println("Bench finalized: " + benchId);
                 endBench(http, benchId);
             } catch (Exception e) {
-                System.err.println("Errore chiamando /api/end: " + e.getMessage());
+                System.err.println("Error in /api/end: " + e.getMessage());
             }
         } else {
-            System.err.println("Nessun batch ricevuto. Salto chiamata /api/end");
+            System.err.println("No batch received. Skip Call /api/end");
         }
     }
 
@@ -88,7 +94,7 @@ public class ChallengerSource implements SourceFunction<Batch> {
     }
 
     private String createAndStartBench(CloseableHttpClient http) throws IOException {
-        System.out.println(">>> createAndStartBench() INVOCATO");
+        System.out.println("Invoked createAndStartBench()");
         HttpPost create = new HttpPost(API_URL + "/api/create");
         create.setHeader("Content-Type", "application/json");
 
@@ -162,18 +168,24 @@ public class ChallengerSource implements SourceFunction<Batch> {
             resultMap.put("saturated", batch.saturated);
             resultMap.put("centroids", batch.q3_clusters);
 
-            byte[] payload = mapper.writeValueAsBytes(resultMap);
-
-            HttpPost post = new HttpPost(url);
-            post.setHeader("Content-Type", "application/msgpack");
-            post.setEntity(new ByteArrayEntity(payload, ContentType.create("application/msgpack")));
-
-            String response = httpClient.execute(post, response1 ->
-                    new String(response1.getEntity().getContent().readAllBytes())
-            );
-            LOG.debug("Uploaded result for tile_id={}, response={}", batch.tile_id, response);
+            writeResults(true, batch, httpClient, url, mapper, resultMap);
         } catch (Exception e) {
             LOG.error("Failed to upload result for tile_id={}: {}", batch.tile_id, e.getMessage(), e);
+        }
+    }
+
+    private static void writeResults(Boolean flag, Batch batch, CloseableHttpClient httpClient, String url, ObjectMapper mapper, Map<String, Object> resultMap) throws IOException {
+        byte[] payload = mapper.writeValueAsBytes(resultMap);
+
+        HttpPost post = new HttpPost(url);
+        post.setHeader("Content-Type", "application/msgpack");
+        post.setEntity(new ByteArrayEntity(payload, ContentType.create("application/msgpack")));
+
+        String response = httpClient.execute(post, response1 ->
+                new String(response1.getEntity().getContent().readAllBytes())
+        );
+        if(flag){
+            LOG.debug("Uploaded result for tile_id={}, response={}", batch.tile_id, response);
         }
     }
 
@@ -190,20 +202,21 @@ public class ChallengerSource implements SourceFunction<Batch> {
             resultMap.put("saturated", 0); // Dummy value per Q0
             resultMap.put("centroids", new ArrayList<>()); // Nessun cluster per Q0
 
-            byte[] payload = mapper.writeValueAsBytes(resultMap);
-
-            HttpPost post = new HttpPost(url);
-            post.setHeader("Content-Type", "application/msgpack");
-            post.setEntity(new ByteArrayEntity(payload, ContentType.create("application/msgpack")));
-
-            String response = httpClient.execute(post, response1 ->
-                    new String(response1.getEntity().getContent().readAllBytes())
-            );
+            writeResults(false, batch, httpClient, url, mapper, resultMap);
             LOG.info("Q0: Result uploaded for batch_id={}, tile_id={}", batch.batch_id, batch.tile_id);
         } catch (Exception e) {
             LOG.error("Q0: Failed to upload result for batch_id={}: {}", batch.batch_id, e.getMessage(), e);
         }
     }
+    public static String waitForBenchId() {
+        int retry = 0;
+        while (BENCH_ID == null && retry < 100) { // max 10 secondi
+            try {
+                Thread.sleep(100);
+                retry++;
+            } catch (InterruptedException ignored) {}
+        }
+        return BENCH_ID;
+    }
 
 }
-
