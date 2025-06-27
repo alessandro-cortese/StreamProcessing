@@ -1,4 +1,5 @@
 #!/bin/bash
+
 docker image load -i gc25cdocker.tar
 docker run -d -p 8866:8866 \
   --network stream_processing_network \

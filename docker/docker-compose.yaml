@@ -1,38 +1,45 @@
 networks:
   stream_processing_network:
     driver: bridge
-    name: stream_processing_network
 
 services:
-  ## FLINK - JOBMANAGER
-  flink-jobmanager:
-    build: ./flink/
-    container_name: flink-jobmanager
-    networks:
-      - stream_processing_network
-    tty: true
-    volumes:
-      - ../src:/opt/flink/src
-      - ../Results:/Results
-      - ../target:/opt/flink/usrlib
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.3.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
     ports:
-      - "8081:8081"
-    environment:
-      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-    command: jobmanager
-
-  ## FLINK - TASKMANAGER
-  flink-taskmanager:
-    build: ./flink/
+      - "2181:2181"
     networks:
       - stream_processing_network
-    tty: true
-    volumes:
-      - ../src:/opt/flink/src
-      - ../Results:/Results
-      - ../target:/opt/flink/usrlib
-    environment:
-      - JOB_MANAGER_RPC_ADDRESS=flink-jobmanager
-    command: taskmanager
+    #command: ["bin/zookeeper-server-start.sh", "config/zookeeper.properties"]
+
+  kafka:
+    image: confluentinc/cp-kafka:7.3.0
+    container_name: kafka
     depends_on:
-      - flink-jobmanager
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - stream_processing_network
+    # command: ["bin/kafka-server-start.sh", "config/server.properties", "bin/kafka-topics.sh", "--create", "--topic", "challenger-batches", "--bootstrap-server", "localhost:9092", "--partitions 1", "--replication-factor", "1"]
+
+  kafka-streams-app:
+    build: ./kafka-streams-app
+    container_name: kafka-streams-app
+    depends_on:
+      - kafka
+    networks:
+      - stream_processing_network
+    volumes:
+      - ../Results:/Results
+      - ../target:/app
+    # command: ["java", "-jar", "/app/kafka-streams-job.jar"]

@@ -1,7 +1,0 @@
-apache-flink==1.18.1
-scikit-learn
-numpy
-requests
-Pillow
-msgpack
-tifffile
