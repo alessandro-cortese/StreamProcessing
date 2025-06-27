@@ -16,9 +16,10 @@ public class ChallengerMetricsFetcher {
 
     private static final String HISTORY_URL = "http://gc25-challenger:8866/api/history";
     private static final String OUTPUT_FILE = "/Results/challenger_metrics.csv";
+    private static final String OUTPUT_FILE_KAFKA_COMPARISON = "/Results/challenger_metrics_kafka_streams_comparison.csv";
     private static final String ERROR_LOG = "/Results/errors.log";
 
-    public static void fetchAndSaveLatestMetrics(int parallelismLevel, String benchId) {
+    public static void fetchAndSaveLatestMetrics(int parallelismLevel, String benchId, boolean kafka_comparison) {
         try {
             System.out.println("Requesting Challenger metrics from: " + HISTORY_URL);
 
@@ -57,7 +58,12 @@ public class ChallengerMetricsFetcher {
                 return;
             }
 
-            File file = new File(OUTPUT_FILE);
+            File file;
+            if(kafka_comparison)
+                 file = new File(OUTPUT_FILE_KAFKA_COMPARISON);
+            else
+                file = new File(OUTPUT_FILE);
+
             boolean isNew = !file.exists() || file.length() == 0;
 
             try (FileWriter writer = new FileWriter(file, true)) {

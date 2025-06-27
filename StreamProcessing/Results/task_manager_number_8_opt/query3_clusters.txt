@@ -1,0 +1,4654 @@
+batch_id: 1, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 7, print_id: SI266220200309225433, tile_id: 7
+
+
+batch_id: 14, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 0, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 9, print_id: SI266220200309225433, tile_id: 9
+
+
+batch_id: 10, print_id: SI266220200309225433, tile_id: 10
+
+
+batch_id: 5, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 15, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 3, print_id: SI266220200309225433, tile_id: 3
+
+
+batch_id: 23, print_id: SI266220200309225433, tile_id: 7
+
+
+batch_id: 6, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 2, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 12, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 17, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 19, print_id: SI266220200309225433, tile_id: 3
+
+
+batch_id: 4, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 20, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 8, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 11, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 18, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 21, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 13, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 25, print_id: SI266220200309225433, tile_id: 9
+
+
+batch_id: 22, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 33, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 28, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 31, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 29, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 27, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 35, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 339.333, "y": 105.333, "count": 3}
+Cluster: {"x": 498.264, "y": 129.253, "count": 87}
+Cluster: {"x": 363.063, "y": 97.500, "count": 16}
+Cluster: {"x": 446.400, "y": 98.800, "count": 10}
+Cluster: {"x": 315.333, "y": 113.111, "count": 9}
+Cluster: {"x": 287.875, "y": 127.313, "count": 32}
+Cluster: {"x": 383.421, "y": 158.070, "count": 57}
+Cluster: {"x": 446.053, "y": 153.053, "count": 19}
+Cluster: {"x": 336.714, "y": 155.429, "count": 7}
+Cluster: {"x": 456.526, "y": 184.263, "count": 19}
+
+
+batch_id: 26, print_id: SI266220200309225433, tile_id: 10
+
+
+batch_id: 24, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 16, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 30, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 37, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 43, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 38, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 44, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 41, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 75.286, "y": 474.000, "count": 7}
+Cluster: {"x": 109.400, "y": 462.400, "count": 5}
+Cluster: {"x": 163.294, "y": 498.118, "count": 34}
+
+
+batch_id: 46, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 36, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 396.382, "y": 346.408, "count": 414}
+Cluster: {"x": 216.000, "y": 315.000, "count": 6}
+Cluster: {"x": 184.000, "y": 331.889, "count": 9}
+Cluster: {"x": 263.000, "y": 348.301, "count": 153}
+Cluster: {"x": 215.727, "y": 351.364, "count": 11}
+
+
+batch_id: 52, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 42, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 158.258, "y": 9.742, "count": 159}
+
+
+batch_id: 39, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 240.273, "y": 106.364, "count": 11}
+Cluster: {"x": 5.836, "y": 99.364, "count": 55}
+Cluster: {"x": 207.875, "y": 113.875, "count": 8}
+Cluster: {"x": 183.429, "y": 128.429, "count": 14}
+Cluster: {"x": 0.750, "y": 163.278, "count": 36}
+Cluster: {"x": 40.269, "y": 154.231, "count": 52}
+Cluster: {"x": 439.545, "y": 180.727, "count": 11}
+
+
+batch_id: 60, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 32, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 51, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 405.667, "y": 146.000, "count": 3}
+Cluster: {"x": 345.803, "y": 149.658, "count": 310}
+Cluster: {"x": 498.286, "y": 96.381, "count": 21}
+Cluster: {"x": 450.432, "y": 105.703, "count": 37}
+Cluster: {"x": 343.500, "y": 101.250, "count": 12}
+Cluster: {"x": 497.554, "y": 173.046, "count": 65}
+Cluster: {"x": 454.818, "y": 182.364, "count": 11}
+
+
+batch_id: 49, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 59, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 34, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 47, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 54, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 428.045, "y": 1.000, "count": 22}
+Cluster: {"x": 30.500, "y": 1.000, "count": 2}
+Cluster: {"x": 21.162, "y": 173.262, "count": 290}
+
+
+batch_id: 57, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 497.750, "y": 479.250, "count": 4}
+Cluster: {"x": 152.364, "y": 445.909, "count": 11}
+Cluster: {"x": 128.365, "y": 493.019, "count": 425}
+Cluster: {"x": 54.706, "y": 485.647, "count": 17}
+Cluster: {"x": 296.820, "y": 498.343, "count": 172}
+
+
+batch_id: 67, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 408.333, "y": 171.167, "count": 6}
+Cluster: {"x": 498.406, "y": 98.656, "count": 32}
+Cluster: {"x": 385.500, "y": 93.800, "count": 10}
+Cluster: {"x": 350.706, "y": 101.118, "count": 17}
+Cluster: {"x": 447.860, "y": 120.349, "count": 43}
+Cluster: {"x": 315.500, "y": 113.000, "count": 6}
+Cluster: {"x": 302.235, "y": 142.255, "count": 51}
+Cluster: {"x": 475.698, "y": 141.755, "count": 53}
+Cluster: {"x": 339.100, "y": 156.100, "count": 10}
+Cluster: {"x": 451.857, "y": 184.571, "count": 7}
+
+
+batch_id: 55, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 187.000, "y": 118.000, "count": 1}
+Cluster: {"x": 0.727, "y": 96.364, "count": 22}
+Cluster: {"x": 396.291, "y": 117.805, "count": 313}
+Cluster: {"x": 25.377, "y": 164.884, "count": 138}
+
+
+batch_id: 48, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 53, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 318.600, "y": 419.800, "count": 5}
+Cluster: {"x": 350.000, "y": 234.000, "count": 7}
+Cluster: {"x": 406.565, "y": 239.478, "count": 23}
+Cluster: {"x": 433.195, "y": 242.512, "count": 41}
+Cluster: {"x": 419.852, "y": 283.316, "count": 250}
+Cluster: {"x": 350.000, "y": 286.286, "count": 7}
+Cluster: {"x": 402.463, "y": 462.195, "count": 853}
+Cluster: {"x": 432.000, "y": 498.000, "count": 19}
+
+
+batch_id: 45, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 65, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 40, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 76, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 91.000, "y": 355.200, "count": 5}
+
+
+batch_id: 63, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 62, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 58, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 138.336, "y": 4.199, "count": 327}
+Cluster: {"x": 294.661, "y": 0.627, "count": 177}
+Cluster: {"x": 497.000, "y": 0.857, "count": 7}
+
+
+batch_id: 68, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 73, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 79.143, "y": 470.571, "count": 7}
+Cluster: {"x": 248.700, "y": 493.200, "count": 10}
+Cluster: {"x": 252.267, "y": 498.133, "count": 15}
+Cluster: {"x": 106.000, "y": 498.222, "count": 9}
+
+
+batch_id: 75, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 81, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 50, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 325.500, "y": 199.000, "count": 2}
+Cluster: {"x": 477.482, "y": 173.799, "count": 299}
+Cluster: {"x": 320.714, "y": 178.000, "count": 7}
+Cluster: {"x": 377.200, "y": 198.500, "count": 10}
+
+
+batch_id: 71, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 0.667, "y": 184.667, "count": 3}
+Cluster: {"x": 0.667, "y": 100.692, "count": 39}
+Cluster: {"x": 438.185, "y": 93.852, "count": 27}
+Cluster: {"x": 35.061, "y": 95.184, "count": 49}
+Cluster: {"x": 350.583, "y": 181.000, "count": 12}
+
+
+batch_id: 64, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 74, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 340.500, "y": 1.000, "count": 2}
+Cluster: {"x": 123.222, "y": 1.111, "count": 18}
+Cluster: {"x": 251.128, "y": 20.106, "count": 47}
+Cluster: {"x": 497.000, "y": 1.000, "count": 8}
+
+
+batch_id: 79, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 70, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 0.750, "y": 164.500, "count": 8}
+Cluster: {"x": 350.500, "y": 465.000, "count": 10}
+
+
+batch_id: 92, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 87, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 252.000, "y": 105.143, "count": 7}
+Cluster: {"x": 0.556, "y": 94.778, "count": 9}
+Cluster: {"x": 14.280, "y": 177.100, "count": 100}
+
+
+batch_id: 83, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 356.114, "y": 98.727, "count": 44}
+Cluster: {"x": 498.455, "y": 95.273, "count": 11}
+Cluster: {"x": 447.077, "y": 112.154, "count": 65}
+Cluster: {"x": 289.857, "y": 127.554, "count": 56}
+Cluster: {"x": 389.500, "y": 124.000, "count": 6}
+Cluster: {"x": 498.095, "y": 171.143, "count": 42}
+Cluster: {"x": 361.834, "y": 163.910, "count": 199}
+
+
+batch_id: 69, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 84, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 89, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 177.182, "y": 483.091, "count": 11}
+Cluster: {"x": 253.400, "y": 447.800, "count": 25}
+Cluster: {"x": 77.455, "y": 482.727, "count": 11}
+Cluster: {"x": 164.273, "y": 486.000, "count": 11}
+
+
+batch_id: 61, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 1.000, "y": 479.500, "count": 2}
+Cluster: {"x": 40.500, "y": 455.313, "count": 16}
+
+
+batch_id: 91, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 97, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 56, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 66, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 95, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 78, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 13.143, "y": 1.000, "count": 7}
+
+
+batch_id: 82, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 468.136, "y": 169.045, "count": 22}
+
+
+batch_id: 72, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 90, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 340.333, "y": 35.333, "count": 6}
+Cluster: {"x": 228.333, "y": 4.333, "count": 6}
+
+
+batch_id: 77, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 1.000, "y": 498.000, "count": 5}
+
+
+batch_id: 86, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 352.231, "y": 379.385, "count": 13}
+
+
+batch_id: 99, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 470.265, "y": 141.387, "count": 313}
+Cluster: {"x": 353.442, "y": 134.487, "count": 308}
+
+
+batch_id: 103, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 28.021, "y": 152.737, "count": 194}
+Cluster: {"x": 270.611, "y": 95.000, "count": 18}
+Cluster: {"x": 1.184, "y": 141.000, "count": 38}
+
+
+batch_id: 94, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 100, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 88, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 80, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 85, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 426.278, "y": 462.794, "count": 126}
+Cluster: {"x": 357.714, "y": 465.700, "count": 70}
+
+
+batch_id: 105, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 294.500, "y": 498.000, "count": 4}
+Cluster: {"x": 156.532, "y": 449.890, "count": 109}
+Cluster: {"x": 327.594, "y": 447.115, "count": 96}
+Cluster: {"x": 146.490, "y": 498.143, "count": 49}
+
+
+batch_id: 93, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 101, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 98, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 381.246, "y": 183.928, "count": 69}
+Cluster: {"x": 337.222, "y": 176.056, "count": 54}
+Cluster: {"x": 498.000, "y": 239.700, "count": 10}
+
+
+batch_id: 108, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 238.154, "y": 297.615, "count": 13}
+
+
+batch_id: 111, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 110, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 116, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 119, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 20.651, "y": 158.903, "count": 393}
+
+
+batch_id: 102, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 240.000, "count": 12}
+Cluster: {"x": 437.000, "y": 296.727, "count": 11}
+Cluster: {"x": 273.208, "y": 378.708, "count": 24}
+
+
+batch_id: 107, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 106, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 306.833, "y": 1.000, "count": 6}
+Cluster: {"x": 143.951, "y": 0.951, "count": 41}
+Cluster: {"x": 251.833, "y": 35.833, "count": 6}
+
+
+batch_id: 113, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 109, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 115, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 339.200, "y": 155.400, "count": 5}
+Cluster: {"x": 466.167, "y": 93.333, "count": 6}
+Cluster: {"x": 498.324, "y": 104.853, "count": 34}
+Cluster: {"x": 363.750, "y": 98.000, "count": 8}
+Cluster: {"x": 322.769, "y": 110.538, "count": 13}
+Cluster: {"x": 285.400, "y": 132.133, "count": 30}
+Cluster: {"x": 498.231, "y": 172.077, "count": 26}
+Cluster: {"x": 364.000, "y": 162.714, "count": 7}
+Cluster: {"x": 459.694, "y": 183.278, "count": 36}
+
+
+batch_id: 104, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 114, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.214, "y": 233.000, "count": 28}
+Cluster: {"x": 498.000, "y": 163.000, "count": 3}
+
+
+batch_id: 124, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 96, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 126, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 117, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 121, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 113.000, "y": 498.000, "count": 16}
+Cluster: {"x": 268.333, "y": 493.667, "count": 3}
+
+
+batch_id: 123, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 127, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 122, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 333.000, "y": 1.000, "count": 3}
+Cluster: {"x": 113.444, "y": 1.000, "count": 18}
+
+
+batch_id: 118, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 202.172, "count": 58}
+
+
+batch_id: 112, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 133, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 125, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 129, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 142, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 1.000, "y": 1.714, "count": 7}
+
+
+batch_id: 132, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 435.000, "y": 384.957, "count": 23}
+Cluster: {"x": 276.000, "y": 368.000, "count": 1}
+
+
+batch_id: 135, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 31.000, "y": 128.500, "count": 4}
+Cluster: {"x": 1.026, "y": 118.368, "count": 38}
+Cluster: {"x": 352.286, "y": 95.964, "count": 28}
+Cluster: {"x": 14.896, "y": 177.167, "count": 48}
+Cluster: {"x": 274.149, "y": 165.404, "count": 47}
+Cluster: {"x": 436.269, "y": 182.115, "count": 26}
+
+
+batch_id: 134, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 351.500, "y": 378.000, "count": 2}
+Cluster: {"x": 0.911, "y": 182.684, "count": 79}
+Cluster: {"x": 21.172, "y": 247.931, "count": 58}
+Cluster: {"x": 274.636, "y": 449.909, "count": 11}
+Cluster: {"x": 436.000, "y": 465.714, "count": 7}
+
+
+batch_id: 139, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 138, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 339.000, "y": 1.000, "count": 1}
+Cluster: {"x": 142.339, "y": 7.427, "count": 171}
+Cluster: {"x": 497.727, "y": 1.818, "count": 11}
+Cluster: {"x": 330.305, "y": 33.010, "count": 105}
+
+
+batch_id: 120, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 331.429, "count": 7}
+
+
+batch_id: 128, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 130, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 452.809, "y": 168.643, "count": 115}
+Cluster: {"x": 498.282, "y": 185.936, "count": 78}
+Cluster: {"x": 451.455, "y": 221.182, "count": 11}
+Cluster: {"x": 496.548, "y": 250.000, "count": 31}
+
+
+batch_id: 131, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 340.000, "y": 106.250, "count": 4}
+Cluster: {"x": 498.049, "y": 117.317, "count": 41}
+Cluster: {"x": 449.188, "y": 114.813, "count": 16}
+Cluster: {"x": 364.125, "y": 98.125, "count": 8}
+Cluster: {"x": 298.931, "y": 118.414, "count": 116}
+Cluster: {"x": 382.769, "y": 158.795, "count": 39}
+Cluster: {"x": 447.909, "y": 169.182, "count": 11}
+Cluster: {"x": 497.192, "y": 176.000, "count": 26}
+
+
+batch_id: 146, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 467.000, "count": 1}
+Cluster: {"x": 384.500, "y": 378.500, "count": 6}
+
+
+batch_id: 137, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 497.667, "y": 497.667, "count": 3}
+Cluster: {"x": 252.844, "y": 447.444, "count": 45}
+Cluster: {"x": 109.219, "y": 498.156, "count": 32}
+Cluster: {"x": 155.400, "y": 498.000, "count": 25}
+
+
+batch_id: 140, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 44.143, "y": 343.714, "count": 7}
+Cluster: {"x": 152.000, "y": 298.500, "count": 6}
+Cluster: {"x": 55.067, "y": 369.667, "count": 15}
+Cluster: {"x": 232.978, "y": 385.956, "count": 45}
+
+
+batch_id: 143, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 147, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 362.092, "y": 99.263, "count": 76}
+Cluster: {"x": 463.833, "y": 113.667, "count": 6}
+Cluster: {"x": 497.694, "y": 126.647, "count": 173}
+Cluster: {"x": 283.143, "y": 136.857, "count": 28}
+Cluster: {"x": 321.600, "y": 151.400, "count": 15}
+Cluster: {"x": 450.429, "y": 179.286, "count": 7}
+
+
+batch_id: 148, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 356.089, "y": 385.422, "count": 45}
+
+
+batch_id: 155, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 136, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 151, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 232.000, "y": 138.500, "count": 8}
+Cluster: {"x": 16.465, "y": 123.399, "count": 316}
+Cluster: {"x": 273.417, "y": 94.750, "count": 12}
+Cluster: {"x": 436.714, "y": 94.429, "count": 14}
+Cluster: {"x": 432.833, "y": 125.833, "count": 6}
+Cluster: {"x": 165.143, "y": 133.143, "count": 21}
+Cluster: {"x": 353.224, "y": 179.896, "count": 67}
+
+
+batch_id: 154, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 219.000, "count": 1}
+Cluster: {"x": 120.222, "y": 1.000, "count": 81}
+Cluster: {"x": 268.121, "y": 20.547, "count": 232}
+Cluster: {"x": 497.438, "y": 1.875, "count": 16}
+
+
+batch_id: 145, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 141, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 150, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 467.000, "count": 1}
+Cluster: {"x": 276.063, "y": 378.375, "count": 16}
+Cluster: {"x": 438.773, "y": 378.591, "count": 22}
+Cluster: {"x": 167.778, "y": 418.556, "count": 9}
+Cluster: {"x": 353.057, "y": 464.400, "count": 35}
+
+
+batch_id: 156, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.063, "y": 339.188, "count": 16}
+Cluster: {"x": 152.591, "y": 385.182, "count": 22}
+
+
+batch_id: 144, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 158, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 101.333, "y": 73.667, "count": 3}
+Cluster: {"x": 1.000, "y": 2.000, "count": 11}
+
+
+batch_id: 164, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 351.750, "y": 303.600, "count": 40}
+
+
+batch_id: 153, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 166.349, "y": 446.860, "count": 43}
+Cluster: {"x": 498.000, "y": 462.833, "count": 6}
+Cluster: {"x": 337.541, "y": 446.892, "count": 37}
+Cluster: {"x": 101.911, "y": 493.703, "count": 101}
+Cluster: {"x": 288.514, "y": 498.083, "count": 72}
+
+
+batch_id: 149, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 157, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 57.250, "y": 498.000, "count": 8}
+
+
+batch_id: 170, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 428.000, "y": 153.625, "count": 8}
+Cluster: {"x": 105.733, "y": 0.800, "count": 15}
+Cluster: {"x": 169.364, "y": 7.455, "count": 11}
+Cluster: {"x": 253.500, "y": 0.857, "count": 14}
+Cluster: {"x": 331.875, "y": 1.000, "count": 8}
+
+
+batch_id: 159, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 162, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 173, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 172, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.846, "y": 319.923, "count": 13}
+Cluster: {"x": 126.333, "y": 309.000, "count": 6}
+
+
+batch_id: 161, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 167, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 145.067, "y": 147.800, "count": 15}
+Cluster: {"x": 4.500, "y": 102.143, "count": 14}
+Cluster: {"x": 351.778, "y": 95.111, "count": 9}
+Cluster: {"x": 174.216, "y": 128.057, "count": 88}
+Cluster: {"x": 40.556, "y": 182.111, "count": 9}
+
+
+batch_id: 163, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 376.929, "y": 138.571, "count": 14}
+Cluster: {"x": 450.595, "y": 101.405, "count": 42}
+Cluster: {"x": 498.500, "y": 94.000, "count": 6}
+Cluster: {"x": 302.178, "y": 121.659, "count": 129}
+Cluster: {"x": 498.000, "y": 144.500, "count": 8}
+
+
+batch_id: 165, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 180, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 152, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 450.667, "y": 337.333, "count": 3}
+Cluster: {"x": 498.000, "y": 317.500, "count": 8}
+Cluster: {"x": 497.833, "y": 354.000, "count": 12}
+
+
+batch_id: 166, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 351.500, "y": 380.500, "count": 8}
+Cluster: {"x": 166.000, "y": 415.000, "count": 7}
+
+
+batch_id: 169, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 170.857, "y": 479.286, "count": 7}
+Cluster: {"x": 251.574, "y": 459.213, "count": 47}
+Cluster: {"x": 104.143, "y": 462.143, "count": 7}
+Cluster: {"x": 68.079, "y": 479.753, "count": 89}
+Cluster: {"x": 253.563, "y": 498.063, "count": 16}
+Cluster: {"x": 168.714, "y": 498.429, "count": 7}
+Cluster: {"x": 317.500, "y": 498.000, "count": 12}
+
+
+batch_id: 171, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 160, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 178, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 230.099, "count": 81}
+Cluster: {"x": 450.895, "y": 213.579, "count": 19}
+Cluster: {"x": 450.500, "y": 245.000, "count": 6}
+
+
+batch_id: 189, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 188, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 175, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 174, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 181, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 187, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 168, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 464.273, "y": 331.455, "count": 11}
+Cluster: {"x": 497.913, "y": 322.435, "count": 23}
+
+
+batch_id: 177, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 186, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.000, "count": 1}
+Cluster: {"x": 146.657, "y": 7.549, "count": 102}
+Cluster: {"x": 307.974, "y": 1.632, "count": 155}
+
+
+batch_id: 182, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 0.985, "y": 231.896, "count": 67}
+Cluster: {"x": 19.000, "y": 215.000, "count": 2}
+
+
+batch_id: 185, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 300.800, "y": 477.200, "count": 5}
+Cluster: {"x": 152.364, "y": 447.091, "count": 11}
+Cluster: {"x": 142.540, "y": 498.222, "count": 63}
+Cluster: {"x": 314.227, "y": 498.273, "count": 88}
+
+
+batch_id: 179, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 292.500, "y": 140.000, "count": 2}
+Cluster: {"x": 366.904, "y": 133.770, "count": 178}
+Cluster: {"x": 491.490, "y": 138.917, "count": 290}
+Cluster: {"x": 321.333, "y": 110.111, "count": 9}
+Cluster: {"x": 296.375, "y": 123.750, "count": 8}
+Cluster: {"x": 450.304, "y": 133.348, "count": 23}
+
+
+batch_id: 176, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 190, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 198, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 350.000, "y": 466.500, "count": 2}
+Cluster: {"x": 0.704, "y": 243.667, "count": 27}
+Cluster: {"x": 436.069, "y": 379.414, "count": 29}
+Cluster: {"x": 273.867, "y": 380.333, "count": 30}
+
+
+batch_id: 196, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 350.333, "y": 386.333, "count": 3}
+Cluster: {"x": 274.111, "y": 301.000, "count": 18}
+Cluster: {"x": 436.333, "y": 301.333, "count": 9}
+
+
+batch_id: 197, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 184, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 202, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 300.400, "y": 0.800, "count": 5}
+Cluster: {"x": 113.818, "y": 0.727, "count": 33}
+Cluster: {"x": 164.500, "y": 1.000, "count": 6}
+Cluster: {"x": 336.000, "y": 1.000, "count": 9}
+Cluster: {"x": 251.683, "y": 32.463, "count": 41}
+
+
+batch_id: 194, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.179, "y": 241.679, "count": 28}
+
+
+batch_id: 195, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 340.500, "y": 155.000, "count": 2}
+Cluster: {"x": 382.143, "y": 108.310, "count": 42}
+Cluster: {"x": 484.227, "y": 156.805, "count": 185}
+Cluster: {"x": 316.000, "y": 114.000, "count": 7}
+Cluster: {"x": 281.750, "y": 129.750, "count": 20}
+
+
+batch_id: 205, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 213, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 204, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 58.400, "y": 299.933, "count": 15}
+Cluster: {"x": 237.929, "y": 300.143, "count": 14}
+Cluster: {"x": 150.357, "y": 386.429, "count": 14}
+
+
+batch_id: 193, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 206, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 212, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 274.833, "y": 365.167, "count": 6}
+Cluster: {"x": 168.000, "y": 333.000, "count": 1}
+Cluster: {"x": 436.086, "y": 383.971, "count": 35}
+
+
+batch_id: 214, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 275.500, "y": 448.500, "count": 18}
+Cluster: {"x": 167.500, "y": 414.500, "count": 4}
+Cluster: {"x": 437.759, "y": 462.862, "count": 29}
+
+
+batch_id: 183, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 193.188, "y": 165.063, "count": 16}
+Cluster: {"x": 6.918, "y": 148.021, "count": 291}
+Cluster: {"x": 262.933, "y": 94.333, "count": 15}
+Cluster: {"x": 352.583, "y": 93.917, "count": 12}
+Cluster: {"x": 40.909, "y": 128.273, "count": 11}
+Cluster: {"x": 439.833, "y": 148.333, "count": 12}
+Cluster: {"x": 273.900, "y": 161.400, "count": 30}
+Cluster: {"x": 350.143, "y": 152.571, "count": 7}
+
+
+batch_id: 203, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 201, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 335.714, "y": 449.792, "count": 77}
+Cluster: {"x": 255.250, "y": 462.500, "count": 12}
+Cluster: {"x": 165.632, "y": 451.461, "count": 76}
+Cluster: {"x": 56.500, "y": 484.000, "count": 12}
+Cluster: {"x": 112.083, "y": 498.208, "count": 24}
+Cluster: {"x": 335.938, "y": 498.438, "count": 16}
+
+
+batch_id: 191, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 210, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 192, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 211, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 403.000, "y": 152.800, "count": 5}
+Cluster: {"x": 372.272, "y": 108.333, "count": 81}
+Cluster: {"x": 449.913, "y": 98.609, "count": 23}
+Cluster: {"x": 486.314, "y": 150.146, "count": 137}
+Cluster: {"x": 283.667, "y": 135.700, "count": 30}
+
+
+batch_id: 219, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 200, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 456.000, "y": 335.000, "count": 6}
+
+
+batch_id: 221, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 220, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 353.500, "count": 4}
+Cluster: {"x": 150.875, "y": 298.875, "count": 8}
+Cluster: {"x": 58.100, "y": 368.200, "count": 10}
+Cluster: {"x": 236.824, "y": 383.941, "count": 34}
+
+
+batch_id: 222, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 218, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 497.667, "y": 1.333, "count": 3}
+Cluster: {"x": 108.125, "y": 0.750, "count": 16}
+Cluster: {"x": 166.591, "y": 6.591, "count": 44}
+Cluster: {"x": 337.714, "y": 0.857, "count": 7}
+Cluster: {"x": 334.591, "y": 30.485, "count": 66}
+
+
+batch_id: 228, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 360.154, "y": 386.154, "count": 13}
+
+
+batch_id: 230, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 353.304, "y": 465.957, "count": 23}
+Cluster: {"x": 1.000, "y": 232.000, "count": 3}
+
+
+batch_id: 209, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 229, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 430.152, "y": 228.522, "count": 46}
+
+
+batch_id: 217, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 203.250, "y": 498.000, "count": 4}
+Cluster: {"x": 252.424, "y": 447.909, "count": 33}
+Cluster: {"x": 58.419, "y": 480.839, "count": 31}
+Cluster: {"x": 166.000, "y": 498.091, "count": 22}
+Cluster: {"x": 338.000, "y": 498.375, "count": 8}
+
+
+batch_id: 226, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 464.667, "y": 250.667, "count": 6}
+
+
+batch_id: 199, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 0.684, "y": 96.421, "count": 19}
+Cluster: {"x": 38.733, "y": 107.600, "count": 45}
+Cluster: {"x": 433.471, "y": 107.176, "count": 17}
+Cluster: {"x": 276.000, "y": 101.500, "count": 10}
+Cluster: {"x": 2.008, "y": 154.545, "count": 121}
+Cluster: {"x": 350.667, "y": 182.500, "count": 6}
+
+
+batch_id: 225, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 227, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 367.800, "y": 143.800, "count": 5}
+Cluster: {"x": 342.233, "y": 104.567, "count": 90}
+Cluster: {"x": 486.965, "y": 138.543, "count": 313}
+Cluster: {"x": 360.379, "y": 163.638, "count": 58}
+
+
+batch_id: 216, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 353.000, "count": 5}
+Cluster: {"x": 450.750, "y": 334.125, "count": 8}
+
+
+batch_id: 208, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 235, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 234, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 497.667, "y": 1.333, "count": 3}
+Cluster: {"x": 140.646, "y": 5.937, "count": 206}
+Cluster: {"x": 288.688, "y": 0.953, "count": 64}
+Cluster: {"x": 284.832, "y": 34.377, "count": 191}
+
+
+batch_id: 242, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 224, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 237, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 178.000, "y": 498.000, "count": 4}
+Cluster: {"x": 197.500, "y": 6.000, "count": 6}
+
+
+batch_id: 246, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 238, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 236, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 45.000, "y": 370.500, "count": 6}
+Cluster: {"x": 114.529, "y": 351.000, "count": 17}
+Cluster: {"x": 156.375, "y": 386.083, "count": 24}
+
+
+batch_id: 233, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 225.333, "y": 457.333, "count": 6}
+Cluster: {"x": 159.564, "y": 445.345, "count": 55}
+Cluster: {"x": 135.718, "y": 486.440, "count": 248}
+Cluster: {"x": 80.125, "y": 470.125, "count": 8}
+Cluster: {"x": 290.845, "y": 498.042, "count": 71}
+
+
+batch_id: 243, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 448.333, "y": 97.905, "count": 21}
+Cluster: {"x": 498.411, "y": 139.670, "count": 197}
+Cluster: {"x": 359.406, "y": 98.594, "count": 32}
+Cluster: {"x": 315.024, "y": 137.387, "count": 124}
+Cluster: {"x": 450.716, "y": 166.527, "count": 74}
+
+
+batch_id: 244, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 275.889, "y": 361.444, "count": 9}
+
+
+batch_id: 207, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 232, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 315.500, "count": 4}
+Cluster: {"x": 159.636, "y": 306.909, "count": 11}
+Cluster: {"x": 497.857, "y": 353.714, "count": 7}
+
+
+batch_id: 245, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 241, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 215, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 207.750, "y": 138.875, "count": 8}
+Cluster: {"x": 18.076, "y": 130.464, "count": 868}
+Cluster: {"x": 415.381, "y": 154.575, "count": 299}
+Cluster: {"x": 168.400, "y": 128.280, "count": 25}
+Cluster: {"x": 274.955, "y": 165.227, "count": 22}
+
+
+batch_id: 253, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 69.000, "y": 353.429, "count": 7}
+
+
+batch_id: 252, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 150.000, "y": 352.500, "count": 2}
+Cluster: {"x": 1.000, "y": 327.919, "count": 37}
+Cluster: {"x": 150.333, "y": 378.083, "count": 12}
+
+
+batch_id: 240, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 254, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 1.200, "y": 80.200, "count": 5}
+
+
+batch_id: 251, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 223, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 250, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 116.024, "y": 1.529, "count": 85}
+Cluster: {"x": 257.181, "y": 15.026, "count": 116}
+Cluster: {"x": 497.571, "y": 1.571, "count": 7}
+
+
+batch_id: 249, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 72.033, "y": 478.189, "count": 90}
+Cluster: {"x": 317.000, "y": 474.500, "count": 6}
+Cluster: {"x": 114.836, "y": 498.295, "count": 61}
+Cluster: {"x": 286.895, "y": 498.018, "count": 57}
+
+
+batch_id: 248, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 466.000, "y": 331.000, "count": 1}
+Cluster: {"x": 497.848, "y": 328.826, "count": 46}
+
+
+batch_id: 231, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 394.250, "y": 118.750, "count": 4}
+Cluster: {"x": 24.463, "y": 95.825, "count": 80}
+Cluster: {"x": 263.714, "y": 102.429, "count": 28}
+Cluster: {"x": 351.000, "y": 94.714, "count": 7}
+Cluster: {"x": 236.000, "y": 102.286, "count": 7}
+Cluster: {"x": 7.819, "y": 143.877, "count": 309}
+Cluster: {"x": 260.333, "y": 167.889, "count": 9}
+Cluster: {"x": 360.161, "y": 183.250, "count": 56}
+Cluster: {"x": 39.286, "y": 183.000, "count": 7}
+
+
+batch_id: 262, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 165.000, "y": 411.000, "count": 1}
+Cluster: {"x": 352.444, "y": 379.333, "count": 9}
+Cluster: {"x": 439.286, "y": 467.571, "count": 7}
+
+
+batch_id: 257, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 259, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 450.840, "y": 107.960, "count": 25}
+Cluster: {"x": 497.518, "y": 138.295, "count": 166}
+Cluster: {"x": 300.627, "y": 119.353, "count": 51}
+Cluster: {"x": 380.853, "y": 159.647, "count": 34}
+Cluster: {"x": 326.000, "y": 151.571, "count": 7}
+
+
+batch_id: 260, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 440.125, "y": 387.125, "count": 8}
+
+
+batch_id: 264, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 470.444, "y": 324.000, "count": 9}
+
+
+batch_id: 256, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 258, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 261, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 239, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 265, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 213.067, "y": 493.733, "count": 15}
+Cluster: {"x": 256.507, "y": 449.030, "count": 67}
+Cluster: {"x": 58.857, "y": 480.071, "count": 28}
+
+
+batch_id: 269, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 268, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 51.500, "y": 361.667, "count": 6}
+
+
+batch_id: 247, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 373.500, "y": 94.000, "count": 2}
+Cluster: {"x": 5.842, "y": 131.996, "count": 240}
+Cluster: {"x": 196.467, "y": 125.935, "count": 107}
+Cluster: {"x": 235.889, "y": 159.667, "count": 9}
+Cluster: {"x": 260.000, "y": 167.286, "count": 7}
+Cluster: {"x": 350.750, "y": 178.167, "count": 36}
+
+
+batch_id: 270, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 272, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 267, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 274, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.154, "y": 241.846, "count": 13}
+Cluster: {"x": 445.125, "y": 287.375, "count": 8}
+
+
+batch_id: 255, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 266, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 426.769, "y": 163.231, "count": 13}
+Cluster: {"x": 104.286, "y": 0.571, "count": 7}
+Cluster: {"x": 166.680, "y": 10.680, "count": 25}
+Cluster: {"x": 263.167, "y": 1.000, "count": 6}
+Cluster: {"x": 339.154, "y": 35.615, "count": 13}
+
+
+batch_id: 273, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 285, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 284, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 151.920, "y": 386.280, "count": 25}
+Cluster: {"x": 237.500, "y": 298.000, "count": 2}
+
+
+batch_id: 277, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 263, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 219.222, "y": 119.222, "count": 9}
+Cluster: {"x": 0.758, "y": 142.558, "count": 165}
+Cluster: {"x": 359.714, "y": 95.440, "count": 84}
+Cluster: {"x": 165.350, "y": 128.350, "count": 20}
+Cluster: {"x": 38.810, "y": 173.738, "count": 42}
+Cluster: {"x": 277.000, "y": 165.778, "count": 9}
+Cluster: {"x": 426.762, "y": 183.381, "count": 21}
+
+
+batch_id: 286, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 278, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 351.000, "y": 467.000, "count": 1}
+Cluster: {"x": 0.750, "y": 246.417, "count": 12}
+Cluster: {"x": 272.273, "y": 379.848, "count": 33}
+Cluster: {"x": 434.639, "y": 379.778, "count": 36}
+
+
+batch_id: 276, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 351.000, "y": 386.000, "count": 1}
+Cluster: {"x": 273.500, "y": 299.500, "count": 14}
+
+
+batch_id: 281, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 259.000, "y": 498.000, "count": 5}
+Cluster: {"x": 161.618, "y": 452.118, "count": 102}
+Cluster: {"x": 331.700, "y": 449.044, "count": 90}
+Cluster: {"x": 163.500, "y": 498.000, "count": 8}
+
+
+batch_id: 283, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 280, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 282, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 158.167, "y": 1.000, "count": 6}
+Cluster: {"x": 309.667, "y": 1.000, "count": 6}
+Cluster: {"x": 259.000, "y": 0.857, "count": 7}
+Cluster: {"x": 252.227, "y": 33.500, "count": 22}
+
+
+batch_id: 290, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 288, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 275, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 316.200, "y": 113.600, "count": 5}
+Cluster: {"x": 498.276, "y": 141.414, "count": 181}
+Cluster: {"x": 376.908, "y": 108.750, "count": 76}
+Cluster: {"x": 285.350, "y": 122.900, "count": 20}
+Cluster: {"x": 455.429, "y": 183.500, "count": 14}
+
+
+batch_id: 289, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 301, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 300, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 60.000, "y": 368.500, "count": 2}
+Cluster: {"x": 1.000, "y": 352.500, "count": 6}
+Cluster: {"x": 238.000, "y": 384.286, "count": 7}
+
+
+batch_id: 271, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 302, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 293, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 292, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 437.667, "y": 383.500, "count": 6}
+
+
+batch_id: 294, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 438.545, "y": 463.727, "count": 11}
+Cluster: {"x": 275.600, "y": 447.200, "count": 5}
+
+
+batch_id: 299, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 304, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 298, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.000, "count": 1}
+Cluster: {"x": 111.205, "y": 0.718, "count": 39}
+Cluster: {"x": 168.077, "y": 8.564, "count": 39}
+Cluster: {"x": 338.220, "y": 17.878, "count": 41}
+
+
+batch_id: 297, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 498.000, "y": 498.000, "count": 1}
+Cluster: {"x": 64.875, "y": 484.813, "count": 16}
+Cluster: {"x": 168.357, "y": 497.857, "count": 14}
+Cluster: {"x": 113.000, "y": 498.400, "count": 35}
+Cluster: {"x": 337.333, "y": 498.222, "count": 9}
+
+
+batch_id: 291, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 329.000, "y": 124.000, "count": 7}
+Cluster: {"x": 370.000, "y": 95.000, "count": 14}
+Cluster: {"x": 481.114, "y": 136.313, "count": 818}
+Cluster: {"x": 366.596, "y": 145.769, "count": 52}
+Cluster: {"x": 281.563, "y": 130.000, "count": 16}
+
+
+batch_id: 279, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 426.000, "y": 135.000, "count": 1}
+Cluster: {"x": 9.472, "y": 131.213, "count": 235}
+Cluster: {"x": 437.421, "y": 95.421, "count": 19}
+Cluster: {"x": 274.512, "y": 96.837, "count": 43}
+Cluster: {"x": 406.333, "y": 125.889, "count": 9}
+
+
+batch_id: 296, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 353.000, "count": 7}
+Cluster: {"x": 498.000, "y": 327.500, "count": 2}
+
+
+batch_id: 310, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.135, "y": 191.441, "count": 111}
+Cluster: {"x": 362.500, "y": 1.000, "count": 2}
+Cluster: {"x": 37.981, "y": 195.019, "count": 52}
+Cluster: {"x": 274.091, "y": 449.727, "count": 11}
+Cluster: {"x": 437.500, "y": 466.000, "count": 8}
+
+
+batch_id: 316, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.818, "y": 354.273, "count": 11}
+Cluster: {"x": 1.000, "y": 317.500, "count": 2}
+Cluster: {"x": 54.000, "y": 370.000, "count": 29}
+Cluster: {"x": 230.000, "y": 386.667, "count": 9}
+
+
+batch_id: 287, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 318, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 309, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 348.600, "y": 279.200, "count": 5}
+Cluster: {"x": 411.875, "y": 21.125, "count": 8}
+Cluster: {"x": 403.274, "y": 264.079, "count": 190}
+Cluster: {"x": 402.321, "y": 302.812, "count": 308}
+Cluster: {"x": 415.667, "y": 465.889, "count": 9}
+
+
+batch_id: 308, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 266.383, "y": 367.496, "count": 115}
+Cluster: {"x": 431.667, "y": 295.333, "count": 3}
+Cluster: {"x": 426.698, "y": 386.217, "count": 106}
+
+
+batch_id: 305, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 312, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.077, "y": 353.538, "count": 13}
+Cluster: {"x": 211.778, "y": 359.556, "count": 9}
+Cluster: {"x": 322.417, "y": 370.333, "count": 24}
+Cluster: {"x": 254.667, "y": 378.333, "count": 12}
+
+
+batch_id: 315, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 314, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.500, "count": 2}
+Cluster: {"x": 140.959, "y": 7.950, "count": 222}
+Cluster: {"x": 311.442, "y": 13.454, "count": 260}
+
+
+batch_id: 306, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 336.000, "y": 177.000, "count": 1}
+Cluster: {"x": 497.877, "y": 190.798, "count": 114}
+Cluster: {"x": 453.875, "y": 178.938, "count": 16}
+
+
+batch_id: 320, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 317, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 313, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 498.000, "y": 498.000, "count": 1}
+Cluster: {"x": 289.673, "y": 483.489, "count": 468}
+Cluster: {"x": 130.988, "y": 498.275, "count": 80}
+
+
+batch_id: 307, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 484.575, "y": 136.997, "count": 386}
+Cluster: {"x": 333.018, "y": 152.092, "count": 163}
+
+
+batch_id: 323, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 335.888, "y": 127.768, "count": 241}
+Cluster: {"x": 483.911, "y": 150.054, "count": 425}
+
+
+batch_id: 326, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 14.275, "y": 171.700, "count": 40}
+Cluster: {"x": 351.000, "y": 1.000, "count": 1}
+Cluster: {"x": 276.846, "y": 378.231, "count": 13}
+Cluster: {"x": 439.500, "y": 379.000, "count": 16}
+Cluster: {"x": 165.333, "y": 415.867, "count": 15}
+Cluster: {"x": 351.719, "y": 461.474, "count": 57}
+
+
+batch_id: 324, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 353.339, "y": 382.323, "count": 62}
+Cluster: {"x": 273.000, "y": 298.250, "count": 4}
+
+
+batch_id: 325, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 328, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 472.000, "y": 347.000, "count": 1}
+Cluster: {"x": 497.727, "y": 335.591, "count": 44}
+
+
+batch_id: 295, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 17.095, "y": 139.929, "count": 1359}
+Cluster: {"x": 380.429, "y": 107.762, "count": 21}
+Cluster: {"x": 428.540, "y": 154.216, "count": 328}
+Cluster: {"x": 266.310, "y": 140.463, "count": 255}
+Cluster: {"x": 165.750, "y": 132.083, "count": 12}
+
+
+batch_id: 330, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 391.000, "count": 6}
+Cluster: {"x": 121.211, "y": 1.891, "count": 128}
+Cluster: {"x": 262.047, "y": 15.847, "count": 236}
+Cluster: {"x": 497.800, "y": 1.700, "count": 10}
+
+
+batch_id: 322, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 181.171, "count": 35}
+
+
+batch_id: 321, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 333, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 61.000, "y": 497.800, "count": 5}
+
+
+batch_id: 332, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.818, "y": 350.091, "count": 22}
+Cluster: {"x": 81.417, "y": 308.500, "count": 12}
+Cluster: {"x": 152.355, "y": 381.871, "count": 31}
+
+
+batch_id: 329, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 338.412, "y": 447.118, "count": 34}
+Cluster: {"x": 318.444, "y": 415.000, "count": 9}
+Cluster: {"x": 165.605, "y": 447.256, "count": 43}
+Cluster: {"x": 103.356, "y": 494.086, "count": 163}
+Cluster: {"x": 276.615, "y": 497.333, "count": 96}
+
+
+batch_id: 334, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 57.250, "y": 261.750, "count": 8}
+Cluster: {"x": 0.833, "y": 1.667, "count": 6}
+
+
+batch_id: 339, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 339.200, "y": 155.400, "count": 5}
+Cluster: {"x": 479.846, "y": 94.872, "count": 39}
+Cluster: {"x": 310.628, "y": 121.345, "count": 145}
+Cluster: {"x": 498.361, "y": 166.967, "count": 61}
+Cluster: {"x": 376.800, "y": 165.800, "count": 15}
+
+
+batch_id: 303, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 340, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 336, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 331, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 311, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 237.400, "y": 136.600, "count": 5}
+Cluster: {"x": 10.167, "y": 148.117, "count": 281}
+Cluster: {"x": 351.833, "y": 97.452, "count": 42}
+Cluster: {"x": 392.750, "y": 94.750, "count": 12}
+Cluster: {"x": 230.500, "y": 133.000, "count": 6}
+Cluster: {"x": 271.054, "y": 166.243, "count": 37}
+Cluster: {"x": 434.750, "y": 183.000, "count": 24}
+
+
+batch_id: 338, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 337, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 342, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 352.256, "y": 381.410, "count": 39}
+Cluster: {"x": 166.588, "y": 414.765, "count": 17}
+
+
+batch_id: 345, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 216.429, "y": 472.286, "count": 7}
+Cluster: {"x": 252.468, "y": 452.532, "count": 47}
+Cluster: {"x": 128.333, "y": 454.083, "count": 12}
+Cluster: {"x": 63.207, "y": 480.759, "count": 58}
+Cluster: {"x": 166.059, "y": 498.059, "count": 17}
+Cluster: {"x": 109.091, "y": 498.364, "count": 11}
+Cluster: {"x": 253.846, "y": 498.308, "count": 13}
+
+
+batch_id: 341, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 319, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 344, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 497.600, "y": 355.200, "count": 5}
+Cluster: {"x": 497.867, "y": 318.733, "count": 15}
+Cluster: {"x": 449.429, "y": 334.714, "count": 7}
+
+
+batch_id: 346, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 418.833, "y": 1.167, "count": 6}
+Cluster: {"x": 106.067, "y": 0.800, "count": 15}
+Cluster: {"x": 166.429, "y": 7.857, "count": 21}
+Cluster: {"x": 253.333, "y": 0.733, "count": 15}
+Cluster: {"x": 340.286, "y": 36.000, "count": 7}
+
+
+batch_id: 327, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 314.500, "y": 119.500, "count": 8}
+Cluster: {"x": 5.284, "y": 132.611, "count": 306}
+Cluster: {"x": 433.692, "y": 104.718, "count": 117}
+Cluster: {"x": 269.566, "y": 97.313, "count": 83}
+Cluster: {"x": 363.646, "y": 165.060, "count": 302}
+Cluster: {"x": 209.679, "y": 145.507, "count": 215}
+Cluster: {"x": 43.429, "y": 176.286, "count": 7}
+
+
+batch_id: 349, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 358, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 0.949, "y": 201.342, "count": 79}
+Cluster: {"x": 7.875, "y": 327.750, "count": 8}
+Cluster: {"x": 39.833, "y": 251.167, "count": 6}
+Cluster: {"x": 270.286, "y": 378.571, "count": 7}
+Cluster: {"x": 435.333, "y": 378.333, "count": 9}
+
+
+batch_id: 348, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.800, "y": 314.400, "count": 5}
+Cluster: {"x": 151.500, "y": 303.000, "count": 10}
+
+
+batch_id: 353, print_id: SI266220200309225433, tile_id: 1
+Cluster: {"x": 497.923, "y": 453.077, "count": 13}
+Cluster: {"x": 482.385, "y": 478.385, "count": 13}
+
+
+batch_id: 350, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 357, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 441.500, "y": 331.000, "count": 2}
+Cluster: {"x": 381.333, "y": 314.083, "count": 12}
+Cluster: {"x": 20.634, "y": 456.122, "count": 41}
+Cluster: {"x": 431.000, "y": 498.000, "count": 6}
+
+
+batch_id: 356, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 361, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 154.615, "y": 478.923, "count": 13}
+Cluster: {"x": 157.267, "y": 448.089, "count": 45}
+Cluster: {"x": 296.000, "y": 445.625, "count": 8}
+Cluster: {"x": 331.167, "y": 446.458, "count": 48}
+Cluster: {"x": 162.714, "y": 498.000, "count": 7}
+Cluster: {"x": 314.848, "y": 498.000, "count": 46}
+
+
+batch_id: 360, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 347, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 352, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 362, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 314.119, "y": 1.000, "count": 42}
+Cluster: {"x": 201.889, "y": 12.556, "count": 9}
+
+
+batch_id: 335, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 355, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 378.444, "y": 139.111, "count": 9}
+Cluster: {"x": 361.312, "y": 125.509, "count": 173}
+Cluster: {"x": 485.569, "y": 105.055, "count": 109}
+Cluster: {"x": 467.750, "y": 181.818, "count": 44}
+
+
+batch_id: 354, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 413.800, "count": 5}
+Cluster: {"x": 498.024, "y": 202.373, "count": 83}
+
+
+batch_id: 369, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 374, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 274.000, "y": 380.000, "count": 1}
+Cluster: {"x": 437.471, "y": 379.765, "count": 17}
+
+
+batch_id: 364, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 343, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 0.857, "y": 95.000, "count": 14}
+Cluster: {"x": 233.182, "y": 104.409, "count": 22}
+Cluster: {"x": 352.600, "y": 97.900, "count": 20}
+Cluster: {"x": 168.673, "y": 128.551, "count": 49}
+Cluster: {"x": 0.621, "y": 168.897, "count": 58}
+Cluster: {"x": 40.857, "y": 176.333, "count": 21}
+
+
+batch_id: 366, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 372, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 438.750, "y": 303.188, "count": 16}
+
+
+batch_id: 365, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 368, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 363, print_id: SI266220200309225433, tile_id: 11
+Cluster: {"x": 268.667, "y": 99.833, "count": 6}
+
+
+batch_id: 377, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 224.385, "y": 494.538, "count": 13}
+Cluster: {"x": 92.000, "y": 253.714, "count": 7}
+Cluster: {"x": 167.000, "y": 450.583, "count": 36}
+Cluster: {"x": 337.877, "y": 453.456, "count": 57}
+Cluster: {"x": 111.333, "y": 498.190, "count": 21}
+
+
+batch_id: 371, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 321.200, "y": 148.200, "count": 5}
+Cluster: {"x": 380.333, "y": 106.111, "count": 27}
+Cluster: {"x": 453.095, "y": 102.857, "count": 21}
+Cluster: {"x": 498.421, "y": 97.789, "count": 19}
+Cluster: {"x": 313.000, "y": 114.869, "count": 61}
+Cluster: {"x": 496.154, "y": 137.231, "count": 13}
+Cluster: {"x": 365.231, "y": 159.231, "count": 13}
+Cluster: {"x": 450.091, "y": 180.409, "count": 22}
+Cluster: {"x": 493.559, "y": 181.735, "count": 34}
+
+
+batch_id: 370, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 380, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 43.571, "y": 346.429, "count": 7}
+Cluster: {"x": 239.182, "y": 301.727, "count": 11}
+
+
+batch_id: 351, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 382, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 373, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 339.200, "y": 37.000, "count": 10}
+
+
+batch_id: 359, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 257.444, "y": 119.667, "count": 9}
+Cluster: {"x": 25.284, "y": 137.871, "count": 232}
+Cluster: {"x": 434.370, "y": 96.593, "count": 27}
+Cluster: {"x": 402.190, "y": 121.143, "count": 21}
+Cluster: {"x": 350.857, "y": 151.357, "count": 14}
+Cluster: {"x": 435.340, "y": 173.106, "count": 47}
+
+
+batch_id: 381, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 379, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 378, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 311.750, "y": 26.250, "count": 4}
+Cluster: {"x": 115.143, "y": 0.857, "count": 28}
+Cluster: {"x": 338.167, "y": 0.833, "count": 6}
+
+
+batch_id: 376, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 338.200, "count": 5}
+
+
+batch_id: 384, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 385, print_id: SI266220200309225433, tile_id: 1
+Cluster: {"x": 274.600, "y": 43.800, "count": 5}
+
+
+batch_id: 386, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 396, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 151.529, "y": 299.941, "count": 17}
+Cluster: {"x": 0.625, "y": 353.375, "count": 8}
+Cluster: {"x": 47.269, "y": 366.782, "count": 78}
+Cluster: {"x": 232.255, "y": 385.196, "count": 51}
+
+
+batch_id: 367, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 398, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 389, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 388, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 271.452, "y": 366.581, "count": 31}
+Cluster: {"x": 434.368, "y": 384.105, "count": 38}
+
+
+batch_id: 390, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 274.273, "y": 449.091, "count": 11}
+Cluster: {"x": 351.500, "y": 379.000, "count": 2}
+Cluster: {"x": 437.769, "y": 464.769, "count": 13}
+
+
+batch_id: 395, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 375, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 360.500, "y": 99.000, "count": 4}
+Cluster: {"x": 20.290, "y": 135.785, "count": 614}
+Cluster: {"x": 418.679, "y": 148.882, "count": 221}
+Cluster: {"x": 268.081, "y": 125.419, "count": 86}
+
+
+batch_id: 394, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 337.000, "y": 1.000, "count": 3}
+Cluster: {"x": 147.842, "y": 6.289, "count": 152}
+Cluster: {"x": 251.625, "y": 0.625, "count": 8}
+Cluster: {"x": 497.000, "y": 0.857, "count": 7}
+Cluster: {"x": 327.449, "y": 32.133, "count": 98}
+
+
+batch_id: 392, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.100, "y": 354.100, "count": 10}
+
+
+batch_id: 393, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 311.250, "y": 484.750, "count": 8}
+Cluster: {"x": 252.882, "y": 447.353, "count": 34}
+Cluster: {"x": 141.944, "y": 498.125, "count": 72}
+Cluster: {"x": 497.833, "y": 498.167, "count": 6}
+Cluster: {"x": 252.583, "y": 498.417, "count": 12}
+
+
+batch_id: 397, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 412, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 44.500, "y": 370.500, "count": 4}
+Cluster: {"x": 9.286, "y": 357.190, "count": 21}
+Cluster: {"x": 153.792, "y": 385.583, "count": 24}
+
+
+batch_id: 401, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 387, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 320.250, "y": 138.250, "count": 4}
+Cluster: {"x": 343.468, "y": 124.703, "count": 222}
+Cluster: {"x": 450.917, "y": 94.667, "count": 12}
+Cluster: {"x": 498.300, "y": 97.600, "count": 10}
+Cluster: {"x": 481.720, "y": 158.361, "count": 781}
+
+
+batch_id: 405, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 400, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 408, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 472.000, "y": 347.000, "count": 1}
+Cluster: {"x": 497.625, "y": 314.875, "count": 8}
+Cluster: {"x": 450.118, "y": 337.706, "count": 17}
+Cluster: {"x": 497.739, "y": 353.043, "count": 23}
+
+
+batch_id: 404, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 165.571, "y": 337.143, "count": 14}
+Cluster: {"x": 351.000, "y": 298.000, "count": 1}
+Cluster: {"x": 188.833, "y": 346.833, "count": 6}
+Cluster: {"x": 358.026, "y": 384.154, "count": 39}
+
+
+batch_id: 411, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 383, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 406, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 166.000, "y": 418.000, "count": 13}
+Cluster: {"x": 91.750, "y": 330.083, "count": 12}
+Cluster: {"x": 353.619, "y": 465.238, "count": 42}
+
+
+batch_id: 403, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 361.857, "y": 98.500, "count": 70}
+Cluster: {"x": 482.895, "y": 140.080, "count": 323}
+Cluster: {"x": 324.302, "y": 151.736, "count": 106}
+
+
+batch_id: 413, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 409, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 159.243, "y": 450.216, "count": 37}
+Cluster: {"x": 473.625, "y": 465.750, "count": 8}
+Cluster: {"x": 335.091, "y": 446.273, "count": 22}
+Cluster: {"x": 105.526, "y": 495.526, "count": 97}
+Cluster: {"x": 283.683, "y": 497.984, "count": 63}
+
+
+batch_id: 414, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 391, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 370.250, "y": 129.000, "count": 8}
+Cluster: {"x": 16.664, "y": 145.119, "count": 740}
+Cluster: {"x": 268.647, "y": 152.794, "count": 34}
+Cluster: {"x": 406.747, "y": 175.807, "count": 83}
+
+
+batch_id: 421, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 402, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 250.222, "count": 9}
+Cluster: {"x": 498.000, "y": 345.200, "count": 5}
+
+
+batch_id: 420, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 332.167, "y": 299.667, "count": 6}
+
+
+batch_id: 417, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 422, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 350.429, "y": 382.000, "count": 7}
+Cluster: {"x": 141.250, "y": 365.750, "count": 4}
+Cluster: {"x": 165.952, "y": 414.714, "count": 21}
+
+
+batch_id: 410, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 119.346, "y": 1.635, "count": 104}
+Cluster: {"x": 269.450, "y": 22.282, "count": 238}
+Cluster: {"x": 496.667, "y": 1.667, "count": 9}
+
+
+batch_id: 416, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 418, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 419, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 450.333, "y": 183.667, "count": 3}
+Cluster: {"x": 484.898, "y": 135.918, "count": 294}
+Cluster: {"x": 329.453, "y": 118.586, "count": 181}
+Cluster: {"x": 384.833, "y": 167.333, "count": 6}
+
+
+batch_id: 429, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 399, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 425, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 207.750, "y": 475.000, "count": 12}
+Cluster: {"x": 251.048, "y": 464.643, "count": 84}
+Cluster: {"x": 75.127, "y": 478.024, "count": 126}
+Cluster: {"x": 497.714, "y": 462.857, "count": 7}
+Cluster: {"x": 113.108, "y": 498.297, "count": 37}
+Cluster: {"x": 323.500, "y": 498.143, "count": 14}
+
+
+batch_id: 428, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.882, "y": 326.471, "count": 17}
+Cluster: {"x": 151.000, "y": 300.000, "count": 3}
+
+
+batch_id: 430, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 1.167, "y": 197.667, "count": 6}
+
+
+batch_id: 427, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 432, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 426, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 432.000, "y": 198.600, "count": 10}
+Cluster: {"x": 110.884, "y": 0.884, "count": 43}
+Cluster: {"x": 271.531, "y": 0.938, "count": 32}
+Cluster: {"x": 336.750, "y": 0.875, "count": 8}
+
+
+batch_id: 407, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 188.000, "y": 119.500, "count": 2}
+Cluster: {"x": 12.968, "y": 128.335, "count": 535}
+Cluster: {"x": 264.239, "y": 111.332, "count": 226}
+Cluster: {"x": 395.618, "y": 144.343, "count": 353}
+Cluster: {"x": 212.250, "y": 112.250, "count": 8}
+Cluster: {"x": 174.636, "y": 138.136, "count": 44}
+Cluster: {"x": 212.727, "y": 152.182, "count": 11}
+Cluster: {"x": 236.800, "y": 159.933, "count": 15}
+Cluster: {"x": 261.125, "y": 167.750, "count": 16}
+
+
+batch_id: 433, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 424, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 60.600, "y": 329.800, "count": 5}
+Cluster: {"x": 497.500, "y": 316.962, "count": 26}
+Cluster: {"x": 472.250, "y": 323.250, "count": 8}
+Cluster: {"x": 497.778, "y": 353.556, "count": 9}
+
+
+batch_id: 415, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 438, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 7.255, "y": 234.745, "count": 55}
+Cluster: {"x": 222.737, "y": 222.158, "count": 19}
+Cluster: {"x": 351.905, "y": 379.952, "count": 21}
+
+
+batch_id: 435, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 450.000, "y": 169.500, "count": 2}
+Cluster: {"x": 489.121, "y": 127.601, "count": 223}
+Cluster: {"x": 362.957, "y": 130.691, "count": 94}
+Cluster: {"x": 286.933, "y": 136.867, "count": 15}
+
+
+batch_id: 437, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 31.000, "y": 464.286, "count": 7}
+
+
+batch_id: 436, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 354.750, "y": 298.250, "count": 8}
+
+
+batch_id: 440, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 497.600, "y": 313.800, "count": 5}
+
+
+batch_id: 442, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 311.455, "y": 0.818, "count": 11}
+Cluster: {"x": 107.167, "y": 0.750, "count": 12}
+Cluster: {"x": 163.279, "y": 10.984, "count": 61}
+Cluster: {"x": 282.941, "y": 1.000, "count": 17}
+Cluster: {"x": 339.700, "y": 35.800, "count": 10}
+
+
+batch_id: 434, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 230.545, "count": 44}
+Cluster: {"x": 498.000, "y": 162.500, "count": 2}
+Cluster: {"x": 451.167, "y": 223.833, "count": 6}
+
+
+batch_id: 441, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 256.043, "y": 447.638, "count": 47}
+Cluster: {"x": 273.077, "y": 474.769, "count": 13}
+Cluster: {"x": 274.613, "y": 496.419, "count": 31}
+Cluster: {"x": 111.500, "y": 498.100, "count": 10}
+Cluster: {"x": 160.231, "y": 498.192, "count": 26}
+
+
+batch_id: 445, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 121.400, "y": 456.800, "count": 5}
+
+
+batch_id: 423, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 399.000, "y": 106.750, "count": 4}
+Cluster: {"x": 1.673, "y": 137.733, "count": 202}
+Cluster: {"x": 350.854, "y": 102.220, "count": 41}
+Cluster: {"x": 193.931, "y": 125.019, "count": 159}
+
+
+batch_id: 444, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 69.083, "y": 302.167, "count": 12}
+
+
+batch_id: 446, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 449, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 452, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 272.000, "y": 300.250, "count": 4}
+Cluster: {"x": 437.462, "y": 300.615, "count": 13}
+
+
+batch_id: 448, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 454, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 273.692, "y": 380.192, "count": 26}
+Cluster: {"x": 435.850, "y": 380.150, "count": 20}
+Cluster: {"x": 350.800, "y": 466.500, "count": 10}
+
+
+batch_id: 443, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 450, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 451, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 335.524, "y": 139.714, "count": 21}
+Cluster: {"x": 383.052, "y": 111.483, "count": 58}
+Cluster: {"x": 498.074, "y": 98.519, "count": 27}
+Cluster: {"x": 448.000, "y": 101.500, "count": 6}
+Cluster: {"x": 339.333, "y": 106.167, "count": 6}
+Cluster: {"x": 273.000, "y": 134.143, "count": 7}
+Cluster: {"x": 498.412, "y": 175.971, "count": 34}
+Cluster: {"x": 453.450, "y": 181.200, "count": 20}
+
+
+batch_id: 431, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 461, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 453, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 457, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 324.000, "y": 498.000, "count": 4}
+Cluster: {"x": 335.526, "y": 455.009, "count": 114}
+Cluster: {"x": 165.217, "y": 452.377, "count": 69}
+Cluster: {"x": 56.857, "y": 481.286, "count": 7}
+Cluster: {"x": 112.000, "y": 498.105, "count": 19}
+Cluster: {"x": 161.957, "y": 498.174, "count": 23}
+Cluster: {"x": 337.333, "y": 498.222, "count": 9}
+
+
+batch_id: 460, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 237.667, "y": 300.000, "count": 3}
+Cluster: {"x": 57.833, "y": 299.250, "count": 12}
+Cluster: {"x": 152.158, "y": 384.711, "count": 38}
+
+
+batch_id: 462, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 439, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 325.563, "y": 126.813, "count": 16}
+Cluster: {"x": 14.941, "y": 135.114, "count": 271}
+Cluster: {"x": 260.900, "y": 93.900, "count": 10}
+Cluster: {"x": 358.906, "y": 94.531, "count": 64}
+Cluster: {"x": 428.714, "y": 181.571, "count": 7}
+Cluster: {"x": 394.714, "y": 184.571, "count": 7}
+
+
+batch_id: 456, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 367.000, "y": 328.833, "count": 6}
+
+
+batch_id: 459, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 458, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.000, "count": 1}
+Cluster: {"x": 113.966, "y": 0.655, "count": 29}
+Cluster: {"x": 256.143, "y": 0.857, "count": 7}
+Cluster: {"x": 338.143, "y": 0.714, "count": 7}
+Cluster: {"x": 162.000, "y": 1.000, "count": 17}
+Cluster: {"x": 252.635, "y": 31.962, "count": 52}
+
+
+batch_id: 464, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 465, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 466, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.143, "y": 170.500, "count": 14}
+
+
+batch_id: 447, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 476, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 58.333, "y": 369.556, "count": 18}
+Cluster: {"x": 86.429, "y": 321.857, "count": 7}
+Cluster: {"x": 238.182, "y": 385.000, "count": 22}
+
+
+batch_id: 478, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 469, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 366.733, "y": 240.600, "count": 15}
+
+
+batch_id: 468, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 437.643, "y": 381.786, "count": 14}
+
+
+batch_id: 470, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 170.900, "count": 20}
+Cluster: {"x": 167.238, "y": 414.857, "count": 21}
+Cluster: {"x": 275.250, "y": 446.625, "count": 8}
+Cluster: {"x": 438.000, "y": 463.684, "count": 19}
+
+
+batch_id: 480, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 475, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 474, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 345.000, "y": 74.600, "count": 5}
+Cluster: {"x": 110.224, "y": 1.020, "count": 49}
+Cluster: {"x": 166.829, "y": 7.439, "count": 41}
+Cluster: {"x": 338.197, "y": 19.803, "count": 66}
+
+
+batch_id: 472, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 450.857, "y": 334.857, "count": 21}
+Cluster: {"x": 498.000, "y": 353.500, "count": 6}
+
+
+batch_id: 455, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 54.400, "y": 151.600, "count": 5}
+Cluster: {"x": 5.813, "y": 111.641, "count": 64}
+Cluster: {"x": 39.226, "y": 115.242, "count": 62}
+Cluster: {"x": 274.500, "y": 95.500, "count": 14}
+Cluster: {"x": 424.667, "y": 115.222, "count": 18}
+Cluster: {"x": 261.192, "y": 127.769, "count": 26}
+Cluster: {"x": 348.125, "y": 124.875, "count": 8}
+Cluster: {"x": 431.500, "y": 144.786, "count": 14}
+Cluster: {"x": 0.514, "y": 175.081, "count": 37}
+Cluster: {"x": 350.667, "y": 182.556, "count": 9}
+
+
+batch_id: 477, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 473, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 498.000, "y": 498.000, "count": 1}
+Cluster: {"x": 59.686, "y": 482.486, "count": 35}
+Cluster: {"x": 110.405, "y": 498.108, "count": 37}
+Cluster: {"x": 166.381, "y": 498.143, "count": 21}
+Cluster: {"x": 337.500, "y": 498.400, "count": 10}
+
+
+batch_id: 463, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 467, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 360.198, "y": 128.010, "count": 490}
+Cluster: {"x": 481.164, "y": 146.428, "count": 1363}
+Cluster: {"x": 278.148, "y": 130.778, "count": 27}
+Cluster: {"x": 317.118, "y": 146.588, "count": 17}
+
+
+batch_id: 486, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 18.000, "y": 133.211, "count": 19}
+Cluster: {"x": 243.222, "y": 291.222, "count": 9}
+Cluster: {"x": 12.038, "y": 177.488, "count": 211}
+Cluster: {"x": 236.833, "y": 442.833, "count": 6}
+Cluster: {"x": 263.455, "y": 450.636, "count": 11}
+
+
+batch_id: 484, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 269.621, "y": 370.000, "count": 29}
+Cluster: {"x": 353.375, "y": 386.375, "count": 8}
+
+
+batch_id: 485, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 488, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 315.500, "count": 6}
+Cluster: {"x": 497.667, "y": 351.778, "count": 18}
+
+
+batch_id: 490, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 131.926, "y": 7.730, "count": 204}
+Cluster: {"x": 497.375, "y": 2.063, "count": 16}
+Cluster: {"x": 289.930, "y": 1.053, "count": 57}
+Cluster: {"x": 269.781, "y": 34.740, "count": 73}
+
+
+batch_id: 481, print_id: SI266220200309225433, tile_id: 1
+Cluster: {"x": 378.455, "y": 31.636, "count": 11}
+Cluster: {"x": 369.500, "y": 259.000, "count": 4}
+
+
+batch_id: 483, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 272.500, "y": 134.500, "count": 2}
+Cluster: {"x": 354.318, "y": 100.773, "count": 44}
+Cluster: {"x": 486.141, "y": 130.989, "count": 807}
+Cluster: {"x": 292.000, "y": 122.500, "count": 6}
+Cluster: {"x": 348.673, "y": 158.663, "count": 98}
+
+
+batch_id: 482, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 471.526, "y": 190.654, "count": 272}
+
+
+batch_id: 489, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 497.500, "y": 498.000, "count": 2}
+Cluster: {"x": 105.818, "y": 461.318, "count": 22}
+Cluster: {"x": 127.618, "y": 498.273, "count": 55}
+Cluster: {"x": 254.500, "y": 498.000, "count": 10}
+Cluster: {"x": 312.469, "y": 498.000, "count": 32}
+
+
+batch_id: 492, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 159.167, "y": 298.333, "count": 6}
+Cluster: {"x": 166.125, "y": 268.875, "count": 8}
+Cluster: {"x": 0.769, "y": 349.000, "count": 13}
+Cluster: {"x": 49.710, "y": 370.194, "count": 31}
+
+
+batch_id: 494, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 3.000, "y": 2.444, "count": 9}
+
+
+batch_id: 491, print_id: SI266220200309225433, tile_id: 11
+Cluster: {"x": 131.167, "y": 129.167, "count": 6}
+
+
+batch_id: 502, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 277.000, "y": 378.000, "count": 7}
+Cluster: {"x": 113.375, "y": 319.250, "count": 8}
+Cluster: {"x": 439.889, "y": 378.111, "count": 9}
+Cluster: {"x": 351.148, "y": 459.315, "count": 54}
+
+
+batch_id: 500, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 352.000, "y": 381.149, "count": 47}
+Cluster: {"x": 198.200, "y": 349.800, "count": 5}
+
+
+batch_id: 507, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 471, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 40.250, "y": 182.500, "count": 4}
+Cluster: {"x": 15.955, "y": 136.301, "count": 1710}
+Cluster: {"x": 349.333, "y": 109.833, "count": 6}
+Cluster: {"x": 420.872, "y": 149.700, "count": 273}
+Cluster: {"x": 262.591, "y": 147.570, "count": 93}
+Cluster: {"x": 168.036, "y": 131.857, "count": 28}
+
+
+batch_id: 506, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 410.250, "count": 8}
+Cluster: {"x": 117.760, "y": 2.020, "count": 100}
+Cluster: {"x": 261.809, "y": 13.303, "count": 178}
+Cluster: {"x": 498.125, "y": 1.750, "count": 8}
+
+
+batch_id: 493, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 23.200, "y": 323.400, "count": 5}
+
+
+batch_id: 496, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 504, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 497.879, "y": 332.845, "count": 58}
+
+
+batch_id: 499, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 484.740, "y": 142.308, "count": 373}
+Cluster: {"x": 338.127, "y": 124.745, "count": 314}
+
+
+batch_id: 498, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 479, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 508, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.807, "y": 337.193, "count": 57}
+Cluster: {"x": 150.967, "y": 371.393, "count": 61}
+
+
+batch_id: 510, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 161.000, "y": 243.000, "count": 3}
+Cluster: {"x": 2.778, "y": 1.333, "count": 9}
+
+
+batch_id: 497, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 509, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 516, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 512, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 501, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 514, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 487, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 321.500, "y": 136.500, "count": 2}
+Cluster: {"x": 10.618, "y": 136.794, "count": 855}
+Cluster: {"x": 438.714, "y": 93.571, "count": 7}
+Cluster: {"x": 238.402, "y": 110.750, "count": 92}
+Cluster: {"x": 367.205, "y": 118.205, "count": 39}
+Cluster: {"x": 401.667, "y": 106.533, "count": 15}
+Cluster: {"x": 261.614, "y": 164.571, "count": 70}
+Cluster: {"x": 440.000, "y": 158.714, "count": 7}
+Cluster: {"x": 353.714, "y": 183.143, "count": 7}
+
+
+batch_id: 518, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 276.800, "y": 451.400, "count": 5}
+Cluster: {"x": 352.727, "y": 379.955, "count": 22}
+Cluster: {"x": 166.000, "y": 413.294, "count": 17}
+Cluster: {"x": 439.000, "y": 467.500, "count": 6}
+
+
+batch_id: 505, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 498.000, "y": 487.857, "count": 7}
+Cluster: {"x": 339.778, "y": 446.500, "count": 18}
+Cluster: {"x": 170.111, "y": 446.333, "count": 9}
+Cluster: {"x": 104.273, "y": 462.455, "count": 11}
+Cluster: {"x": 99.834, "y": 493.019, "count": 157}
+Cluster: {"x": 275.515, "y": 496.253, "count": 99}
+
+
+batch_id: 515, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 330.400, "y": 153.000, "count": 5}
+Cluster: {"x": 482.536, "y": 99.286, "count": 56}
+Cluster: {"x": 311.263, "y": 116.333, "count": 99}
+Cluster: {"x": 498.347, "y": 166.917, "count": 72}
+Cluster: {"x": 380.353, "y": 163.294, "count": 17}
+Cluster: {"x": 454.174, "y": 184.261, "count": 23}
+
+
+batch_id: 517, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 495, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 522, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 254.500, "y": 1.000, "count": 4}
+Cluster: {"x": 164.000, "y": 5.844, "count": 45}
+Cluster: {"x": 251.286, "y": 0.571, "count": 7}
+Cluster: {"x": 338.889, "y": 1.111, "count": 9}
+Cluster: {"x": 338.950, "y": 34.600, "count": 20}
+
+
+batch_id: 520, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 356.000, "count": 1}
+Cluster: {"x": 497.714, "y": 314.571, "count": 7}
+
+
+batch_id: 513, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 525, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 534, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 213.450, "count": 40}
+Cluster: {"x": 236.889, "y": 217.889, "count": 9}
+Cluster: {"x": 36.739, "y": 218.478, "count": 23}
+Cluster: {"x": 271.667, "y": 379.667, "count": 15}
+Cluster: {"x": 433.323, "y": 379.677, "count": 31}
+
+
+batch_id: 503, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 350.333, "y": 94.333, "count": 3}
+Cluster: {"x": 6.215, "y": 131.969, "count": 321}
+Cluster: {"x": 429.044, "y": 94.511, "count": 45}
+Cluster: {"x": 216.494, "y": 134.230, "count": 239}
+Cluster: {"x": 369.144, "y": 171.701, "count": 194}
+Cluster: {"x": 439.500, "y": 131.000, "count": 6}
+
+
+batch_id: 524, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.667, "y": 314.500, "count": 6}
+
+
+batch_id: 526, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 533, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 521, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 277.200, "y": 498.000, "count": 5}
+Cluster: {"x": 255.763, "y": 451.303, "count": 76}
+Cluster: {"x": 60.091, "y": 479.848, "count": 33}
+Cluster: {"x": 160.593, "y": 498.296, "count": 27}
+Cluster: {"x": 252.000, "y": 498.333, "count": 9}
+
+
+batch_id: 536, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 532, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 528, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 523, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 529, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 531, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 397.800, "y": 170.100, "count": 10}
+Cluster: {"x": 377.660, "y": 122.041, "count": 97}
+Cluster: {"x": 497.762, "y": 142.981, "count": 206}
+Cluster: {"x": 315.750, "y": 114.125, "count": 8}
+Cluster: {"x": 286.050, "y": 123.100, "count": 20}
+
+
+batch_id: 511, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 530, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.051, "y": 218.564, "count": 39}
+Cluster: {"x": 498.000, "y": 249.200, "count": 5}
+
+
+batch_id: 519, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 219.571, "y": 108.000, "count": 7}
+Cluster: {"x": 5.511, "y": 98.867, "count": 45}
+Cluster: {"x": 360.784, "y": 99.230, "count": 74}
+Cluster: {"x": 170.615, "y": 125.897, "count": 39}
+Cluster: {"x": 439.632, "y": 125.842, "count": 19}
+Cluster: {"x": 263.533, "y": 148.733, "count": 30}
+Cluster: {"x": 9.489, "y": 168.840, "count": 94}
+Cluster: {"x": 433.935, "y": 176.097, "count": 31}
+Cluster: {"x": 375.667, "y": 184.333, "count": 12}
+
+
+batch_id: 540, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 168.500, "y": 330.500, "count": 6}
+
+
+batch_id: 542, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 539, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 537, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 128.400, "y": 454.800, "count": 5}
+Cluster: {"x": 325.968, "y": 447.677, "count": 93}
+Cluster: {"x": 160.148, "y": 449.508, "count": 61}
+Cluster: {"x": 157.857, "y": 498.143, "count": 21}
+Cluster: {"x": 334.182, "y": 498.000, "count": 11}
+
+
+batch_id: 546, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 538, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 161.500, "y": 1.000, "count": 18}
+Cluster: {"x": 232.375, "y": 13.875, "count": 8}
+Cluster: {"x": 329.368, "y": 1.000, "count": 19}
+
+
+batch_id: 544, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 527, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 541, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 550, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 545, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 556, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 340.500, "count": 6}
+
+
+batch_id: 558, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 549, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 548, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 555, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 557, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 1.000, "y": 498.000, "count": 1}
+Cluster: {"x": 163.167, "y": 285.167, "count": 6}
+
+
+batch_id: 554, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 339.250, "y": 7.250, "count": 4}
+Cluster: {"x": 111.625, "y": 0.656, "count": 32}
+Cluster: {"x": 168.833, "y": 0.833, "count": 6}
+
+
+batch_id: 535, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 188.500, "y": 143.500, "count": 4}
+Cluster: {"x": 12.435, "y": 140.554, "count": 278}
+Cluster: {"x": 269.134, "y": 104.104, "count": 67}
+Cluster: {"x": 418.486, "y": 102.143, "count": 70}
+Cluster: {"x": 390.000, "y": 132.500, "count": 6}
+Cluster: {"x": 269.111, "y": 165.111, "count": 9}
+Cluster: {"x": 375.447, "y": 180.868, "count": 38}
+
+
+batch_id: 552, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 342.000, "count": 7}
+
+
+batch_id: 553, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 320.400, "y": 494.800, "count": 5}
+Cluster: {"x": 56.462, "y": 482.692, "count": 13}
+Cluster: {"x": 112.212, "y": 498.182, "count": 33}
+Cluster: {"x": 168.500, "y": 498.333, "count": 6}
+
+
+batch_id: 547, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 331.591, "y": 107.957, "count": 93}
+Cluster: {"x": 482.369, "y": 121.471, "count": 510}
+Cluster: {"x": 365.465, "y": 146.660, "count": 144}
+
+
+batch_id: 566, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 351.800, "y": 378.900, "count": 10}
+Cluster: {"x": 1.000, "y": 325.600, "count": 5}
+Cluster: {"x": 273.536, "y": 449.643, "count": 28}
+Cluster: {"x": 437.053, "y": 465.579, "count": 19}
+
+
+batch_id: 565, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 564, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 266.738, "y": 367.774, "count": 84}
+Cluster: {"x": 432.095, "y": 385.397, "count": 63}
+
+
+batch_id: 561, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 571, print_id: SI266220200309225433, tile_id: 11
+Cluster: {"x": 287.286, "y": 128.000, "count": 7}
+
+
+batch_id: 570, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 417.833, "y": 1.167, "count": 6}
+Cluster: {"x": 139.680, "y": 6.311, "count": 228}
+Cluster: {"x": 257.757, "y": 0.757, "count": 37}
+Cluster: {"x": 324.617, "y": 33.617, "count": 115}
+
+
+batch_id: 543, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 562, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 563, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 299.500, "y": 129.300, "count": 10}
+Cluster: {"x": 456.728, "y": 112.309, "count": 81}
+Cluster: {"x": 488.000, "y": 160.576, "count": 139}
+Cluster: {"x": 350.537, "y": 159.158, "count": 95}
+
+
+batch_id: 573, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 560, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 572, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 217.500, "y": 353.500, "count": 4}
+Cluster: {"x": 151.200, "y": 298.000, "count": 10}
+Cluster: {"x": 1.000, "y": 352.500, "count": 6}
+Cluster: {"x": 55.313, "y": 369.781, "count": 32}
+Cluster: {"x": 229.240, "y": 385.920, "count": 50}
+
+
+batch_id: 574, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 582, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 24.600, "y": 327.200, "count": 5}
+Cluster: {"x": 1.188, "y": 162.500, "count": 16}
+Cluster: {"x": 35.533, "y": 163.400, "count": 15}
+Cluster: {"x": 438.568, "y": 378.676, "count": 37}
+Cluster: {"x": 276.190, "y": 378.857, "count": 21}
+Cluster: {"x": 165.727, "y": 417.000, "count": 11}
+Cluster: {"x": 352.529, "y": 462.235, "count": 51}
+
+
+batch_id: 580, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 355.602, "y": 383.386, "count": 83}
+Cluster: {"x": 189.000, "y": 347.000, "count": 1}
+
+
+batch_id: 568, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 352.333, "count": 9}
+
+
+batch_id: 581, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 353.000, "y": 318.000, "count": 9}
+Cluster: {"x": 329.800, "y": 326.000, "count": 5}
+
+
+batch_id: 569, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 252.316, "y": 446.000, "count": 19}
+Cluster: {"x": 380.833, "y": 433.000, "count": 6}
+Cluster: {"x": 266.296, "y": 482.392, "count": 199}
+Cluster: {"x": 131.114, "y": 498.181, "count": 105}
+
+
+batch_id: 579, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 347.891, "y": 104.242, "count": 128}
+Cluster: {"x": 483.411, "y": 142.949, "count": 409}
+Cluster: {"x": 328.528, "y": 152.394, "count": 142}
+
+
+batch_id: 551, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 16.446, "y": 142.763, "count": 1351}
+Cluster: {"x": 264.209, "y": 140.360, "count": 211}
+Cluster: {"x": 423.568, "y": 140.954, "count": 391}
+Cluster: {"x": 218.080, "y": 108.440, "count": 25}
+Cluster: {"x": 381.714, "y": 165.286, "count": 7}
+Cluster: {"x": 353.375, "y": 164.125, "count": 8}
+
+
+batch_id: 578, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 251.000, "count": 1}
+Cluster: {"x": 498.200, "y": 162.300, "count": 10}
+Cluster: {"x": 384.500, "y": 378.000, "count": 10}
+
+
+batch_id: 577, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 588, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.900, "y": 351.800, "count": 20}
+Cluster: {"x": 112.455, "y": 298.909, "count": 11}
+Cluster: {"x": 152.150, "y": 383.000, "count": 40}
+
+
+batch_id: 590, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 143.786, "y": 306.857, "count": 14}
+Cluster: {"x": 0.857, "y": 1.429, "count": 7}
+
+
+batch_id: 587, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 576, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 586, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 357.000, "count": 10}
+Cluster: {"x": 121.782, "y": 1.445, "count": 119}
+Cluster: {"x": 267.228, "y": 16.375, "count": 272}
+Cluster: {"x": 497.357, "y": 1.643, "count": 14}
+
+
+batch_id: 585, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 420.286, "y": 481.429, "count": 7}
+Cluster: {"x": 166.318, "y": 446.341, "count": 44}
+Cluster: {"x": 337.293, "y": 447.655, "count": 58}
+Cluster: {"x": 103.117, "y": 494.422, "count": 180}
+Cluster: {"x": 287.500, "y": 498.073, "count": 96}
+
+
+batch_id: 584, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 497.607, "y": 352.393, "count": 28}
+Cluster: {"x": 498.000, "y": 315.000, "count": 3}
+Cluster: {"x": 472.111, "y": 347.222, "count": 9}
+
+
+batch_id: 559, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 589, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 76.167, "y": 497.833, "count": 6}
+
+
+batch_id: 592, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 595, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 419.333, "y": 138.333, "count": 3}
+Cluster: {"x": 329.101, "y": 110.923, "count": 168}
+Cluster: {"x": 462.143, "y": 98.429, "count": 14}
+Cluster: {"x": 498.310, "y": 98.517, "count": 29}
+Cluster: {"x": 498.400, "y": 165.600, "count": 60}
+Cluster: {"x": 326.667, "y": 151.500, "count": 6}
+Cluster: {"x": 450.667, "y": 161.167, "count": 12}
+Cluster: {"x": 385.714, "y": 166.571, "count": 7}
+
+
+batch_id: 598, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.222, "y": 251.000, "count": 9}
+Cluster: {"x": 351.567, "y": 383.767, "count": 30}
+Cluster: {"x": 166.333, "y": 414.167, "count": 18}
+
+
+batch_id: 567, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 351.000, "y": 96.143, "count": 14}
+Cluster: {"x": 183.500, "y": 114.786, "count": 14}
+Cluster: {"x": 11.160, "y": 147.193, "count": 181}
+Cluster: {"x": 272.533, "y": 166.367, "count": 30}
+Cluster: {"x": 429.162, "y": 181.730, "count": 37}
+
+
+batch_id: 596, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 593, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 597, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 594, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 575, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 605, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 583, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 43.667, "y": 174.333, "count": 3}
+Cluster: {"x": 4.967, "y": 130.525, "count": 337}
+Cluster: {"x": 263.413, "y": 106.169, "count": 254}
+Cluster: {"x": 365.889, "y": 163.796, "count": 314}
+Cluster: {"x": 434.032, "y": 108.149, "count": 248}
+Cluster: {"x": 192.000, "y": 119.167, "count": 6}
+Cluster: {"x": 171.746, "y": 135.407, "count": 59}
+Cluster: {"x": 234.581, "y": 158.081, "count": 62}
+
+
+batch_id: 604, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 355.000, "count": 3}
+Cluster: {"x": 151.500, "y": 299.000, "count": 6}
+Cluster: {"x": 0.778, "y": 316.833, "count": 18}
+
+
+batch_id: 606, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 116.200, "y": 1.200, "count": 5}
+
+
+batch_id: 600, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 485.000, "y": 339.000, "count": 4}
+Cluster: {"x": 497.821, "y": 317.429, "count": 28}
+Cluster: {"x": 450.429, "y": 336.286, "count": 7}
+
+
+batch_id: 601, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 273.000, "y": 493.143, "count": 7}
+Cluster: {"x": 327.167, "y": 299.167, "count": 6}
+Cluster: {"x": 252.024, "y": 457.459, "count": 85}
+Cluster: {"x": 128.286, "y": 454.357, "count": 14}
+Cluster: {"x": 104.400, "y": 462.933, "count": 15}
+Cluster: {"x": 65.592, "y": 479.908, "count": 76}
+Cluster: {"x": 250.900, "y": 498.100, "count": 10}
+Cluster: {"x": 167.182, "y": 498.364, "count": 11}
+Cluster: {"x": 334.917, "y": 498.083, "count": 12}
+
+
+batch_id: 603, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 602, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 464.667, "y": 133.333, "count": 6}
+Cluster: {"x": 108.810, "y": 0.905, "count": 21}
+Cluster: {"x": 168.714, "y": 11.381, "count": 21}
+Cluster: {"x": 251.364, "y": 0.909, "count": 11}
+Cluster: {"x": 333.308, "y": 1.077, "count": 13}
+Cluster: {"x": 340.250, "y": 35.375, "count": 8}
+
+
+batch_id: 608, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 611, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 374.504, "y": 143.215, "count": 135}
+Cluster: {"x": 488.780, "y": 128.158, "count": 177}
+Cluster: {"x": 298.423, "y": 121.615, "count": 52}
+
+
+batch_id: 610, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 374.687, "y": 207.373, "count": 150}
+Cluster: {"x": 382.667, "y": 164.333, "count": 3}
+Cluster: {"x": 305.377, "y": 208.264, "count": 53}
+Cluster: {"x": 498.188, "y": 243.625, "count": 16}
+
+
+batch_id: 614, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 368.500, "y": 231.500, "count": 4}
+Cluster: {"x": 1.000, "y": 242.643, "count": 14}
+
+
+batch_id: 609, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 620, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 49.793, "y": 298.759, "count": 29}
+Cluster: {"x": 1.000, "y": 317.000, "count": 7}
+
+
+batch_id: 622, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 15.222, "y": 189.889, "count": 9}
+
+
+batch_id: 613, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 591, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 619, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 612, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 212.667, "y": 314.333, "count": 3}
+Cluster: {"x": 267.458, "y": 299.681, "count": 72}
+
+
+batch_id: 624, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 618, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 372.429, "y": 259.714, "count": 7}
+Cluster: {"x": 145.147, "y": 7.373, "count": 75}
+Cluster: {"x": 251.000, "y": 0.500, "count": 6}
+Cluster: {"x": 315.094, "y": 0.938, "count": 32}
+Cluster: {"x": 477.258, "y": 212.935, "count": 31}
+
+
+batch_id: 617, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 292.500, "y": 498.167, "count": 6}
+Cluster: {"x": 149.922, "y": 449.039, "count": 51}
+Cluster: {"x": 250.545, "y": 464.545, "count": 11}
+Cluster: {"x": 104.444, "y": 462.667, "count": 9}
+Cluster: {"x": 326.146, "y": 472.463, "count": 41}
+Cluster: {"x": 154.703, "y": 498.108, "count": 37}
+Cluster: {"x": 313.154, "y": 498.051, "count": 39}
+
+
+batch_id: 616, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 317.000, "count": 7}
+
+
+batch_id: 599, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 421.600, "y": 94.400, "count": 5}
+Cluster: {"x": 0.759, "y": 98.724, "count": 29}
+Cluster: {"x": 354.950, "y": 110.588, "count": 80}
+Cluster: {"x": 261.167, "y": 94.333, "count": 6}
+Cluster: {"x": 185.148, "y": 123.139, "count": 108}
+Cluster: {"x": 0.692, "y": 168.308, "count": 52}
+Cluster: {"x": 35.000, "y": 185.000, "count": 17}
+
+
+batch_id: 621, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 607, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 627, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 315.500, "y": 147.000, "count": 2}
+Cluster: {"x": 344.315, "y": 115.370, "count": 127}
+Cluster: {"x": 453.074, "y": 98.667, "count": 27}
+Cluster: {"x": 494.185, "y": 101.185, "count": 27}
+Cluster: {"x": 492.333, "y": 144.833, "count": 18}
+Cluster: {"x": 340.000, "y": 155.286, "count": 7}
+Cluster: {"x": 363.667, "y": 163.111, "count": 9}
+Cluster: {"x": 498.222, "y": 177.778, "count": 9}
+Cluster: {"x": 450.500, "y": 182.714, "count": 14}
+
+
+batch_id: 630, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 437.115, "y": 380.346, "count": 26}
+Cluster: {"x": 156.000, "y": 287.000, "count": 7}
+
+
+batch_id: 629, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 628, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 351.000, "y": 385.000, "count": 1}
+Cluster: {"x": 438.083, "y": 304.000, "count": 24}
+
+
+batch_id: 632, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 345.600, "count": 5}
+
+
+batch_id: 634, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 300.300, "y": 1.100, "count": 10}
+Cluster: {"x": 114.706, "y": 0.706, "count": 34}
+Cluster: {"x": 338.182, "y": 0.636, "count": 11}
+Cluster: {"x": 250.263, "y": 33.789, "count": 19}
+
+
+batch_id: 625, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 626, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 633, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 185.125, "y": 489.625, "count": 8}
+Cluster: {"x": 165.653, "y": 450.633, "count": 49}
+Cluster: {"x": 337.859, "y": 455.672, "count": 64}
+Cluster: {"x": 337.909, "y": 498.273, "count": 11}
+Cluster: {"x": 114.563, "y": 498.313, "count": 32}
+Cluster: {"x": 168.000, "y": 498.375, "count": 8}
+
+
+batch_id: 645, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 637, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 615, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 273.500, "y": 131.833, "count": 12}
+Cluster: {"x": 20.260, "y": 142.870, "count": 269}
+Cluster: {"x": 246.607, "y": 103.964, "count": 28}
+Cluster: {"x": 399.667, "y": 102.667, "count": 12}
+Cluster: {"x": 277.625, "y": 124.625, "count": 8}
+Cluster: {"x": 407.070, "y": 169.026, "count": 313}
+Cluster: {"x": 270.320, "y": 159.760, "count": 50}
+Cluster: {"x": 137.720, "y": 194.600, "count": 25}
+
+
+batch_id: 636, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 314.000, "count": 1}
+Cluster: {"x": 237.857, "y": 299.571, "count": 14}
+Cluster: {"x": 150.250, "y": 386.750, "count": 8}
+
+
+batch_id: 638, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 640, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 646, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 275.667, "y": 448.000, "count": 9}
+Cluster: {"x": 351.000, "y": 378.500, "count": 2}
+Cluster: {"x": 437.417, "y": 463.833, "count": 24}
+
+
+batch_id: 644, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 434.500, "y": 384.974, "count": 38}
+
+
+batch_id: 623, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 635, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 648, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 491.875, "y": 342.125, "count": 8}
+
+
+batch_id: 641, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 643, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 346.479, "y": 125.720, "count": 793}
+Cluster: {"x": 450.000, "y": 94.455, "count": 11}
+Cluster: {"x": 478.800, "y": 154.994, "count": 1200}
+
+
+batch_id: 642, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 649, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 260.533, "y": 498.000, "count": 15}
+Cluster: {"x": 252.750, "y": 447.125, "count": 32}
+Cluster: {"x": 56.923, "y": 480.692, "count": 13}
+Cluster: {"x": 164.633, "y": 498.100, "count": 30}
+
+
+batch_id: 652, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 344.500, "count": 4}
+Cluster: {"x": 151.462, "y": 299.154, "count": 13}
+Cluster: {"x": 236.842, "y": 384.316, "count": 19}
+
+
+batch_id: 654, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 651, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 660, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 358.351, "y": 385.421, "count": 57}
+
+
+batch_id: 631, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 18.003, "y": 144.998, "count": 596}
+Cluster: {"x": 267.952, "y": 107.476, "count": 21}
+Cluster: {"x": 411.463, "y": 142.490, "count": 335}
+
+
+batch_id: 650, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 431.909, "y": 78.455, "count": 11}
+Cluster: {"x": 111.609, "y": 0.783, "count": 23}
+Cluster: {"x": 165.475, "y": 7.271, "count": 59}
+Cluster: {"x": 330.835, "y": 32.152, "count": 79}
+
+
+batch_id: 658, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 482.200, "y": 293.800, "count": 5}
+
+
+batch_id: 666, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 497.800, "y": 2.200, "count": 5}
+Cluster: {"x": 128.173, "y": 2.173, "count": 98}
+Cluster: {"x": 284.653, "y": 0.986, "count": 72}
+Cluster: {"x": 271.723, "y": 33.881, "count": 159}
+
+
+batch_id: 657, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 659, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 367.333, "y": 95.778, "count": 36}
+Cluster: {"x": 481.062, "y": 140.780, "count": 500}
+Cluster: {"x": 302.977, "y": 133.216, "count": 88}
+Cluster: {"x": 359.263, "y": 163.000, "count": 38}
+
+
+batch_id: 662, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 439.500, "y": 377.200, "count": 10}
+Cluster: {"x": 1.000, "y": 322.500, "count": 6}
+Cluster: {"x": 353.912, "y": 465.588, "count": 34}
+
+
+batch_id: 653, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 656, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 668, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.889, "y": 343.944, "count": 18}
+Cluster: {"x": 157.905, "y": 385.381, "count": 21}
+
+
+batch_id: 670, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 661, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 370.000, "y": 78.789, "count": 19}
+
+
+batch_id: 665, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 205.400, "y": 471.300, "count": 10}
+Cluster: {"x": 157.556, "y": 448.000, "count": 9}
+Cluster: {"x": 80.364, "y": 469.818, "count": 11}
+Cluster: {"x": 128.170, "y": 497.625, "count": 88}
+Cluster: {"x": 284.948, "y": 498.069, "count": 58}
+
+
+batch_id: 664, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 472.333, "y": 346.667, "count": 3}
+Cluster: {"x": 262.000, "y": 309.947, "count": 19}
+Cluster: {"x": 497.760, "y": 343.040, "count": 25}
+Cluster: {"x": 259.478, "y": 381.851, "count": 67}
+
+
+batch_id: 676, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 639, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 667, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 669, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 672, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 678, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 165.500, "y": 413.000, "count": 6}
+
+
+batch_id: 673, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 675, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 497.102, "y": 135.004, "count": 266}
+Cluster: {"x": 278.778, "y": 112.111, "count": 9}
+Cluster: {"x": 326.069, "y": 124.757, "count": 218}
+Cluster: {"x": 450.429, "y": 97.714, "count": 7}
+Cluster: {"x": 450.921, "y": 164.667, "count": 63}
+
+
+batch_id: 674, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 677, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 681, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 104.400, "y": 462.933, "count": 15}
+Cluster: {"x": 344.364, "y": 450.455, "count": 11}
+Cluster: {"x": 71.031, "y": 482.062, "count": 97}
+Cluster: {"x": 116.690, "y": 498.293, "count": 58}
+Cluster: {"x": 287.921, "y": 498.048, "count": 63}
+
+
+batch_id: 682, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 497.900, "y": 177.500, "count": 10}
+Cluster: {"x": 115.156, "y": 1.987, "count": 77}
+Cluster: {"x": 282.696, "y": 0.929, "count": 56}
+
+
+batch_id: 647, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 219.500, "y": 147.000, "count": 2}
+Cluster: {"x": 356.149, "y": 99.181, "count": 94}
+Cluster: {"x": 14.842, "y": 134.386, "count": 893}
+Cluster: {"x": 393.084, "y": 165.399, "count": 853}
+Cluster: {"x": 267.304, "y": 115.913, "count": 23}
+Cluster: {"x": 192.000, "y": 116.500, "count": 6}
+Cluster: {"x": 269.099, "y": 158.845, "count": 71}
+Cluster: {"x": 42.727, "y": 168.727, "count": 11}
+
+
+batch_id: 680, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 450.000, "y": 339.000, "count": 1}
+Cluster: {"x": 495.071, "y": 325.524, "count": 42}
+
+
+batch_id: 685, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 154.200, "y": 124.800, "count": 5}
+
+
+batch_id: 693, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 655, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 684, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 67.333, "y": 352.667, "count": 3}
+Cluster: {"x": 0.933, "y": 326.300, "count": 30}
+
+
+batch_id: 686, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 663, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 276.000, "y": 146.143, "count": 7}
+Cluster: {"x": 392.134, "y": 140.621, "count": 253}
+Cluster: {"x": 8.843, "y": 140.513, "count": 536}
+Cluster: {"x": 267.462, "y": 108.746, "count": 130}
+Cluster: {"x": 206.867, "y": 116.600, "count": 15}
+Cluster: {"x": 164.167, "y": 135.167, "count": 6}
+Cluster: {"x": 415.875, "y": 137.125, "count": 8}
+Cluster: {"x": 214.000, "y": 150.100, "count": 10}
+Cluster: {"x": 188.500, "y": 144.000, "count": 8}
+Cluster: {"x": 261.000, "y": 168.000, "count": 13}
+
+
+batch_id: 694, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 439.500, "y": 467.500, "count": 4}
+Cluster: {"x": 351.773, "y": 379.727, "count": 22}
+Cluster: {"x": 276.889, "y": 451.889, "count": 9}
+
+
+batch_id: 692, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 688, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 683, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 690, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 689, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 691, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 489.204, "y": 134.254, "count": 280}
+Cluster: {"x": 384.893, "y": 138.125, "count": 56}
+Cluster: {"x": 342.125, "y": 103.875, "count": 8}
+Cluster: {"x": 295.840, "y": 119.560, "count": 25}
+Cluster: {"x": 325.158, "y": 152.158, "count": 19}
+
+
+batch_id: 701, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 697, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 244.789, "y": 493.737, "count": 19}
+Cluster: {"x": 259.360, "y": 449.090, "count": 89}
+Cluster: {"x": 157.520, "y": 498.120, "count": 25}
+
+
+batch_id: 700, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 702, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 671, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 699, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 704, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 698, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 365.625, "y": 1.125, "count": 8}
+Cluster: {"x": 157.833, "y": 9.567, "count": 60}
+Cluster: {"x": 339.000, "y": 35.529, "count": 17}
+
+
+batch_id: 705, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 696, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 450.800, "y": 329.600, "count": 5}
+
+
+batch_id: 710, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 273.480, "y": 379.760, "count": 25}
+Cluster: {"x": 1.000, "y": 163.000, "count": 1}
+Cluster: {"x": 436.257, "y": 379.686, "count": 35}
+
+
+batch_id: 679, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 390.667, "y": 183.500, "count": 6}
+Cluster: {"x": 366.500, "y": 90.667, "count": 12}
+Cluster: {"x": 3.771, "y": 132.541, "count": 279}
+Cluster: {"x": 206.024, "y": 131.743, "count": 245}
+Cluster: {"x": 346.762, "y": 111.333, "count": 21}
+Cluster: {"x": 440.667, "y": 116.833, "count": 6}
+
+
+batch_id: 707, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 340.300, "y": 155.300, "count": 10}
+Cluster: {"x": 380.352, "y": 121.813, "count": 91}
+Cluster: {"x": 498.333, "y": 144.553, "count": 114}
+Cluster: {"x": 316.286, "y": 114.000, "count": 7}
+Cluster: {"x": 283.529, "y": 125.412, "count": 17}
+Cluster: {"x": 340.333, "y": 155.667, "count": 6}
+Cluster: {"x": 452.769, "y": 182.615, "count": 13}
+
+
+batch_id: 709, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 255.500, "y": 286.000, "count": 6}
+
+
+batch_id: 708, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 383.125, "y": 352.000, "count": 8}
+Cluster: {"x": 272.882, "y": 300.412, "count": 17}
+
+
+batch_id: 687, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 714, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 243.000, "y": 1.000, "count": 6}
+Cluster: {"x": 159.750, "y": 0.813, "count": 16}
+Cluster: {"x": 337.000, "y": 1.000, "count": 9}
+Cluster: {"x": 252.273, "y": 32.673, "count": 55}
+
+
+batch_id: 706, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 713, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 163.600, "y": 490.400, "count": 10}
+Cluster: {"x": 332.146, "y": 450.375, "count": 96}
+Cluster: {"x": 164.676, "y": 450.197, "count": 71}
+Cluster: {"x": 163.211, "y": 498.158, "count": 19}
+Cluster: {"x": 337.143, "y": 498.357, "count": 14}
+
+
+batch_id: 717, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 695, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 251.222, "y": 127.889, "count": 9}
+Cluster: {"x": 13.024, "y": 140.287, "count": 327}
+Cluster: {"x": 359.604, "y": 95.042, "count": 48}
+Cluster: {"x": 165.083, "y": 126.333, "count": 12}
+Cluster: {"x": 267.429, "y": 157.000, "count": 28}
+Cluster: {"x": 437.333, "y": 179.267, "count": 15}
+
+
+batch_id: 716, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 236.400, "y": 299.950, "count": 20}
+Cluster: {"x": 151.190, "y": 384.667, "count": 21}
+
+
+batch_id: 718, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 725, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 703, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 724, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 437.500, "y": 380.500, "count": 8}
+Cluster: {"x": 166.200, "y": 334.600, "count": 5}
+
+
+batch_id: 726, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 166.375, "y": 414.813, "count": 16}
+Cluster: {"x": 217.000, "y": 181.000, "count": 1}
+Cluster: {"x": 275.714, "y": 446.143, "count": 7}
+Cluster: {"x": 437.833, "y": 463.889, "count": 18}
+
+
+batch_id: 715, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 720, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 730, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.000, "count": 1}
+Cluster: {"x": 109.857, "y": 0.714, "count": 21}
+Cluster: {"x": 167.611, "y": 7.167, "count": 36}
+Cluster: {"x": 338.169, "y": 19.704, "count": 71}
+
+
+batch_id: 721, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 712, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 722, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 711, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 265.500, "y": 163.214, "count": 14}
+Cluster: {"x": 14.753, "y": 133.284, "count": 190}
+Cluster: {"x": 276.889, "y": 98.889, "count": 9}
+Cluster: {"x": 428.343, "y": 110.386, "count": 70}
+Cluster: {"x": 265.900, "y": 130.900, "count": 10}
+Cluster: {"x": 254.800, "y": 161.000, "count": 10}
+
+
+batch_id: 732, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 151.200, "y": 299.700, "count": 10}
+Cluster: {"x": 38.714, "y": 335.000, "count": 7}
+Cluster: {"x": 0.714, "y": 352.857, "count": 7}
+Cluster: {"x": 59.684, "y": 367.579, "count": 19}
+Cluster: {"x": 237.870, "y": 382.783, "count": 23}
+
+
+batch_id: 723, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 347.667, "y": 157.333, "count": 6}
+Cluster: {"x": 362.019, "y": 116.949, "count": 312}
+Cluster: {"x": 479.444, "y": 141.275, "count": 2085}
+Cluster: {"x": 287.364, "y": 126.727, "count": 33}
+Cluster: {"x": 389.381, "y": 135.286, "count": 21}
+
+
+batch_id: 734, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 740, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 262.630, "y": 366.978, "count": 92}
+Cluster: {"x": 212.200, "y": 355.400, "count": 5}
+
+
+batch_id: 728, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 450.083, "y": 336.083, "count": 12}
+Cluster: {"x": 498.000, "y": 315.500, "count": 4}
+Cluster: {"x": 498.222, "y": 352.111, "count": 9}
+
+
+batch_id: 729, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 60.231, "y": 482.462, "count": 39}
+Cluster: {"x": 250.000, "y": 446.000, "count": 1}
+Cluster: {"x": 167.750, "y": 498.125, "count": 16}
+Cluster: {"x": 111.000, "y": 498.188, "count": 16}
+Cluster: {"x": 338.182, "y": 498.364, "count": 11}
+
+
+batch_id: 731, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 738, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 497.824, "y": 167.735, "count": 34}
+Cluster: {"x": 452.500, "y": 166.214, "count": 28}
+
+
+batch_id: 719, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 739, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 484.397, "y": 131.231, "count": 476}
+Cluster: {"x": 248.100, "y": 93.700, "count": 20}
+Cluster: {"x": 318.496, "y": 113.265, "count": 113}
+Cluster: {"x": 352.660, "y": 159.723, "count": 94}
+
+
+batch_id: 733, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 737, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 748, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 98.000, "y": 369.333, "count": 6}
+Cluster: {"x": 0.917, "y": 354.417, "count": 12}
+
+
+batch_id: 750, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 223.000, "y": 228.000, "count": 1}
+Cluster: {"x": 0.833, "y": 1.167, "count": 6}
+
+
+batch_id: 741, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 393.000, "y": 292.286, "count": 7}
+Cluster: {"x": 372.000, "y": 190.000, "count": 3}
+Cluster: {"x": 424.714, "y": 306.571, "count": 7}
+Cluster: {"x": 409.430, "y": 461.895, "count": 656}
+
+
+batch_id: 742, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 4.000, "y": 167.878, "count": 41}
+Cluster: {"x": 215.182, "y": 312.364, "count": 11}
+
+
+batch_id: 747, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 744, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 324.984, "y": 347.484, "count": 122}
+Cluster: {"x": 498.000, "y": 315.000, "count": 3}
+Cluster: {"x": 259.500, "y": 349.188, "count": 16}
+Cluster: {"x": 497.947, "y": 353.211, "count": 19}
+
+
+batch_id: 746, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 137.045, "y": 7.128, "count": 288}
+Cluster: {"x": 299.236, "y": 0.893, "count": 140}
+Cluster: {"x": 497.700, "y": 1.300, "count": 10}
+
+
+batch_id: 727, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 375.400, "y": 149.400, "count": 5}
+Cluster: {"x": 15.539, "y": 135.465, "count": 1886}
+Cluster: {"x": 418.630, "y": 129.764, "count": 297}
+Cluster: {"x": 266.144, "y": 139.164, "count": 146}
+Cluster: {"x": 166.789, "y": 131.579, "count": 19}
+Cluster: {"x": 357.333, "y": 157.444, "count": 9}
+
+
+batch_id: 754, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 736, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 749, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 28.000, "y": 498.167, "count": 6}
+Cluster: {"x": 48.080, "y": 442.920, "count": 25}
+
+
+batch_id: 757, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 745, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 497.750, "y": 476.375, "count": 8}
+Cluster: {"x": 155.905, "y": 446.952, "count": 21}
+Cluster: {"x": 119.378, "y": 458.311, "count": 45}
+Cluster: {"x": 56.467, "y": 478.600, "count": 15}
+Cluster: {"x": 297.713, "y": 498.088, "count": 136}
+Cluster: {"x": 135.230, "y": 498.340, "count": 100}
+
+
+batch_id: 764, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 61.667, "y": 305.000, "count": 6}
+Cluster: {"x": 234.231, "y": 298.231, "count": 13}
+Cluster: {"x": 2.833, "y": 341.800, "count": 30}
+Cluster: {"x": 151.308, "y": 383.154, "count": 26}
+
+
+batch_id: 755, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 483.763, "y": 146.508, "count": 482}
+Cluster: {"x": 330.681, "y": 126.308, "count": 260}
+
+
+batch_id: 756, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 352.274, "y": 380.387, "count": 62}
+Cluster: {"x": 193.167, "y": 348.167, "count": 6}
+
+
+batch_id: 763, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 735, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 762, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 394.000, "count": 3}
+Cluster: {"x": 119.167, "y": 2.193, "count": 114}
+Cluster: {"x": 261.328, "y": 14.181, "count": 259}
+Cluster: {"x": 497.700, "y": 1.300, "count": 10}
+Cluster: {"x": 498.000, "y": 432.500, "count": 6}
+
+
+batch_id: 758, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 40.000, "y": 378.000, "count": 5}
+Cluster: {"x": 439.043, "y": 378.261, "count": 23}
+Cluster: {"x": 277.714, "y": 378.000, "count": 7}
+Cluster: {"x": 165.000, "y": 415.500, "count": 8}
+Cluster: {"x": 350.944, "y": 458.481, "count": 54}
+
+
+batch_id: 753, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 765, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 43.857, "y": 488.000, "count": 7}
+
+
+batch_id: 752, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 766, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 1.000, "y": 419.833, "count": 6}
+Cluster: {"x": 2.154, "y": 1.231, "count": 13}
+
+
+batch_id: 774, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 35.213, "y": 247.869, "count": 61}
+Cluster: {"x": 440.333, "y": 35.333, "count": 3}
+Cluster: {"x": 352.400, "y": 380.600, "count": 15}
+Cluster: {"x": 166.045, "y": 415.682, "count": 22}
+Cluster: {"x": 438.769, "y": 466.615, "count": 13}
+
+
+batch_id: 743, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 264.296, "y": 135.037, "count": 27}
+Cluster: {"x": 9.934, "y": 138.188, "count": 516}
+Cluster: {"x": 391.378, "y": 97.968, "count": 251}
+Cluster: {"x": 248.474, "y": 101.105, "count": 19}
+Cluster: {"x": 268.769, "y": 166.308, "count": 26}
+
+
+batch_id: 772, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 440.111, "y": 386.889, "count": 9}
+Cluster: {"x": 277.800, "y": 371.600, "count": 5}
+
+
+batch_id: 760, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 337.370, "count": 27}
+Cluster: {"x": 472.500, "y": 322.000, "count": 6}
+
+
+batch_id: 773, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 422.000, "y": 448.000, "count": 50}
+Cluster: {"x": 440.000, "y": 320.000, "count": 1}
+
+
+batch_id: 761, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 367.556, "y": 473.778, "count": 9}
+Cluster: {"x": 338.927, "y": 447.463, "count": 41}
+Cluster: {"x": 165.091, "y": 446.318, "count": 22}
+Cluster: {"x": 100.636, "y": 492.864, "count": 154}
+Cluster: {"x": 278.513, "y": 496.913, "count": 115}
+
+
+batch_id: 771, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 316.000, "y": 148.000, "count": 1}
+Cluster: {"x": 488.000, "y": 135.653, "count": 124}
+Cluster: {"x": 317.573, "y": 112.992, "count": 124}
+Cluster: {"x": 340.167, "y": 156.167, "count": 6}
+Cluster: {"x": 378.130, "y": 165.783, "count": 23}
+
+
+batch_id: 770, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 768, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 769, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 780, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 26.167, "y": 325.000, "count": 6}
+
+
+batch_id: 782, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 779, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 751, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 778, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 370.400, "y": 1.000, "count": 5}
+Cluster: {"x": 105.250, "y": 0.750, "count": 8}
+Cluster: {"x": 165.929, "y": 8.452, "count": 42}
+Cluster: {"x": 251.778, "y": 0.556, "count": 9}
+Cluster: {"x": 338.529, "y": 34.500, "count": 34}
+
+
+batch_id: 776, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 491.500, "y": 346.750, "count": 4}
+Cluster: {"x": 497.900, "y": 314.600, "count": 10}
+Cluster: {"x": 449.000, "y": 334.750, "count": 8}
+
+
+batch_id: 759, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 359.000, "y": 142.000, "count": 2}
+Cluster: {"x": 6.327, "y": 134.010, "count": 382}
+Cluster: {"x": 428.018, "y": 95.368, "count": 57}
+Cluster: {"x": 218.225, "y": 137.840, "count": 244}
+Cluster: {"x": 372.713, "y": 170.473, "count": 338}
+
+
+batch_id: 781, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 777, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 254.476, "y": 458.968, "count": 124}
+Cluster: {"x": 256.750, "y": 425.000, "count": 8}
+Cluster: {"x": 67.583, "y": 477.208, "count": 24}
+Cluster: {"x": 160.625, "y": 498.208, "count": 24}
+Cluster: {"x": 339.143, "y": 498.286, "count": 7}
+
+
+batch_id: 787, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 492.350, "y": 123.714, "count": 217}
+Cluster: {"x": 369.168, "y": 123.592, "count": 125}
+Cluster: {"x": 281.346, "y": 123.115, "count": 26}
+Cluster: {"x": 453.111, "y": 184.667, "count": 9}
+
+
+batch_id: 767, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 790, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 273.000, "y": 379.333, "count": 18}
+Cluster: {"x": 7.600, "y": 163.600, "count": 5}
+Cluster: {"x": 433.357, "y": 378.786, "count": 14}
+
+
+batch_id: 789, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 22.125, "y": 469.875, "count": 8}
+
+
+batch_id: 788, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 403.167, "y": 297.667, "count": 6}
+Cluster: {"x": 436.394, "y": 301.455, "count": 33}
+
+
+batch_id: 784, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 794, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 160.059, "y": 0.882, "count": 17}
+Cluster: {"x": 177.500, "y": 0.750, "count": 8}
+Cluster: {"x": 325.267, "y": 0.767, "count": 30}
+Cluster: {"x": 251.000, "y": 36.286, "count": 7}
+
+
+batch_id: 786, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 207.000, "count": 6}
+
+
+batch_id: 785, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 797, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 775, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 250.250, "y": 158.000, "count": 4}
+Cluster: {"x": 19.525, "y": 92.475, "count": 40}
+Cluster: {"x": 356.125, "y": 94.750, "count": 32}
+Cluster: {"x": 178.170, "y": 123.660, "count": 53}
+Cluster: {"x": 0.725, "y": 166.565, "count": 69}
+Cluster: {"x": 438.488, "y": 170.902, "count": 41}
+Cluster: {"x": 277.000, "y": 167.286, "count": 7}
+Cluster: {"x": 40.300, "y": 179.000, "count": 10}
+
+
+batch_id: 796, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 798, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 805, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 806, print_id: SI266220200309225433, tile_id: 6
+
+
+batch_id: 793, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 189.333, "y": 493.000, "count": 3}
+Cluster: {"x": 320.456, "y": 446.427, "count": 103}
+Cluster: {"x": 157.452, "y": 448.381, "count": 42}
+Cluster: {"x": 157.818, "y": 498.136, "count": 22}
+Cluster: {"x": 319.763, "y": 498.184, "count": 38}
+
+
+batch_id: 804, print_id: SI266220200309225433, tile_id: 4
+
+
+batch_id: 792, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 795, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 800, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 802, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 803, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 387.600, "y": 120.400, "count": 5}
+Cluster: {"x": 343.421, "y": 103.246, "count": 57}
+Cluster: {"x": 478.380, "y": 125.800, "count": 631}
+Cluster: {"x": 282.000, "y": 126.889, "count": 18}
+Cluster: {"x": 366.200, "y": 155.840, "count": 25}
+
+
+batch_id: 783, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 808, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 289.143, "y": 315.429, "count": 7}
+
+
+batch_id: 801, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 812, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 814, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 811, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 816, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 810, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 292.750, "y": 1.000, "count": 4}
+Cluster: {"x": 116.122, "y": 0.634, "count": 41}
+
+
+batch_id: 809, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 340.000, "y": 498.000, "count": 1}
+Cluster: {"x": 56.550, "y": 483.650, "count": 20}
+Cluster: {"x": 118.386, "y": 498.114, "count": 44}
+
+
+batch_id: 791, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 314.455, "y": 135.909, "count": 11}
+Cluster: {"x": 1.040, "y": 133.830, "count": 176}
+Cluster: {"x": 40.299, "y": 146.215, "count": 107}
+Cluster: {"x": 425.594, "y": 101.563, "count": 32}
+Cluster: {"x": 274.714, "y": 94.429, "count": 7}
+Cluster: {"x": 251.762, "y": 116.762, "count": 21}
+Cluster: {"x": 382.223, "y": 179.223, "count": 94}
+Cluster: {"x": 250.200, "y": 161.000, "count": 10}
+Cluster: {"x": 440.000, "y": 182.714, "count": 7}
+
+
+batch_id: 813, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 817, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 819, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 317.000, "y": 115.250, "count": 4}
+Cluster: {"x": 349.012, "y": 115.951, "count": 82}
+Cluster: {"x": 451.200, "y": 99.000, "count": 20}
+Cluster: {"x": 498.240, "y": 97.400, "count": 25}
+Cluster: {"x": 290.077, "y": 128.462, "count": 13}
+Cluster: {"x": 480.931, "y": 163.385, "count": 130}
+Cluster: {"x": 363.462, "y": 163.462, "count": 26}
+
+
+batch_id: 822, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 273.258, "y": 449.065, "count": 31}
+Cluster: {"x": 437.167, "y": 464.917, "count": 12}
+
+
+batch_id: 820, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 271.816, "y": 367.947, "count": 38}
+Cluster: {"x": 434.553, "y": 385.263, "count": 38}
+
+
+batch_id: 821, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 824, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.286, "y": 354.143, "count": 7}
+Cluster: {"x": 396.750, "y": 321.250, "count": 4}
+
+
+batch_id: 826, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 497.667, "y": 1.333, "count": 3}
+Cluster: {"x": 141.565, "y": 6.057, "count": 336}
+Cluster: {"x": 326.632, "y": 32.316, "count": 136}
+
+
+batch_id: 799, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 818, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 829, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 123.500, "y": 198.500, "count": 8}
+
+
+batch_id: 807, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 16.714, "y": 141.126, "count": 1427}
+Cluster: {"x": 415.302, "y": 141.226, "count": 483}
+Cluster: {"x": 268.665, "y": 137.637, "count": 182}
+Cluster: {"x": 187.250, "y": 120.750, "count": 8}
+Cluster: {"x": 217.000, "y": 119.167, "count": 6}
+
+
+batch_id: 828, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 63.833, "y": 358.500, "count": 6}
+Cluster: {"x": 151.167, "y": 297.667, "count": 6}
+Cluster: {"x": 53.974, "y": 369.410, "count": 39}
+Cluster: {"x": 233.541, "y": 385.730, "count": 37}
+
+
+batch_id: 830, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 825, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 498.000, "y": 498.000, "count": 1}
+Cluster: {"x": 251.708, "y": 446.292, "count": 24}
+Cluster: {"x": 141.032, "y": 498.310, "count": 126}
+
+
+batch_id: 836, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 274.583, "y": 335.417, "count": 12}
+Cluster: {"x": 274.231, "y": 298.154, "count": 13}
+Cluster: {"x": 356.767, "y": 384.983, "count": 60}
+
+
+batch_id: 827, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 832, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 838, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 1.000, "y": 359.000, "count": 2}
+Cluster: {"x": 25.055, "y": 173.532, "count": 474}
+Cluster: {"x": 275.700, "y": 378.500, "count": 20}
+Cluster: {"x": 437.656, "y": 378.938, "count": 32}
+Cluster: {"x": 167.438, "y": 417.688, "count": 16}
+Cluster: {"x": 352.913, "y": 463.522, "count": 46}
+
+
+batch_id: 835, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 296.333, "y": 117.667, "count": 3}
+Cluster: {"x": 357.121, "y": 99.970, "count": 66}
+Cluster: {"x": 481.004, "y": 141.166, "count": 459}
+Cluster: {"x": 329.683, "y": 153.417, "count": 120}
+
+
+batch_id: 834, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 498.000, "y": 323.333, "count": 3}
+Cluster: {"x": 496.538, "y": 168.969, "count": 65}
+Cluster: {"x": 383.286, "y": 379.000, "count": 7}
+
+
+batch_id: 815, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 844, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 150.000, "y": 298.000, "count": 1}
+Cluster: {"x": 233.475, "y": 298.311, "count": 61}
+Cluster: {"x": 0.867, "y": 353.133, "count": 15}
+Cluster: {"x": 152.609, "y": 383.283, "count": 46}
+
+
+batch_id: 846, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 91.125, "y": 203.625, "count": 8}
+Cluster: {"x": 0.857, "y": 2.000, "count": 7}
+
+
+batch_id: 842, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 341.143, "count": 7}
+Cluster: {"x": 123.288, "y": 2.025, "count": 118}
+Cluster: {"x": 260.590, "y": 20.750, "count": 268}
+Cluster: {"x": 497.727, "y": 1.818, "count": 11}
+Cluster: {"x": 331.500, "y": 1.000, "count": 8}
+
+
+batch_id: 833, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 845, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 121.400, "y": 498.000, "count": 5}
+
+
+batch_id: 852, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 351.400, "y": 299.800, "count": 5}
+
+
+batch_id: 837, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 848, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 840, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 472.200, "y": 347.400, "count": 5}
+Cluster: {"x": 498.000, "y": 319.000, "count": 8}
+Cluster: {"x": 497.609, "y": 353.391, "count": 23}
+
+
+batch_id: 843, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 823, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 319.000, "y": 142.429, "count": 7}
+Cluster: {"x": 30.000, "y": 91.500, "count": 6}
+Cluster: {"x": 389.214, "y": 93.357, "count": 14}
+Cluster: {"x": 0.640, "y": 98.040, "count": 25}
+Cluster: {"x": 351.500, "y": 99.154, "count": 26}
+Cluster: {"x": 260.356, "y": 154.397, "count": 73}
+Cluster: {"x": 14.472, "y": 179.981, "count": 53}
+Cluster: {"x": 389.950, "y": 179.200, "count": 40}
+Cluster: {"x": 434.500, "y": 182.667, "count": 6}
+
+
+batch_id: 850, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 854, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 351.563, "y": 382.063, "count": 16}
+Cluster: {"x": 166.269, "y": 414.423, "count": 26}
+
+
+batch_id: 841, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 497.667, "y": 497.667, "count": 3}
+Cluster: {"x": 165.317, "y": 447.267, "count": 60}
+Cluster: {"x": 336.743, "y": 446.686, "count": 35}
+Cluster: {"x": 108.896, "y": 495.230, "count": 135}
+Cluster: {"x": 275.866, "y": 498.045, "count": 67}
+
+
+batch_id: 851, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 376.400, "y": 165.400, "count": 5}
+Cluster: {"x": 498.353, "y": 138.970, "count": 201}
+Cluster: {"x": 314.470, "y": 119.239, "count": 134}
+Cluster: {"x": 453.141, "y": 132.115, "count": 78}
+
+
+batch_id: 831, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 853, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 856, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 472.000, "y": 323.000, "count": 3}
+Cluster: {"x": 497.868, "y": 323.289, "count": 38}
+Cluster: {"x": 450.286, "y": 335.143, "count": 7}
+
+
+batch_id: 861, print_id: SI266220200309225433, tile_id: 13
+Cluster: {"x": 1.200, "y": 484.000, "count": 5}
+
+
+batch_id: 849, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 857, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 297.400, "y": 480.800, "count": 5}
+Cluster: {"x": 266.629, "y": 477.139, "count": 151}
+Cluster: {"x": 128.083, "y": 454.833, "count": 12}
+Cluster: {"x": 74.855, "y": 476.855, "count": 110}
+Cluster: {"x": 109.143, "y": 498.250, "count": 28}
+
+
+batch_id: 860, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 62.000, "y": 370.500, "count": 2}
+Cluster: {"x": 151.667, "y": 302.833, "count": 6}
+Cluster: {"x": 0.929, "y": 322.607, "count": 28}
+
+
+batch_id: 862, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 1.000, "y": 1.600, "count": 5}
+
+
+batch_id: 867, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 352.631, "y": 131.325, "count": 203}
+Cluster: {"x": 493.013, "y": 122.601, "count": 153}
+Cluster: {"x": 472.485, "y": 184.242, "count": 33}
+
+
+batch_id: 859, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 839, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 205.500, "y": 122.000, "count": 4}
+Cluster: {"x": 14.123, "y": 129.812, "count": 835}
+Cluster: {"x": 399.299, "y": 142.836, "count": 591}
+Cluster: {"x": 249.620, "y": 126.725, "count": 342}
+
+
+batch_id: 858, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 442.833, "y": 146.000, "count": 6}
+Cluster: {"x": 109.543, "y": 0.943, "count": 35}
+Cluster: {"x": 252.667, "y": 0.889, "count": 18}
+Cluster: {"x": 338.889, "y": 0.889, "count": 9}
+Cluster: {"x": 287.333, "y": 1.000, "count": 12}
+Cluster: {"x": 340.125, "y": 35.125, "count": 8}
+
+
+batch_id: 864, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 866, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 497.857, "y": 187.857, "count": 7}
+
+
+batch_id: 865, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 877, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 847, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 876, print_id: SI266220200309225433, tile_id: 12
+
+
+batch_id: 869, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 2.083, "y": 482.667, "count": 12}
+
+
+batch_id: 878, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 870, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 60.333, "y": 284.833, "count": 6}
+
+
+batch_id: 875, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 868, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 263.500, "y": 298.000, "count": 2}
+Cluster: {"x": 352.000, "y": 297.500, "count": 6}
+
+
+batch_id: 880, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 874, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 359.667, "y": 1.000, "count": 3}
+Cluster: {"x": 147.536, "y": 8.214, "count": 332}
+Cluster: {"x": 254.222, "y": 0.667, "count": 9}
+Cluster: {"x": 325.733, "y": 1.000, "count": 15}
+Cluster: {"x": 339.571, "y": 34.714, "count": 7}
+Cluster: {"x": 195.000, "y": 71.000, "count": 17}
+
+
+batch_id: 872, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 873, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 200.600, "y": 475.200, "count": 10}
+Cluster: {"x": 251.900, "y": 445.900, "count": 10}
+Cluster: {"x": 156.917, "y": 446.958, "count": 24}
+Cluster: {"x": 141.493, "y": 498.265, "count": 136}
+Cluster: {"x": 253.000, "y": 498.222, "count": 9}
+Cluster: {"x": 330.833, "y": 498.000, "count": 6}
+
+
+batch_id: 882, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 886, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 350.000, "y": 467.000, "count": 3}
+Cluster: {"x": 274.000, "y": 379.818, "count": 22}
+Cluster: {"x": 436.050, "y": 379.600, "count": 20}
+
+
+batch_id: 885, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 855, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 288.250, "y": 134.000, "count": 16}
+Cluster: {"x": 3.729, "y": 130.530, "count": 247}
+Cluster: {"x": 352.241, "y": 106.370, "count": 54}
+Cluster: {"x": 187.636, "y": 123.307, "count": 88}
+Cluster: {"x": 236.000, "y": 159.500, "count": 8}
+Cluster: {"x": 40.818, "y": 180.727, "count": 11}
+
+
+batch_id: 892, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 56.500, "y": 299.000, "count": 4}
+Cluster: {"x": 236.000, "y": 298.500, "count": 6}
+Cluster: {"x": 150.313, "y": 386.188, "count": 16}
+
+
+batch_id: 894, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 881, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 891, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 884, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 435.000, "y": 299.000, "count": 1}
+Cluster: {"x": 272.923, "y": 300.615, "count": 13}
+
+
+batch_id: 863, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 890, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 300.800, "y": 1.000, "count": 5}
+Cluster: {"x": 110.174, "y": 0.696, "count": 23}
+Cluster: {"x": 162.714, "y": 0.786, "count": 14}
+Cluster: {"x": 338.615, "y": 0.923, "count": 13}
+Cluster: {"x": 251.000, "y": 32.182, "count": 22}
+
+
+batch_id: 888, print_id: SI266220200309225433, tile_id: 8
+
+
+batch_id: 871, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 382.000, "y": 162.750, "count": 4}
+Cluster: {"x": 3.133, "y": 124.813, "count": 150}
+Cluster: {"x": 356.862, "y": 94.000, "count": 29}
+Cluster: {"x": 267.316, "y": 94.316, "count": 19}
+Cluster: {"x": 237.500, "y": 102.000, "count": 14}
+Cluster: {"x": 212.000, "y": 110.500, "count": 6}
+Cluster: {"x": 186.875, "y": 129.438, "count": 16}
+Cluster: {"x": 41.140, "y": 166.791, "count": 43}
+Cluster: {"x": 225.000, "y": 152.500, "count": 6}
+Cluster: {"x": 264.250, "y": 164.250, "count": 56}
+Cluster: {"x": 389.222, "y": 176.444, "count": 9}
+Cluster: {"x": 437.444, "y": 176.111, "count": 9}
+Cluster: {"x": 3.000, "y": 184.286, "count": 7}
+
+
+batch_id: 893, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 889, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 336.384, "y": 452.636, "count": 99}
+Cluster: {"x": 210.667, "y": 309.167, "count": 6}
+Cluster: {"x": 165.558, "y": 451.154, "count": 52}
+Cluster: {"x": 56.593, "y": 483.926, "count": 27}
+Cluster: {"x": 136.189, "y": 498.283, "count": 53}
+Cluster: {"x": 337.667, "y": 498.333, "count": 9}
+
+
+batch_id: 879, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 883, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 356.000, "y": 154.000, "count": 3}
+Cluster: {"x": 479.697, "y": 108.939, "count": 99}
+Cluster: {"x": 363.700, "y": 97.700, "count": 10}
+Cluster: {"x": 386.483, "y": 114.690, "count": 29}
+Cluster: {"x": 305.302, "y": 116.937, "count": 63}
+Cluster: {"x": 316.500, "y": 148.000, "count": 6}
+Cluster: {"x": 365.000, "y": 160.000, "count": 6}
+Cluster: {"x": 498.486, "y": 175.743, "count": 35}
+Cluster: {"x": 457.250, "y": 183.938, "count": 16}
+
+
+batch_id: 902, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 166.500, "y": 413.500, "count": 4}
+Cluster: {"x": 350.889, "y": 379.333, "count": 9}
+Cluster: {"x": 275.000, "y": 447.000, "count": 11}
+Cluster: {"x": 438.105, "y": 462.000, "count": 19}
+
+
+batch_id: 901, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 900, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 436.107, "y": 382.857, "count": 28}
+
+
+batch_id: 904, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 352.000, "count": 5}
+Cluster: {"x": 450.333, "y": 334.583, "count": 12}
+
+
+batch_id: 896, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 906, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 1.000, "count": 1}
+Cluster: {"x": 110.300, "y": 0.700, "count": 20}
+Cluster: {"x": 161.429, "y": 3.893, "count": 28}
+Cluster: {"x": 337.455, "y": 0.818, "count": 11}
+Cluster: {"x": 335.746, "y": 30.966, "count": 59}
+
+
+batch_id: 898, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 899, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 350.746, "y": 124.314, "count": 617}
+Cluster: {"x": 453.600, "y": 94.467, "count": 15}
+Cluster: {"x": 481.717, "y": 153.289, "count": 1016}
+
+
+batch_id: 897, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 909, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 917, print_id: SI266220200309225433, tile_id: 5
+Cluster: {"x": 420.000, "y": 76.227, "count": 22}
+Cluster: {"x": 0.889, "y": 91.556, "count": 9}
+Cluster: {"x": 383.385, "y": 227.385, "count": 13}
+Cluster: {"x": 20.167, "y": 477.833, "count": 12}
+
+
+batch_id: 887, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 325.571, "y": 170.143, "count": 7}
+Cluster: {"x": 16.958, "y": 139.210, "count": 448}
+Cluster: {"x": 268.966, "y": 114.828, "count": 29}
+Cluster: {"x": 425.480, "y": 107.880, "count": 25}
+Cluster: {"x": 358.111, "y": 110.667, "count": 9}
+Cluster: {"x": 188.500, "y": 143.000, "count": 6}
+Cluster: {"x": 435.563, "y": 163.938, "count": 16}
+
+
+batch_id: 908, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 1.000, "y": 353.000, "count": 1}
+Cluster: {"x": 151.053, "y": 299.053, "count": 19}
+Cluster: {"x": 58.125, "y": 368.875, "count": 8}
+Cluster: {"x": 236.958, "y": 383.542, "count": 24}
+
+
+batch_id: 910, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 918, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 38.000, "y": 162.944, "count": 18}
+Cluster: {"x": 5.878, "y": 208.673, "count": 98}
+Cluster: {"x": 354.111, "y": 466.370, "count": 27}
+
+
+batch_id: 905, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 57.833, "y": 481.167, "count": 36}
+Cluster: {"x": 164.200, "y": 498.400, "count": 25}
+Cluster: {"x": 338.417, "y": 498.083, "count": 12}
+Cluster: {"x": 110.375, "y": 498.000, "count": 8}
+
+
+batch_id: 907, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 916, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 360.921, "y": 385.974, "count": 38}
+
+
+batch_id: 914, print_id: SI266220200309225433, tile_id: 2
+Cluster: {"x": 400.667, "y": 205.000, "count": 3}
+Cluster: {"x": 497.902, "y": 186.623, "count": 61}
+Cluster: {"x": 497.826, "y": 247.609, "count": 23}
+
+
+batch_id: 922, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 305.778, "y": 59.111, "count": 9}
+Cluster: {"x": 114.734, "y": 3.188, "count": 64}
+Cluster: {"x": 282.242, "y": 1.000, "count": 62}
+Cluster: {"x": 276.060, "y": 34.196, "count": 168}
+
+
+batch_id: 912, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 915, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 327.333, "y": 143.333, "count": 6}
+Cluster: {"x": 354.794, "y": 100.254, "count": 63}
+Cluster: {"x": 484.627, "y": 134.253, "count": 766}
+Cluster: {"x": 294.929, "y": 119.643, "count": 14}
+Cluster: {"x": 349.379, "y": 158.548, "count": 124}
+
+
+batch_id: 920, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 498.000, "y": 317.500, "count": 8}
+Cluster: {"x": 497.857, "y": 353.357, "count": 14}
+
+
+batch_id: 924, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 116.500, "y": 322.500, "count": 4}
+Cluster: {"x": 150.833, "y": 298.167, "count": 6}
+Cluster: {"x": 210.000, "y": 320.714, "count": 7}
+Cluster: {"x": 0.750, "y": 353.750, "count": 8}
+Cluster: {"x": 153.556, "y": 385.111, "count": 18}
+
+
+batch_id: 913, print_id: SI266220200309225433, tile_id: 1
+Cluster: {"x": 497.800, "y": 91.400, "count": 5}
+
+
+batch_id: 926, print_id: SI266220200309225433, tile_id: 14
+Cluster: {"x": 179.000, "y": 1.000, "count": 5}
+
+
+batch_id: 932, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 350.714, "y": 385.143, "count": 7}
+Cluster: {"x": 236.000, "y": 363.000, "count": 2}
+
+
+batch_id: 934, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 165.000, "y": 415.000, "count": 7}
+
+
+batch_id: 923, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 895, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 921, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 281.969, "y": 498.031, "count": 64}
+Cluster: {"x": 419.000, "y": 471.500, "count": 2}
+Cluster: {"x": 129.462, "y": 498.115, "count": 26}
+
+
+batch_id: 930, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 925, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 928, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 931, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 498.143, "y": 140.578, "count": 237}
+Cluster: {"x": 328.318, "y": 127.393, "count": 239}
+Cluster: {"x": 450.538, "y": 113.500, "count": 26}
+Cluster: {"x": 450.133, "y": 169.756, "count": 45}
+
+
+batch_id: 903, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 15.716, "y": 136.757, "count": 1356}
+Cluster: {"x": 350.882, "y": 96.000, "count": 17}
+Cluster: {"x": 409.205, "y": 153.911, "count": 146}
+Cluster: {"x": 266.912, "y": 146.053, "count": 57}
+Cluster: {"x": 167.857, "y": 130.214, "count": 14}
+Cluster: {"x": 385.000, "y": 146.000, "count": 12}
+
+
+batch_id: 933, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 929, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 941, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 911, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 940, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 0.750, "y": 355.000, "count": 4}
+Cluster: {"x": 5.308, "y": 316.192, "count": 26}
+
+
+batch_id: 942, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 939, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 919, print_id: SI266220200309225433, tile_id: 7
+Cluster: {"x": 11.255, "y": 140.525, "count": 644}
+Cluster: {"x": 332.214, "y": 143.643, "count": 14}
+Cluster: {"x": 260.314, "y": 108.697, "count": 185}
+Cluster: {"x": 350.833, "y": 97.333, "count": 12}
+Cluster: {"x": 436.073, "y": 136.127, "count": 55}
+Cluster: {"x": 351.000, "y": 132.167, "count": 6}
+Cluster: {"x": 260.583, "y": 168.083, "count": 12}
+Cluster: {"x": 355.476, "y": 182.286, "count": 42}
+
+
+batch_id: 936, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 468.750, "y": 326.750, "count": 4}
+Cluster: {"x": 497.667, "y": 327.889, "count": 45}
+
+
+batch_id: 946, print_id: SI266220200309225433, tile_id: 2
+
+
+batch_id: 958, print_id: SI266220200309225433, tile_id: 14
+
+
+batch_id: 944, print_id: SI266220200309225433, tile_id: 0
+
+
+batch_id: 956, print_id: SI266220200309225433, tile_id: 12
+Cluster: {"x": 61.188, "y": 370.813, "count": 16}
+Cluster: {"x": 60.750, "y": 353.000, "count": 4}
+
+
+batch_id: 947, print_id: SI266220200309225433, tile_id: 3
+Cluster: {"x": 422.500, "y": 177.250, "count": 4}
+Cluster: {"x": 493.068, "y": 136.868, "count": 190}
+Cluster: {"x": 310.391, "y": 115.188, "count": 69}
+Cluster: {"x": 385.238, "y": 163.905, "count": 21}
+Cluster: {"x": 339.333, "y": 155.667, "count": 6}
+
+
+batch_id: 938, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 498.000, "y": 395.000, "count": 3}
+Cluster: {"x": 116.321, "y": 1.524, "count": 84}
+Cluster: {"x": 266.757, "y": 12.188, "count": 144}
+Cluster: {"x": 497.364, "y": 1.455, "count": 11}
+
+
+batch_id: 937, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 128.167, "y": 454.167, "count": 6}
+Cluster: {"x": 434.200, "y": 477.000, "count": 5}
+Cluster: {"x": 104.167, "y": 463.667, "count": 12}
+Cluster: {"x": 69.240, "y": 489.200, "count": 25}
+Cluster: {"x": 282.122, "y": 497.878, "count": 74}
+Cluster: {"x": 119.915, "y": 498.211, "count": 71}
+
+
+batch_id: 949, print_id: SI266220200309225433, tile_id: 5
+
+
+batch_id: 950, print_id: SI266220200309225433, tile_id: 6
+Cluster: {"x": 165.000, "y": 412.000, "count": 1}
+Cluster: {"x": 351.947, "y": 379.789, "count": 19}
+Cluster: {"x": 276.000, "y": 451.500, "count": 10}
+Cluster: {"x": 439.000, "y": 467.692, "count": 13}
+
+
+batch_id: 948, print_id: SI266220200309225433, tile_id: 4
+Cluster: {"x": 228.500, "y": 320.000, "count": 6}
+
+
+batch_id: 955, print_id: SI266220200309225433, tile_id: 11
+
+
+batch_id: 927, print_id: SI266220200309225433, tile_id: 15
+
+
+batch_id: 952, print_id: SI266220200309225433, tile_id: 8
+Cluster: {"x": 491.000, "y": 334.286, "count": 7}
+
+
+batch_id: 945, print_id: SI266220200309225433, tile_id: 1
+
+
+batch_id: 957, print_id: SI266220200309225433, tile_id: 13
+
+
+batch_id: 953, print_id: SI266220200309225433, tile_id: 9
+Cluster: {"x": 251.222, "y": 493.222, "count": 9}
+Cluster: {"x": 261.040, "y": 449.476, "count": 124}
+Cluster: {"x": 60.690, "y": 478.759, "count": 29}
+Cluster: {"x": 159.750, "y": 498.250, "count": 24}
+Cluster: {"x": 253.727, "y": 498.182, "count": 11}
+
+
+batch_id: 954, print_id: SI266220200309225433, tile_id: 10
+Cluster: {"x": 399.500, "y": 18.500, "count": 4}
+Cluster: {"x": 156.254, "y": 6.683, "count": 63}
+Cluster: {"x": 252.273, "y": 0.545, "count": 11}
+Cluster: {"x": 336.500, "y": 1.000, "count": 8}
+Cluster: {"x": 339.500, "y": 35.000, "count": 24}
+
+
