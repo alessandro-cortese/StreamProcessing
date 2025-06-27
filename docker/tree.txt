@@ -1,0 +1,35 @@
+.
+├── challenger
+│   └── gc25-chall
+│       ├── gc25-chall-data
+│       │   └── data
+│       │       ├── blobs
+│       │       │   ├── 10610961
+|       |       |   ...
+│       │       │   ├── 81334622
+│       │       │   ├── 81335618
+│       │       │   └── 81335635
+│       │       ├── conf
+│       │       ├── db
+│       │       └── snap.0000000004D90890
+│       ├── gc25-chall-data.tgz
+│       └── start_challenger.sh
+├── client
+│   ├── Dockerfile
+│   └── requirements.txt
+├── data
+│   ├── blobs
+│   ├── conf
+│   ├── db
+│   └── snap.000000000000015F
+├── docker-compose.yaml
+├── flink
+│   ├── Dockerfile
+│   └── requirements.txt
+├── start_architecture.sh
+├── start_challenger.sh
+├── stop_architecture.sh
+├── stop_challenger.sh
+└── tree.txt
+
+10 directories, 1090 files

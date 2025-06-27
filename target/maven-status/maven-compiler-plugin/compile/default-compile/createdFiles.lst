@@ -1,0 +1,12 @@
+it/uniroma2/sabd/query/Q2OutlierDetection$Outlier.class
+it/uniroma2/sabd/query/Q1SaturationMapFunction.class
+it/uniroma2/sabd/query/Q2OutlierDetection.class
+it/uniroma2/sabd/utils/HTTPClient.class
+it/uniroma2/sabd/engineering/ChallengerMetricsFetcher.class
+it/uniroma2/sabd/query/Q2OutlierDetectionOpt.class
+it/uniroma2/sabd/engineering/UploadResultSinkQ3.class
+it/uniroma2/sabd/query/Q2OutlierDetectionOpt$Outlier.class
+it/uniroma2/sabd/MainJob.class
+it/uniroma2/sabd/model/Batch.class
+it/uniroma2/sabd/engineering/ChallengerSource.class
+it/uniroma2/sabd/query/Q3ClusteringMapFunction.class
