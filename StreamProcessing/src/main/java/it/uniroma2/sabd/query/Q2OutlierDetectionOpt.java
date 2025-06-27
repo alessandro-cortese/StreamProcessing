@@ -9,7 +9,7 @@ import org.apache.flink.util.Collector;
 
 import java.util.*;
 
-public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batch> {
+public class Q2OutlierDetectionOpt extends KeyedProcessFunction<String, Batch, Batch> {
 
     private transient ListState<int[][]> windowState;
 
@@ -17,6 +17,9 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
     private static final int SATURATION_THRESHOLD = 65000;
     private static final int OUTLIER_THRESHOLD = 6000;
     private static final int DISTANCE_THRESHOLD = 2;
+    // The maximum distance to consider for dx, dy loops.
+    // In your original code, loops go up to 2 * DISTANCE_THRESHOLD in both directions.
+    private static final int MAX_COORD_OFFSET = DISTANCE_THRESHOLD * 2; 
 
     @Override
     public void open(Configuration parameters) {
@@ -59,34 +62,22 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
                 int val = window.get(depth - 1)[y][x];
                 if (val <= EMPTY_THRESHOLD || val >= SATURATION_THRESHOLD) continue;
 
-                // Compute Close Neighbors (CN) - distance <= DISTANCE_THRESHOLD
                 double cnSum = 0.0;
                 int cnCount = 0;
+                double onSum = 0.0;
+                int onCount = 0;
 
+                // Loop for Close Neighbors (CN) and Outer Neighbors (ON)
                 for (int d = 0; d < depth; d++) {
-                    for (int dy = -DISTANCE_THRESHOLD * 2; dy <= DISTANCE_THRESHOLD * 2; dy++) {
-                        for (int dx = -DISTANCE_THRESHOLD * 2; dx <= DISTANCE_THRESHOLD * 2; dx++) {
-                            // Compute distance as abs(dx) + abs(dy) + abs(depth - 1 - d)
+                    for (int dy = -MAX_COORD_OFFSET; dy <= MAX_COORD_OFFSET; dy++) {
+                        for (int dx = -MAX_COORD_OFFSET; dx <= MAX_COORD_OFFSET; dx++) {
+                            // Compute Manhattan distance
                             int distance = Math.abs(dx) + Math.abs(dy) + Math.abs(depth - 1 - d);
 
                             if (distance <= DISTANCE_THRESHOLD) {
                                 cnSum += getPaddedValue(window, d, x + dx, y + dy);
                                 cnCount++;
-                            }
-                        }
-                    }
-                }
-
-                // Compute Outer Neighbors (ON) - distance > DISTANCE_THRESHOLD && <= 2*DISTANCE_THRESHOLD
-                double onSum = 0.0;
-                int onCount = 0;
-
-                for (int d = 0; d < depth; d++) {
-                    for (int dy = -DISTANCE_THRESHOLD * 2; dy <= DISTANCE_THRESHOLD * 2; dy++) {
-                        for (int dx = -DISTANCE_THRESHOLD * 2; dx <= DISTANCE_THRESHOLD * 2; dx++) {
-                            int distance = Math.abs(dx) + Math.abs(dy) + Math.abs(depth - 1 - d);
-
-                            if (distance > DISTANCE_THRESHOLD && distance <= 2 * DISTANCE_THRESHOLD) {
+                            } else if (distance > DISTANCE_THRESHOLD && distance <= 2 * DISTANCE_THRESHOLD) {
                                 onSum += getPaddedValue(window, d, x + dx, y + dy);
                                 onCount++;
                             }
@@ -97,7 +88,6 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
                 double closeMean = cnCount > 0 ? cnSum / cnCount : 0.0;
                 double outerMean = onCount > 0 ? onSum / onCount : 0.0;
                 double dev = Math.abs(closeMean - outerMean);
-
 
                 if (val > EMPTY_THRESHOLD && val < SATURATION_THRESHOLD && dev > OUTLIER_THRESHOLD) {
                     candidates.add(new Outlier(x, y, dev));
@@ -136,8 +126,7 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
             return 0.0;
         }
 
-
-        return (double) img[y][x];
+        return img[y][x];
     }
 
     private static class Outlier {

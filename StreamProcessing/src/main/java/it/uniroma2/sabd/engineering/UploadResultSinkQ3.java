@@ -12,13 +12,21 @@ public class UploadResultSinkQ3 implements SinkFunction<Batch> {
 
     @Override
     public void invoke(Batch batch, Context context) {
-        if (ChallengerSource.BENCH_ID != null &&
-                batch.q3_clusters != null &&
-                !batch.q3_clusters.isEmpty() &&
-                !uploaded.contains(batch.batch_id)) {
+//        if (ChallengerSource.BENCH_ID != null &&
+//                batch.q3_clusters != null &&
+//                !batch.q3_clusters.isEmpty() &&
+//                !uploaded.contains(batch.batch_id)) {
+//
+//            ChallengerSource.uploadResult(batch, ChallengerSource.BENCH_ID);
+//            uploaded.add((long) batch.batch_id);
+//        }
 
-            ChallengerSource.uploadResult(batch, ChallengerSource.BENCH_ID);
+        if (ChallengerSource.BENCH_ID != null && !uploaded.contains(batch.batch_id)) {
+            ChallengerSource.uploadResultQ0(batch, ChallengerSource.BENCH_ID);
             uploaded.add((long) batch.batch_id);
         }
+
+//        ChallengerSource.uploadResult(batch, ChallengerSource.BENCH_ID);
+//        uploaded.add((long) batch.batch_id);
     }
 }

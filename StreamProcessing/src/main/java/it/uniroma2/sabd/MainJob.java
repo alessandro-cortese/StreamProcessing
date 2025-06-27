@@ -3,7 +3,6 @@ package it.uniroma2.sabd;
 import it.uniroma2.sabd.engineering.*;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.*;
-import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.core.fs.FileSystem;
 import org.apache.flink.streaming.api.datastream.DataStream;
@@ -15,7 +14,7 @@ import java.util.List;
 
 public class MainJob {
 
-    private static final int PARALLELISM_LEVEL = 1;
+    private static final int PARALLELISM_LEVEL = 8;
     private static final String RESULTS_DIR = "/Results/";
 
     public static void main(String[] args) throws Exception {
@@ -23,7 +22,7 @@ public class MainJob {
         System.out.println("Start Pipeline: Q1 - Saturation + Q2 - Outlier Detection + Q3 - Clustering");
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        env.setParallelism(PARALLELISM_LEVEL);
+        env.setParallelism(1);
 
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
@@ -31,15 +30,23 @@ public class MainJob {
                 .map(new Q1SaturationMapFunction())
                 .setParallelism(PARALLELISM_LEVEL);
 
-        q1Result.addSink(new UploadResultSinkQ0());
+        q1Result.addSink(new UploadResultSinkQ3()).setParallelism(1);
 
         writeCsv(env, q1Result.map(toCsvQ1()), "query1.csv", getHeaderQ1());
+
+//        DataStream<Batch> q2Result = q1Result
+//                .rebalance()
+//                .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
+//                .process(new Q2OutlierDetectionOpt())
+//                .setParallelism(PARALLELISM_LEVEL);
 
         DataStream<Batch> q2Result = q1Result
                 .rebalance()
                 .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
-                .process(new Q2OutlierDetection())
+                .process(new Q2OutlierDetectionOpt())
                 .setParallelism(PARALLELISM_LEVEL);
+
+
 
         writeCsv(env, q2Result.map(toCsvQ2()), "query2.csv", getHeaderQ2());
 
@@ -47,12 +54,13 @@ public class MainJob {
                 .map(new Q3ClusteringMapFunction())
                 .setParallelism(PARALLELISM_LEVEL);
 
-        q3Result.addSink(new UploadResultSinkQ3());
+        //q3Result.addSink(new UploadResultSinkQ3()).setParallelism(1);
         writeCsv(env, q3Result.map(toCsvQ3()), "query3.csv", getHeaderQ3());
 
         q3Result
                 .map(toTextClusters())
-                .writeAsText(RESULTS_DIR + "query3_clusters.txt", FileSystem.WriteMode.OVERWRITE);
+                .writeAsText(RESULTS_DIR + "query3_clusters.txt", FileSystem.WriteMode.OVERWRITE)
+                .setParallelism(1);
 
         env.execute("Thermal Defect Analysis Pipeline - Q1 + Q2 + Q3");
 
@@ -110,6 +118,7 @@ public class MainJob {
         DataStream<String> headerStream = env.fromData(header);
         headerStream.union(dataStream)
                 .writeAsText(RESULTS_DIR + filename, FileSystem.WriteMode.OVERWRITE)
+                .setParallelism(1) // <--- soluzione 1: forzare scrittura singola
                 .name("Write " + filename);
     }
 
