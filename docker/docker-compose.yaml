@@ -13,7 +13,6 @@ services:
       - "2181:2181"
     networks:
       - stream_processing_network
-    #command: ["bin/zookeeper-server-start.sh", "config/zookeeper.properties"]
 
   kafka:
     image: confluentinc/cp-kafka:7.3.0
@@ -30,16 +29,38 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks:
       - stream_processing_network
-    # command: ["bin/kafka-server-start.sh", "config/server.properties", "bin/kafka-topics.sh", "--create", "--topic", "challenger-batches", "--bootstrap-server", "localhost:9092", "--partitions 1", "--replication-factor", "1"]
 
-  kafka-streams-app:
-    build: ./kafka-streams-app
-    container_name: kafka-streams-app
+  kafka-producer-app:
+
+    build:
+      context: ./kafka-streams-app
+      dockerfile: Dockerfile
+    container_name: kafka-producer-app
+
     depends_on:
       - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      CHALLENGER_API_URL: http://gc25-challenger:8866
     networks:
       - stream_processing_network
     volumes:
-      - ../Results:/Results
-      - ../target:/app
-    # command: ["java", "-jar", "/app/kafka-streams-job.jar"]
+      - ../target:/app/kafka
+    command: ["tail", "-f", "/dev/null"]
+
+
+  kafka-streams-app:
+    build:
+      context: ./kafka-streams-app
+      dockerfile: Dockerfile
+    container_name: kafka-streams-processor-app
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - stream_processing_network
+    volumes:
+      - ../target:/app/kafka
+      - ./Results:/Results
+    command: ["tail", "-f", "/dev/null"]

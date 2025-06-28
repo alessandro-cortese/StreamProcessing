@@ -1,4 +1,4 @@
 # Dataset Directory
-data/
 *.tar
 *.tgz
+/docker/challenger/gc25-chall/gc25-chall-data

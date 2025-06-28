@@ -8,15 +8,15 @@ import org.apache.hc.core5.http.io.entity.EntityUtils;
 import java.io.IOException;
 
 /**
- * Classe di utilità per la gestione delle risposte HTTP.
- * Fornisce handler per convertire l'entity della risposta in String o byte[].
+ * Utility class for handling HTTP responses.
+ * Provides response handlers to convert response entities to String or byte[].
  */
 public class HTTPClient {
 
     /**
-     * Restituisce un HttpClientResponseHandler che converte l'entity della risposta in una String.
-     * Gestisce anche gli errori HTTP.
-     * @return Un HttpClientResponseHandler per String.
+     * Returns an HttpClientResponseHandler that converts the response entity to a String.
+     * Also handles HTTP error responses.
+     * @return An HttpClientResponseHandler for String.
      */
     public static HttpClientResponseHandler<String> toStringResponseHandler() {
         return response -> {
@@ -26,7 +26,7 @@ public class HTTPClient {
                 try {
                     return entity != null ? EntityUtils.toString(entity) : null;
                 } catch (ParseException e) {
-                    throw new RuntimeException("Errore durante il parsing dell'entity della risposta a String", e);
+                    throw new RuntimeException("Error while parsing response entity to String", e);
                 }
             } else {
                 String errorBody = "";
@@ -35,17 +35,17 @@ public class HTTPClient {
                         errorBody = EntityUtils.toString(entity);
                     }
                 } catch (ParseException | IOException e) {
-                    // Ignora, prova solo a recuperare il corpo dell'errore
+                    // Ignore, just attempting to extract error body
                 }
-                throw new RuntimeException("Errore API: " + status + " - " + response.getReasonPhrase() + " Corpo: " + errorBody);
+                throw new RuntimeException("API Error: " + status + " - " + response.getReasonPhrase() + " Body: " + errorBody);
             }
         };
     }
 
     /**
-     * Restituisce un HttpClientResponseHandler che converte l'entity della risposta in un array di byte.
-     * Gestisce anche gli errori HTTP.
-     * @return Un HttpClientResponseHandler per byte[].
+     * Returns an HttpClientResponseHandler that converts the response entity to a byte array.
+     * Also handles HTTP error responses.
+     * @return An HttpClientResponseHandler for byte[].
      */
     public static HttpClientResponseHandler<byte[]> toByteResponseHandler() {
         return response -> {
@@ -60,9 +60,9 @@ public class HTTPClient {
                         errorBody = EntityUtils.toString(entity);
                     }
                 } catch (ParseException | IOException e) {
-                    // Ignora, prova solo a recuperare il corpo dell'errore
+                    // Ignore, just attempting to extract error body
                 }
-                throw new RuntimeException("Errore API: " + status + " - " + response.getReasonPhrase() + " Corpo: " + errorBody);
+                throw new RuntimeException("API Error: " + status + " - " + response.getReasonPhrase() + " Body: " + errorBody);
             }
         };
     }

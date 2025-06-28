@@ -4,62 +4,57 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.ArrayList; // Aggiunto per q2_all_outliers e q3_clusters
-import java.util.Iterator; // Aggiunto per decodeTIFF
-import javax.imageio.ImageIO; // Aggiunto per decodeTIFF
-import javax.imageio.ImageReader; // Aggiunto per decodeTIFF
-import javax.imageio.stream.MemoryCacheImageInputStream; // Aggiunto per decodeTIFF
-import java.awt.image.BufferedImage; // Aggiunto per decodeTIFF
-import java.io.ByteArrayInputStream; // Aggiunto per decodeTIFF
+import java.util.ArrayList;
+import java.util.Iterator;
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.MemoryCacheImageInputStream;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 
 /**
- * Rappresenta un batch di dati proveniente dal Challenger.
- * Include i campi base per l'identificazione e il TIFF,
- * oltre a placeholder per i risultati delle query Q1, Q2 e Q3.
+ * Represents a data batch coming from the Challenger.
+ * Includes core metadata (batch ID, tile ID, etc.), the TIFF image,
+ * and fields for the outputs of queries Q1, Q2, and Q3.
  */
 public class Batch implements Serializable {
     private Integer batch_id;
     private Integer tile_id;
     private String print_id;
-    private byte[] tif; // Dati immagine TIFF
-    private Integer saturated = 0; // Inizializzato a 0 come nella tua versione precedente
-    private long latency_ms = 0; // Inizializzato a 0 come nella tua versione precedente
-    private String timestamp = ""; // Inizializzato a "" come nella tua versione precedente
-    private int[][] pixels; // Nuovo campo dalla tua versione precedente
-    private long ingestion_time = 0; // Nuovo campo dalla tua versione precedente
+    private byte[] tif; // TIFF image data
+    private Integer saturated = 0; // Q1 result: number of saturated pixels
+    private long latency_ms = 0; // optional field, used to track processing delay
+    private String timestamp = ""; // ingestion timestamp in ISO format
+    private int[][] pixels; // 2D pixel matrix extracted from the TIFF image
+    private long ingestion_time = 0; // ingestion time in epoch milliseconds
     private Map<String, Object> q2_top5_outliers = new HashMap<>();
-    private List<List<Number>> q2_all_outliers = new ArrayList<>(); // Nuovo campo dalla tua versione precedente
-    private List<String> q3_clusters = new ArrayList<>();
+    private List<List<Number>> q2_all_outliers = new ArrayList<>(); // full list of Q2 outliers
+    private List<String> q3_clusters = new ArrayList<>(); // result of Q3 clustering
 
-    /**
-     * Costruttore di default necessario per la deserializzazione JSON.
-     */
+    /** Default constructor required for JSON deserialization. */
     public Batch() {}
 
     /**
-     * Costruttore per creare un oggetto Batch da una Map, mimando il comportamento
-     * della sorgente Flink.
-     * @param map La mappa di dati ricevuta dal Challenger.
-     * @return Un nuovo oggetto Batch.
+     * Creates a Batch object from a map, mimicking the behavior of the Flink source.
+     * @param map The raw map of values received from the Challenger.
+     * @return A populated Batch object.
      */
     public static Batch fromMap(Map<String, Object> map) {
         Batch b = new Batch();
-        // Usiamo i setter per popolare l'oggetto, come fatto precedentemente
         b.setBatch_id((Integer) map.getOrDefault("batch_id", 0));
         b.setTile_id((Integer) map.getOrDefault("tile_id", 0));
         b.setPrint_id((String) map.getOrDefault("print_id", ""));
         b.setTif((byte[]) map.get("tif"));
 
-        // Logica aggiunta dalla tua versione precedente
-        b.setTimestamp(java.time.Instant.now().toString());   // timestamp
-        b.setIngestion_time(System.currentTimeMillis());      // save instant reception
+        b.setTimestamp(java.time.Instant.now().toString());   // capture system timestamp
+        b.setIngestion_time(System.currentTimeMillis());      // capture system time in ms
 
         return b;
     }
 
     /**
-     * Decodifica i dati TIFF in un array di pixel.
-     * Questo metodo era presente nella tua versione precedente e viene ora incluso.
+     * Decodes the TIFF image data into a 2D pixel matrix.
+     * The matrix is transposed to match expected row-major format.
      */
     public void decodeTIFF() {
         try {
@@ -75,10 +70,11 @@ public class Batch implements Serializable {
 
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
-                    temp[y][x] = image.getRaster().getSample(x, y, 0); // 16-bit value
+                    temp[y][x] = image.getRaster().getSample(x, y, 0); // 16-bit grayscale
                 }
             }
-            // transpose the matrix
+
+            // Transpose the matrix: [height][width] → [width][height]
             pixels = new int[width][height];
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
@@ -91,8 +87,7 @@ public class Batch implements Serializable {
         }
     }
 
-
-    // Metodi Getter e Setter per tutti i campi
+    // Getters and setters for all fields
 
     public Integer getBatch_id() {
         return batch_id;
