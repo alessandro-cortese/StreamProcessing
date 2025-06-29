@@ -61,7 +61,6 @@ public class KafkaConsumerApp {
                 .mapValues(q1::apply)
                 .mapValues(q2::apply)
                 .peek((key, batch) -> {
-                    ChallengerUploader.setBenchId(batch.getBench_id());
                     LOG.info("Q2 - Batch {}: {} outlier totali, top5={}",
                             batch.getBatch_id(),
                             batch.getQ2_all_outliers() != null ? batch.getQ2_all_outliers().size() : 0,
@@ -73,8 +72,6 @@ public class KafkaConsumerApp {
                         ChallengerUploader.endBenchmark(batch.getBench_id());
                     }
                 });
-
-
 
         KafkaStreams streams = new KafkaStreams(builder.build(), props);
         // Add a shutdown hook to close gracefully Kafka Streams

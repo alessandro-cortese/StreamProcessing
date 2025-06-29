@@ -19,8 +19,6 @@ import java.util.Map;
 
 public class ChallengerUploader {
 
-    public static String BENCH_ID = null;
-
     private static final Logger LOG = LoggerFactory.getLogger(ChallengerUploader.class);
     public static final String API_URL =
             System.getenv().getOrDefault("CHALLENGER_API_URL", "http://gc25-challenger:8866");
@@ -66,12 +64,5 @@ public class ChallengerUploader {
         }
     }
 
-    public static String getBenchId() {
-        return BENCH_ID;
-    }
-
-    public static void setBenchId(String benchId) {
-        BENCH_ID = benchId;
-    }
 
 }
