@@ -37,12 +37,12 @@ public class Q2OutlierDetectionOpt extends KeyedProcessFunction<String, Batch, B
             window.add(img);
         }
 
-        window.add(batch.pixels);
+        window.add(batch.getPixels());
         if (window.size() > 3) window.remove(0);
         windowState.update(window);
 
         if (window.size() == 3) {
-            batch.q2_top5_outliers = analyzeOutliers(window, batch);
+            batch.setQ2_top5_outliers(analyzeOutliers(window, batch));
         }
 
         out.collect(batch);
@@ -96,7 +96,7 @@ public class Q2OutlierDetectionOpt extends KeyedProcessFunction<String, Batch, B
             }
         }
 
-        batch.q2_all_outliers = allOutliers;
+        batch.setQ2_all_outliers(allOutliers);
 
         candidates.sort(Comparator.comparingDouble(o -> -o.delta));
 

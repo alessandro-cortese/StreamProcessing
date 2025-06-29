@@ -1,7 +1,7 @@
 package it.uniroma2.sabd.controller;
 
 import it.uniroma2.sabd.engineering.ChallengerMetricsFetcher;
-import it.uniroma2.sabd.engineering.UploadResultSinkQ3;
+import it.uniroma2.sabd.engineering.UploadResultSink;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.Q1SaturationMapFunction;
 import it.uniroma2.sabd.query.Q2OutlierDetection;
@@ -40,18 +40,18 @@ public class Controller {
 
             if(!optimization)
                 q2Result = q1Result.rebalance()
-                        .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
+                        .keyBy(batch -> batch.getPrint_id() + "_" + batch.getTile_id())
                         .process(new Q2OutlierDetection())
                         .setParallelism(parallelism_level);
             else
                 q2Result = q1Result.rebalance()
-                        .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
+                        .keyBy(batch -> batch.getPrint_id()+ "_" + batch.getTile_id())
                         .process(new Q2OutlierDetectionOpt())
                         .setParallelism(parallelism_level);
 
 
             if(kafka_streams_comparison){
-                q2Result.addSink(new UploadResultSinkQ3()).setParallelism(1);
+                q2Result.addSink(new UploadResultSink()).setParallelism(1);
             }
 
             if(!optimization)
@@ -63,7 +63,7 @@ public class Controller {
                     .map(new Q3ClusteringMapFunction())
                     .setParallelism(parallelism_level);
 
-            q3Result.addSink(new UploadResultSinkQ3()).setParallelism(1);
+            q3Result.addSink(new UploadResultSink()).setParallelism(1);
 
             if(!optimization)
                 writeCsv(env, q3Result.map(toCsvQ3()), "query3.csv", getHeaderQ3(),  parallelism_level, false);
@@ -94,40 +94,40 @@ public class Controller {
 
     private static MapFunction<Batch, String> toCsvQ1() {
         return batch -> String.format("%d,%d,%s,%d,%d,%s",
-                batch.batch_id, batch.tile_id, batch.print_id,
-                batch.saturated, batch.latency_ms, batch.timestamp);
+                batch.getBatch_id(), batch.getTile_id(), batch.getPrint_id(),
+                batch.getSaturated(), batch.getLatency_ms(), batch.getTimestamp());
     }
 
     private static MapFunction<Batch, String> toCsvQ2() {
         return batch -> {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format("%d,%s,%d", batch.batch_id, batch.print_id, batch.tile_id));
+            sb.append(String.format("%d,%s,%d", batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id()));
             for (int i = 1; i <= 5; i++) {
-                Object pos = batch.q2_top5_outliers.getOrDefault("P" + i, List.of(0, 0));
-                Object delta = batch.q2_top5_outliers.getOrDefault("\u03b4P" + i, 0);
+                Object pos = batch.getQ2_top5_outliers().getOrDefault("P" + i, List.of(0, 0));
+                Object delta = batch.getQ2_top5_outliers().getOrDefault("\u03b4P" + i, 0);
                 if (pos instanceof List<?> l && l.size() == 2) {
                     sb.append(String.format(",%s,%s,%s", l.get(0), l.get(1), delta));
                 } else {
                     sb.append(",0,0,0");
                 }
             }
-            sb.append(String.format(",%d,%s", batch.latency_ms, batch.timestamp));
+            sb.append(String.format(",%d,%s", batch.getLatency_ms(), batch.getTimestamp()));
             return sb.toString();
         };
     }
 
     private static MapFunction<Batch, String> toCsvQ3() {
         return batch -> String.format("%d,%s,%d,%d,%s",
-                batch.batch_id, batch.print_id, batch.tile_id,
-                batch.saturated, String.join(";", batch.q3_clusters));
+                batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id(),
+                batch.getSaturated(), String.join(";", batch.getQ3_clusters()));
     }
 
     private static MapFunction<Batch, String> toTextClusters() {
         return batch -> {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format("batch_id: %d, print_id: %s, tile_id: %d\n",
-                    batch.batch_id, batch.print_id, batch.tile_id));
-            for (String cluster : batch.q3_clusters) {
+                    batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id()));
+            for (String cluster : batch.getQ3_clusters()) {
                 sb.append("Cluster: ").append(cluster).append("\n");
             }
             sb.append("\n");
