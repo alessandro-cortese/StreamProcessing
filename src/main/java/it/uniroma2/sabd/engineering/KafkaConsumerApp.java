@@ -1,12 +1,16 @@
 package it.uniroma2.sabd.engineering;
 
 import it.uniroma2.sabd.model.Batch;
+import it.uniroma2.sabd.query.Q1Saturation;
+import it.uniroma2.sabd.query.Q2OutlierDetection;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.errors.LogAndContinueExceptionHandler;
+import org.apache.kafka.streams.kstream.Consumed;
+import org.apache.kafka.streams.kstream.KStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +27,7 @@ public class KafkaConsumerApp {
 
     private static final Logger LOG = LoggerFactory.getLogger(KafkaConsumerApp.class);
     private static final String KAFKA_TOPIC = "challenger-batches";
-    private static final String KAFKA_BOOTSTRAP_SERVERS = "localhost:9092";
+    private static final String KAFKA_BOOTSTRAP_SERVERS = "kafka:9092";
 
     public static void main(String[] args) {
 
@@ -35,23 +39,45 @@ public class KafkaConsumerApp {
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, BatchSerde.class.getName());
         // Gestione degli errori di deserializzazione, in modo da non bloccare la pipeline
         props.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, LogAndContinueExceptionHandler.class);
+        props.put("auto.offset.reset", "earliest");
 
         StreamsBuilder builder = new StreamsBuilder();
 
         // Stream dei batch dal topic Kafka
-        builder.stream(KAFKA_TOPIC)
+        KStream<String, Batch> stream = builder.stream(KAFKA_TOPIC, Consumed.with(Serdes.String(), new KafkaConsumerApp.BatchSerde()));
+        stream.peek((key, batch) -> {
+            if (batch != null) {
+                LOG.info("Batch ricevuto da Kafka Streams: Key={} BatchID={}", key, batch.getBatch_id());
+            } else {
+                LOG.warn("Batch nullo per key={}", key);
+            }
+        });
+        // Q1
+        Q1Saturation q1 = new Q1Saturation();
+        Q2OutlierDetection q2 = new Q2OutlierDetection();
+
+        long MAX_BATCHES = 3599;
+        stream
+                .mapValues(q1::apply)
+                .mapValues(q2::apply)
                 .peek((key, batch) -> {
-                    if (batch != null) {
-                        LOG.info("Batch ricevuto da Kafka Streams: Key={}", key);
-                    } else {
-                        LOG.warn("Batch nullo ricevuto per la chiave: {}", key);
+                    ChallengerUploader.setBenchId(batch.getBench_id());
+                    LOG.info("Q2 - Batch {}: {} outlier totali, top5={}",
+                            batch.getBatch_id(),
+                            batch.getQ2_all_outliers() != null ? batch.getQ2_all_outliers().size() : 0,
+                            batch.getQ2_top5_outliers());
+                    ChallengerUploader.uploadQ2(batch, batch.getBench_id());
+
+                    if (batch.getBatch_id() == MAX_BATCHES) {
+                        LOG.info("Ultimo batch ricevuto: {}. Termino il benchmark.", batch.getBatch_id());
+                        ChallengerUploader.endBenchmark(batch.getBench_id());
                     }
                 });
-        // Qui andranno le tue query Q1, Q2, Q3
+
+
 
         KafkaStreams streams = new KafkaStreams(builder.build(), props);
-
-        // Aggiungi un shutdown hook per chiudere pulitamente Kafka Streams
+        // Add a shutdown hook to close gracefully Kafka Streams
         Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
 
         LOG.info("Avvio dell'applicazione Kafka Streams...");

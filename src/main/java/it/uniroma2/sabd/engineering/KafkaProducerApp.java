@@ -59,6 +59,7 @@ public class KafkaProducerApp {
 
         try {
             benchId = createAndStartBench(http);
+
             LOG.info("Benchmark created and started: {}", benchId);
         } catch (Exception e) {
             LOG.error("Error starting the benchmark: {}", e.getMessage(), e);
@@ -72,7 +73,7 @@ public class KafkaProducerApp {
         }
 
         int received = 0;
-        final int MAX_BATCHES = 100;
+        final int MAX_BATCHES = 3600;
 
         try {
             while (received < MAX_BATCHES) {
@@ -91,6 +92,7 @@ public class KafkaProducerApp {
                 }
 
                 Batch batch = Batch.fromMap(record);
+                batch.setBench_id(benchId);
                 LOG.info("Batch parsed: batch_id={} tile_id={} print_id={}",
                         batch.getBatch_id(), batch.getTile_id(), batch.getPrint_id());
 
@@ -109,6 +111,7 @@ public class KafkaProducerApp {
             LOG.error("Error while fetching or sending batches: {}", e.getMessage(), e);
         }
 
+        producer.flush();
         producer.close();
         LOG.info("Challenger producer finished.");
     }
@@ -153,10 +156,10 @@ public class KafkaProducerApp {
         }
     }
 
-    private void endBench(CloseableHttpClient http, String benchId) throws IOException {
-        HttpPost end = new HttpPost(API_URL + "/api/end/" + benchId);
-        http.execute(end, HTTPClient.toStringResponseHandler());
-    }
+//    public static void endBench(CloseableHttpClient http, String benchId) throws IOException {
+//        HttpPost end = new HttpPost(API_URL + "/api/end/" + benchId);
+//        http.execute(end, HTTPClient.toStringResponseHandler());
+//    }
 
     private static Map<String, Object> unpack(byte[] bytes) throws IOException {
         MessageUnpacker up = MessagePack.newDefaultUnpacker(bytes);

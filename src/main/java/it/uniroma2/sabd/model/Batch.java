@@ -18,6 +18,7 @@ import java.io.ByteArrayInputStream;
  * and fields for the outputs of queries Q1, Q2, and Q3.
  */
 public class Batch implements Serializable {
+    private String bench_id;
     private Integer batch_id;
     private Integer tile_id;
     private String print_id;
@@ -183,6 +184,14 @@ public class Batch implements Serializable {
 
     public void setQ3_clusters(List<String> q3_clusters) {
         this.q3_clusters = q3_clusters;
+    }
+
+    public String getBench_id() {
+        return bench_id;
+    }
+
+    public void setBench_id(String bench_id) {
+        this.bench_id = bench_id;
     }
 
     @Override
