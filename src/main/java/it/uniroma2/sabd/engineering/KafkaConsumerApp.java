@@ -3,6 +3,7 @@ package it.uniroma2.sabd.engineering;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.Q1Saturation;
 import it.uniroma2.sabd.query.Q2OutlierDetection;
+import it.uniroma2.sabd.utils.CsvWriter;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
@@ -45,13 +46,13 @@ public class KafkaConsumerApp {
 
         // Stream dei batch dal topic Kafka
         KStream<String, Batch> stream = builder.stream(KAFKA_TOPIC, Consumed.with(Serdes.String(), new KafkaConsumerApp.BatchSerde()));
-        stream.peek((key, batch) -> {
-            if (batch != null) {
-                LOG.info("Batch ricevuto da Kafka Streams: Key={} BatchID={}", key, batch.getBatch_id());
-            } else {
-                LOG.warn("Batch nullo per key={}", key);
-            }
-        });
+//        stream.peek((key, batch) -> {
+//            if (batch != null) {
+//                LOG.info("Batch ricevuto da Kafka Streams: Key={} BatchID={}", key, batch.getBatch_id());
+//            } else {
+//                LOG.warn("Batch nullo per key={}", key);
+//            }
+//        });
         // Q1
         Q1Saturation q1 = new Q1Saturation();
         Q2OutlierDetection q2 = new Q2OutlierDetection();
@@ -61,15 +62,18 @@ public class KafkaConsumerApp {
                 .mapValues(q1::apply)
                 .mapValues(q2::apply)
                 .peek((key, batch) -> {
-                    LOG.info("Q2 - Batch {}: {} outlier totali, top5={}",
-                            batch.getBatch_id(),
-                            batch.getQ2_all_outliers() != null ? batch.getQ2_all_outliers().size() : 0,
-                            batch.getQ2_top5_outliers());
+                    //LOG.info("Q2 - Batch {}: {} outlier totali", batch.getBatch_id(),
+                            //batch.getQ2_all_outliers() != null ? batch.getQ2_all_outliers().size() : 0);
+
+                    CsvWriter.writeQ1(batch);
+                    CsvWriter.writeQ2(batch);
+
                     ChallengerUploader.uploadQ2(batch, batch.getBench_id());
 
                     if (batch.getBatch_id() == MAX_BATCHES) {
                         LOG.info("Ultimo batch ricevuto: {}. Termino il benchmark.", batch.getBatch_id());
                         ChallengerUploader.endBenchmark(batch.getBench_id());
+                        ChallengerMetricsFetcher.fetchAndSaveLatestMetrics(1, batch.getBench_id(), true);
                     }
                 });
 

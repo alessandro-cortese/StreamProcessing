@@ -49,11 +49,11 @@ services:
     command: ["tail", "-f", "/dev/null"]
 
 
-  kafka-streams-app:
+  kafka-consumer-app:
     build:
       context: ./kafka-streams-app
       dockerfile: Dockerfile
-    container_name: kafka-streams-processor-app
+    container_name: kafka-consumer-app
     depends_on:
       - kafka
     environment:
@@ -62,5 +62,5 @@ services:
       - stream_processing_network
     volumes:
       - ../target:/app/kafka
-      - ./Results:/Results
+      - ./Results:/app/Results
     command: ["tail", "-f", "/dev/null"]
