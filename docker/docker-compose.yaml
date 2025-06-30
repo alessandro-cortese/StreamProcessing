@@ -46,21 +46,24 @@ services:
       - stream_processing_network
     volumes:
       - ../target:/app/kafka
-    command: ["tail", "-f", "/dev/null"]
+    command: [ "java", "-jar", "/app/kafka/thermal-defect-kafka-1.0.jar", "producer" ]
+
 
 
   kafka-consumer-app:
-    build:
-      context: ./kafka-streams-app
-      dockerfile: Dockerfile
-    container_name: kafka-consumer-app
-    depends_on:
-      - kafka
+    build: ./kafka-streams-app
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_TOPIC_PARTITIONS: 2
     networks:
       - stream_processing_network
     volumes:
       - ../target:/app/kafka
-      - ./Results:/app/Results
-    command: ["tail", "-f", "/dev/null"]
+      - ../Results:/app/Results
+    command: [ "java", "-jar", "/app/kafka/thermal-defect-kafka-1.0.jar", "consumer" ]
+
+
+
+
+
+

@@ -9,6 +9,8 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.io.entity.StringEntity;
+import org.apache.kafka.clients.admin.AdminClient;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -21,13 +23,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
 /**
  * Kafka Producer application that fetches batches from the Challenger HTTP API,
- * deserializes them, and sends them to a Kafka topic for downstream processing.
+ * serializes them, and sends them to a Kafka topic for downstream processing.
  */
 public class KafkaProducerApp {
 
@@ -49,8 +52,20 @@ public class KafkaProducerApp {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "it.uniroma2.sabd.model.BatchSerializer");
 
         producer = new KafkaProducer<>(props);
+
+
         msgpackMapper = new ObjectMapper(new MessagePackFactory());
         jsonMapper = new ObjectMapper();
+        try(AdminClient admin = AdminClient.create(props)){
+            int partitions = Integer.parseInt(System.getenv().getOrDefault("KAFKA_TOPIC_PARTITIONS", "2"));
+            NewTopic newTopic = new NewTopic(KAFKA_TOPIC, partitions, (short) 1);
+            admin.createTopics(Collections.singletonList(newTopic)).all().get();
+            LOG.info("Created topic {} with {} partitions", KAFKA_TOPIC, partitions);
+
+        } catch (Exception e) {
+            LOG.error("Failed to setup topic", e);
+            throw new RuntimeException("Topic setup failed", e);
+        }
     }
 
     public void run() {
@@ -95,8 +110,8 @@ public class KafkaProducerApp {
                 batch.setBench_id(benchId);
                 LOG.info("Batch parsed: batch_id={} tile_id={} print_id={}",
                         batch.getBatch_id(), batch.getTile_id(), batch.getPrint_id());
-
-                producer.send(new ProducerRecord<>(KAFKA_TOPIC, String.valueOf(batch.getBatch_id()), batch),
+                int partition = (batch.getBatch_id() == 3599) ? 0 : (batch.getBatch_id() % 2);
+                producer.send(new ProducerRecord<>(KAFKA_TOPIC, partition, String.valueOf(batch.getBatch_id()), batch),
                         (metadata, exception) -> {
                             if (exception == null) {
                                 LOG.debug("Batch ID {} sent to topic {} at offset {}",
@@ -155,11 +170,6 @@ public class KafkaProducerApp {
             throw new RuntimeException("I/O error while fetching batch: " + ioe.getMessage(), ioe);
         }
     }
-
-//    public static void endBench(CloseableHttpClient http, String benchId) throws IOException {
-//        HttpPost end = new HttpPost(API_URL + "/api/end/" + benchId);
-//        http.execute(end, HTTPClient.toStringResponseHandler());
-//    }
 
     private static Map<String, Object> unpack(byte[] bytes) throws IOException {
         MessageUnpacker up = MessagePack.newDefaultUnpacker(bytes);

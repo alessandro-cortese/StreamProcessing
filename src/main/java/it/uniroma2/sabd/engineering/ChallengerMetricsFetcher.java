@@ -15,11 +15,9 @@ import java.time.LocalDateTime;
 public class ChallengerMetricsFetcher {
 
     private static final String HISTORY_URL = "http://gc25-challenger:8866/api/history";
-    private static final String OUTPUT_FILE = "Results/challenger_metrics.csv";
-    private static final String OUTPUT_FILE_KAFKA_COMPARISON = "Results/challenger_metrics_kafka.csv";
     private static final String ERROR_LOG = "Results/errors.log";
 
-    public static void fetchAndSaveLatestMetrics(int parallelismLevel, String benchId, boolean kafka_comparison) {
+    public static void fetchAndSaveLatestMetrics(int parallelismLevel, String benchId) {
         try {
             System.out.println("Requesting Challenger metrics from: " + HISTORY_URL);
 
@@ -58,12 +56,9 @@ public class ChallengerMetricsFetcher {
                 return;
             }
 
-            File file;
-            if(kafka_comparison)
-                 file = new File(OUTPUT_FILE_KAFKA_COMPARISON);
-            else
-                file = new File(OUTPUT_FILE);
-
+            // CSV file name includes partition
+            String outputFile = String.format("Results/challenger_metrics_kafka_p%d.csv", parallelismLevel);
+            File file = new File(outputFile);
             boolean isNew = !file.exists() || file.length() == 0;
 
             try (FileWriter writer = new FileWriter(file, true)) {
@@ -79,7 +74,7 @@ public class ChallengerMetricsFetcher {
                 ));
             }
 
-            System.out.println("Metrics saved for bench_id=" + benchId);
+            System.out.println("Metrics saved for bench_id=" + benchId + " in " + outputFile);
 
         } catch (Exception e) {
             logError("Metrics Recovery Error: " + e);

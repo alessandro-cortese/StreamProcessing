@@ -42,9 +42,6 @@ public class ChallengerUploader {
 
             httpClient.execute(post, HTTPClient.toStringResponseHandler());
 
-//            LOG.info("[Q2] Inviato batch {} con {} outlier",
-//                    batch.getBatch_id(),
-//                    outliers != null ? outliers.size() : 0);
 
         } catch (Exception e) {
             LOG.error("Errore invio Q2 per batch {}: {}", batch.getBatch_id(), e.getMessage(), e);
