@@ -156,21 +156,21 @@ public class ChallengerSource implements SourceFunction<Batch> {
 
     public static void uploadResult(Batch batch, String benchId) {
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.getBatch_id());
+            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.batch_id);
 
             ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
 
             Map<String, Object> resultMap = new HashMap<>();
-            resultMap.put("batch_id", batch.getBatch_id());
-            resultMap.put("query", 0);
-            resultMap.put("print_id", batch.getPrint_id());
-            resultMap.put("tile_id", batch.getTile_id());
-            resultMap.put("saturated", batch.getSaturated());
-            resultMap.put("centroids", batch.getQ3_clusters());
+            resultMap.put("batch_id", batch.batch_id);
+            resultMap.put("print_id", batch.print_id);
+            resultMap.put("tile_id", batch.tile_id);
+            resultMap.put("saturated", batch.saturated); // Dummy value per Q0
+            resultMap.put("centroids", new ArrayList<>()); // Nessun cluster per Q0
 
-            writeResults(true, batch, httpClient, url, mapper, resultMap);
+            writeResults(false, batch, httpClient, url, mapper, resultMap);
+            LOG.info("Q0: Result uploaded for batch_id={}, tile_id={}", batch.batch_id, batch.tile_id);
         } catch (Exception e) {
-            LOG.error("Failed to upload result for tile_id={}: {}", batch.getTile_id(), e.getMessage(), e);
+            LOG.error("Q0: Failed to upload result for batch_id={}: {}", batch.batch_id, e.getMessage(), e);
         }
     }
 
@@ -185,19 +185,8 @@ public class ChallengerSource implements SourceFunction<Batch> {
                 new String(response1.getEntity().getContent().readAllBytes())
         );
         if(flag){
-            LOG.debug("Uploaded result for tile_id={}, response={}", batch.getTile_id(), response);
+            LOG.debug("Uploaded result for tile_id={}, response={}", batch.tile_id, response);
         }
-    }
-
-    public static String waitForBenchId() {
-        int retry = 0;
-        while (BENCH_ID == null && retry < 100) { // max 10 secondi
-            try {
-                Thread.sleep(100);
-                retry++;
-            } catch (InterruptedException ignored) {}
-        }
-        return BENCH_ID;
     }
 
 }

@@ -12,16 +12,16 @@ public class Q1SaturationMapFunction implements MapFunction<Batch, Batch> {
         batch.decodeTIFF();  // Assicurati che il TIFF venga decodificato in batch.pixels
 
         int count = 0;
-        if (batch.getPixels() != null) {
-            for (int[] row : batch.getPixels()) {
+        if (batch.pixels != null) {
+            for (int[] row : batch.pixels) {
                 for (int value : row) {
                     if (value > UPPER_THRESHOLD) count++;
                 }
             }
         }
 
-        batch.setSaturated(count);
-        batch.setLatency_ms(System.currentTimeMillis() - batch.getIngestion_time());
+        batch.saturated = count;
+        batch.latency_ms = System.currentTimeMillis() - batch.ingestion_time;
         return batch;
     }
 }

@@ -40,12 +40,12 @@ public class Controller {
 
             if(!optimization)
                 q2Result = q1Result.rebalance()
-                        .keyBy(batch -> batch.getPrint_id() + "_" + batch.getTile_id())
+                        .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
                         .process(new Q2OutlierDetection())
                         .setParallelism(parallelism_level);
             else
                 q2Result = q1Result.rebalance()
-                        .keyBy(batch -> batch.getPrint_id()+ "_" + batch.getTile_id())
+                        .keyBy(batch -> batch.print_id + "_" + batch.tile_id)
                         .process(new Q2OutlierDetectionOpt())
                         .setParallelism(parallelism_level);
 
@@ -94,40 +94,40 @@ public class Controller {
 
     private static MapFunction<Batch, String> toCsvQ1() {
         return batch -> String.format("%d,%d,%s,%d,%d,%s",
-                batch.getBatch_id(), batch.getTile_id(), batch.getPrint_id(),
-                batch.getSaturated(), batch.getLatency_ms(), batch.getTimestamp());
+                batch.batch_id, batch.tile_id, batch.print_id,
+                batch.saturated, batch.latency_ms, batch.timestamp);
     }
 
     private static MapFunction<Batch, String> toCsvQ2() {
         return batch -> {
             StringBuilder sb = new StringBuilder();
-            sb.append(String.format("%d,%s,%d", batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id()));
+            sb.append(String.format("%d,%s,%d", batch.batch_id, batch.print_id, batch.tile_id));
             for (int i = 1; i <= 5; i++) {
-                Object pos = batch.getQ2_top5_outliers().getOrDefault("P" + i, List.of(0, 0));
-                Object delta = batch.getQ2_top5_outliers().getOrDefault("\u03b4P" + i, 0);
+                Object pos = batch.q2_top5_outliers.getOrDefault("P" + i, List.of(0, 0));
+                Object delta = batch.q2_top5_outliers.getOrDefault("\u03b4P" + i, 0);
                 if (pos instanceof List<?> l && l.size() == 2) {
                     sb.append(String.format(",%s,%s,%s", l.get(0), l.get(1), delta));
                 } else {
                     sb.append(",0,0,0");
                 }
             }
-            sb.append(String.format(",%d,%s", batch.getLatency_ms(), batch.getTimestamp()));
+            sb.append(String.format(",%d,%s", batch.latency_ms, batch.timestamp));
             return sb.toString();
         };
     }
 
     private static MapFunction<Batch, String> toCsvQ3() {
         return batch -> String.format("%d,%s,%d,%d,%s",
-                batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id(),
-                batch.getSaturated(), String.join(";", batch.getQ3_clusters()));
+                batch.batch_id, batch.print_id, batch.tile_id,
+                batch.saturated, String.join(";", batch.q3_clusters));
     }
 
     private static MapFunction<Batch, String> toTextClusters() {
         return batch -> {
             StringBuilder sb = new StringBuilder();
             sb.append(String.format("batch_id: %d, print_id: %s, tile_id: %d\n",
-                    batch.getBatch_id(), batch.getPrint_id(), batch.getTile_id()));
-            for (String cluster : batch.getQ3_clusters()) {
+                    batch.batch_id, batch.print_id, batch.tile_id));
+            for (String cluster : batch.q3_clusters) {
                 sb.append("Cluster: ").append(cluster).append("\n");
             }
             sb.append("\n");

@@ -14,10 +14,10 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
     @Override
     public Batch map(Batch batch) {
 
-        List<List<Number>> rawPoints = batch.getQ2_all_outliers();
+        List<List<Number>> rawPoints = batch.q2_all_outliers;
 
         if (rawPoints == null || rawPoints.isEmpty()) {
-            batch.setQ3_clusters(new ArrayList<>());
+            batch.q3_clusters = new ArrayList<>();
             return batch;
         }
 
@@ -32,7 +32,7 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
         }
 
         if (pointsList.size() < MIN_POINTS) {
-            batch.setQ3_clusters(new ArrayList<>());
+            batch.q3_clusters = new ArrayList<>();
             return batch;
         }
 
@@ -69,7 +69,7 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
             centroids.add(centroidJson);
         }
 
-        batch.setQ3_clusters(centroids);
+        batch.q3_clusters = centroids;
         return batch;
     }
 }

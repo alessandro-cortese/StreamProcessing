@@ -13,9 +13,9 @@ public class UploadResultSink implements SinkFunction<Batch> {
     @Override
     public void invoke(Batch batch, Context context) {
 
-        if (ChallengerSource.BENCH_ID != null && !uploaded.contains(batch.getBatch_id())) {
+        if (ChallengerSource.BENCH_ID != null && !uploaded.contains(batch.batch_id)) {
             ChallengerSource.uploadResult(batch, ChallengerSource.BENCH_ID);
-            uploaded.add((long) batch.getBatch_id());
+            uploaded.add((long) batch.batch_id);
         }
 
     }
