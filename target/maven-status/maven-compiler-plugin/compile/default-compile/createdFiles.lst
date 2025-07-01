@@ -1,7 +1,6 @@
 it/uniroma2/sabd/query/Q2OutlierDetection$Outlier.class
 it/uniroma2/sabd/utils/HTTPClient.class
 it/uniroma2/sabd/engineering/ChallengerMetricsFetcher.class
-it/uniroma2/sabd/engineering/KafkaConsumerApp$BatchSerde$1.class
 it/uniroma2/sabd/engineering/KafkaConsumerApp.class
 it/uniroma2/sabd/utils/CsvWriter.class
 it/uniroma2/sabd/engineering/KafkaProducerApp.class
@@ -10,6 +9,5 @@ it/uniroma2/sabd/query/Q1Saturation.class
 it/uniroma2/sabd/model/BatchSerializer.class
 it/uniroma2/sabd/query/Q2OutlierDetection.class
 it/uniroma2/sabd/engineering/ChallengerUploader.class
-it/uniroma2/sabd/engineering/KafkaConsumerApp$BatchSerde$2.class
 it/uniroma2/sabd/ApplicationRunner.class
 it/uniroma2/sabd/model/Batch.class

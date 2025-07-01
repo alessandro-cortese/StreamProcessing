@@ -110,7 +110,8 @@ public class KafkaProducerApp {
                 batch.setBench_id(benchId);
                 LOG.info("Batch parsed: batch_id={} tile_id={} print_id={}",
                         batch.getBatch_id(), batch.getTile_id(), batch.getPrint_id());
-                int partition = (batch.getBatch_id() == 3599) ? 0 : (batch.getBatch_id() % 2);
+                int partitions = Integer.parseInt(System.getenv().getOrDefault("KAFKA_TOPIC_PARTITIONS", "2"));
+                int partition = (batch.getBatch_id() == 3599) ? 0 : (batch.getBatch_id() % partitions); // <-- Qua dici a quale partizione inviarlo giusto?
                 producer.send(new ProducerRecord<>(KAFKA_TOPIC, partition, String.valueOf(batch.getBatch_id()), batch),
                         (metadata, exception) -> {
                             if (exception == null) {

@@ -31,16 +31,15 @@ services:
       - stream_processing_network
 
   kafka-producer-app:
-
     build:
       context: ./kafka-streams-app
       dockerfile: Dockerfile
     container_name: kafka-producer-app
-
     depends_on:
       - kafka
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_TOPIC_PARTITIONS: "8"
       CHALLENGER_API_URL: http://gc25-challenger:8866
     networks:
       - stream_processing_network
@@ -48,13 +47,11 @@ services:
       - ../target:/app/kafka
     command: [ "java", "-jar", "/app/kafka/thermal-defect-kafka-1.0.jar", "producer" ]
 
-
-
   kafka-consumer-app:
     build: ./kafka-streams-app
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      KAFKA_TOPIC_PARTITIONS: 2
+      KAFKA_TOPIC_PARTITIONS: "8"
     networks:
       - stream_processing_network
     volumes:

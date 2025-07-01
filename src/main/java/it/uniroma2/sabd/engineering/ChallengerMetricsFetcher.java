@@ -57,7 +57,7 @@ public class ChallengerMetricsFetcher {
             }
 
             // CSV file name includes partition
-            String outputFile = String.format("Results/challenger_metrics_kafka_p%d.csv", parallelismLevel);
+            String outputFile = "Results/challenger_metrics_kafka.csv";
             File file = new File(outputFile);
             boolean isNew = !file.exists() || file.length() == 0;
 

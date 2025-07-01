@@ -108,3 +108,6 @@ The dataset is provided through a REST API simulating real-time streaming, with 
 
 
 
+/bin/kafka-topics --bootstrap-server kafka:9092 --describe --topic challenger-batches
+
+/bin/kafka-topics --bootstrap-server kafka:9092 --delete --topic challenger-batches
