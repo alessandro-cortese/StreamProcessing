@@ -2,7 +2,7 @@
 
 docker compose build --no-cache
 
-docker compose up -d --scale flink-taskmanager=8
+docker compose up -d --scale flink-taskmanager=4
 
 cd challenger/gc25-chall
 

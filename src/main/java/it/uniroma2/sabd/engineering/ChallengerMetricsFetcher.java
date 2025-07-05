@@ -49,7 +49,6 @@ public class ChallengerMetricsFetcher {
             for (JsonNode entry : data) {
                 if (entry.has("bench_id") && entry.get("bench_id").asText().equals(benchId)) {
                     target = entry;
-                    break;
                 }
             }
 

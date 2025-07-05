@@ -30,7 +30,6 @@ public class Q2OutlierDetectionOpt extends KeyedProcessFunction<String, Batch, B
 
     @Override
     public void processElement(Batch batch, Context ctx, Collector<Batch> out) throws Exception {
-        batch.decodeTIFF();
 
         List<int[][]> window = new ArrayList<>();
         for (int[][] img : windowState.get()) {
