@@ -52,8 +52,21 @@ public class KafkaConsumerApp {
 
         long MAX_BATCHES = 3599;
         stream
-                .mapValues(q1::apply)
-                .mapValues(q2::apply)
+                .mapValues(batch -> {
+                    // Q1 Processing
+                    long startQ1 = System.nanoTime();
+                    Batch afterQ1 = q1.apply(batch);
+                    long endQ1 = System.nanoTime();
+                    MetricsCollector.recordWithTiming("Q1", startQ1, endQ1);
+
+                    // Q2 Processing
+                    long startQ2 = System.nanoTime();
+                    Batch afterQ2 = q2.apply(afterQ1);
+                    long endQ2 = System.nanoTime();
+                    MetricsCollector.recordWithTiming("Q2", startQ2, endQ2);
+
+                    return afterQ2;
+                })
                 .peek((key, batch) -> {
                     CsvWriter.writeQ1(batch);
                     CsvWriter.writeQ2(batch);
@@ -67,7 +80,14 @@ public class KafkaConsumerApp {
                                 Thread.sleep(10000); // Wait to ensure all consumers have finished
                                 ChallengerUploader.endBenchmark(batch.getBench_id());
                                 int partitions = Integer.parseInt(System.getenv().getOrDefault("KAFKA_TOPIC_PARTITIONS", "2"));
-                                ChallengerMetricsFetcher.fetchAndSaveLatestMetrics(partitions, batch.getBench_id());
+
+                                // Export metrics with the correct parallelism
+                                MetricsCollector.export(partitions);
+
+                                // Optional: Print summary statistics
+                                LOG.info("Q1 Stats: {}", MetricsCollector.getStats("Q1"));
+                                LOG.info("Q2 Stats: {}", MetricsCollector.getStats("Q2"));
+
                             } catch (InterruptedException e) {
                                 LOG.error("Error during delay before closing benchmark", e);
                             }

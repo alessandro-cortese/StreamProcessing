@@ -2,7 +2,9 @@ it/uniroma2/sabd/query/Q2OutlierDetection$Outlier.class
 it/uniroma2/sabd/utils/HTTPClient.class
 it/uniroma2/sabd/engineering/ChallengerMetricsFetcher.class
 it/uniroma2/sabd/engineering/KafkaConsumerApp.class
+it/uniroma2/sabd/engineering/MetricsCollector.class
 it/uniroma2/sabd/utils/CsvWriter.class
+it/uniroma2/sabd/engineering/MetricsCollector$Stats.class
 it/uniroma2/sabd/engineering/KafkaProducerApp.class
 it/uniroma2/sabd/engineering/KafkaConsumerApp$BatchSerde.class
 it/uniroma2/sabd/query/Q1Saturation.class

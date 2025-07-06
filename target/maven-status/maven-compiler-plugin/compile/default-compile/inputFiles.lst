@@ -8,4 +8,5 @@
 /home/aries/Documenti/SABD/Project2/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/KafkaConsumerApp.java
 /home/aries/Documenti/SABD/Project2/StreamProcessing/src/main/java/it/uniroma2/sabd/query/Q2OutlierDetection.java
 /home/aries/Documenti/SABD/Project2/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/ChallengerUploader.java
+/home/aries/Documenti/SABD/Project2/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/MetricsCollector.java
 /home/aries/Documenti/SABD/Project2/StreamProcessing/src/main/java/it/uniroma2/sabd/model/Batch.java

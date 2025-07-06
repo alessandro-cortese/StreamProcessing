@@ -39,7 +39,7 @@ services:
       - kafka
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      KAFKA_TOPIC_PARTITIONS: "8"
+      KAFKA_TOPIC_PARTITIONS: ${KAFKA_TOPIC_PARTITIONS:-2}
       CHALLENGER_API_URL: http://gc25-challenger:8866
     networks:
       - stream_processing_network
@@ -51,7 +51,7 @@ services:
     build: ./kafka-streams-app
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      KAFKA_TOPIC_PARTITIONS: "8"
+      KAFKA_TOPIC_PARTITIONS: ${KAFKA_TOPIC_PARTITIONS:-2}
     networks:
       - stream_processing_network
     volumes:

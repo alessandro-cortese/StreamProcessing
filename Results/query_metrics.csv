@@ -1,0 +1,5 @@
+query,parallelism,count,avg_latency_ms,max_latency_ms,throughput_events_per_sec
+Q1,1,3600,8.46,123.00,29.87
+Q2,1,3600,21.64,106.00,29.90
+Q1,2,1801,8.59,89.00,28.88
+Q2,2,1801,22.26,118.00,28.92
