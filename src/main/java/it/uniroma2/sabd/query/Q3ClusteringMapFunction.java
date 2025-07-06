@@ -38,11 +38,9 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
 
         double[][] points = pointsList.toArray(new double[0][]);
 
-        // Esegui DBSCAN
         DBSCAN<double[]> dbscan = DBSCAN.fit(points, MIN_POINTS, EPSILON);
         int[] labels = dbscan.y;
 
-        // Raggruppa per cluster
         Map<Integer, List<double[]>> clusters = new HashMap<>();
 
         for (int i = 0; i < labels.length; i++) {
@@ -50,7 +48,6 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
             clusters.computeIfAbsent(labels[i], k -> new ArrayList<>()).add(points[i]);
         }
 
-        // Costruisci centroidi in formato JSON-compatibile
         List<String> centroids = new ArrayList<>();
         for (List<double[]> cluster : clusters.values()) {
             double sumX = 0.0, sumY = 0.0;

@@ -53,7 +53,6 @@ public class QueryMetricsSink extends RichSinkFunction<Batch> {
         boolean writeHeader = false;
 
         synchronized (QueryMetricsSink.class) {
-            // controlla se il file esiste
             java.io.File file = new java.io.File(SUMMARY_FILE);
             writeHeader = !file.exists();
 

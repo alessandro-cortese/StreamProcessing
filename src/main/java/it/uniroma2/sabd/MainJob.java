@@ -18,17 +18,13 @@ public class MainJob {
 
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
-        // Run to take metrics without optimisation and without collecting metrics for comparison with Kafka Streams
+        // Run to take metrics without optimisation
         System.out.println("Start Pipeline without optimization");
-        execute_computation(env, source, false, false);
+        execute_computation(env, source, false);
 
-        // Run to take metrics with optimisation and without collecting metrics for comparison with Kafka Streams
+        // Run to take metrics with optimisation
         System.out.println("Start Pipeline with optimization");
-        execute_computation(env, source, false, true);
-
-        // Run to take metrics without optimisation and collect metrics for comparison with Kafka Streams
-        System.out.println("Start Pipeline to collect metrics for kafka stram comparison");
-        execute_computation(env, source, true, false);
+        execute_computation(env, source, true);
 
     }
 

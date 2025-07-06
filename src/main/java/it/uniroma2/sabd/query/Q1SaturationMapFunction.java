@@ -9,7 +9,7 @@ public class Q1SaturationMapFunction implements MapFunction<Batch, Batch> {
 
     @Override
     public Batch map(Batch batch) {
-        batch.decodeTIFF();  // Assicurati che il TIFF venga decodificato in batch.pixels
+        batch.decodeTIFF();
 
         int count = 0;
         if (batch.pixels != null) {

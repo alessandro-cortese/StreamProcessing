@@ -20,10 +20,10 @@ import java.util.List;
 
 public class Controller {
 
-    private static final int MAX_PARALLELISM_LEVEL = 4;
+    private static final int MAX_PARALLELISM_LEVEL = 8;
     private static final String RESULTS_DIR = "/Results/";
 
-    public static void execute_computation(StreamExecutionEnvironment env, DataStream<Batch> source, boolean kafka_streams_comparison, boolean optimization) throws Exception {
+    public static void execute_computation(StreamExecutionEnvironment env, DataStream<Batch> source, boolean optimization) throws Exception {
 
         for (int parallelism_level = 1; parallelism_level <= MAX_PARALLELISM_LEVEL; parallelism_level++) {
 
@@ -58,7 +58,7 @@ public class Controller {
                         .setParallelism(parallelism_level);
 
             q2Result.addSink(new QueryMetricsSink("Q2", parallelism_level, optimization, outputPathQ)).setParallelism(1);
-            
+
             if (!optimization)
                 writeCsv(env, q2Result.map(toCsvQ2()), "query2.csv", getHeaderQ2(), parallelism_level, false);
             else
@@ -93,7 +93,7 @@ public class Controller {
             String benchId = Files.readString(Path.of(RESULTS_DIR + "current_bench_id.txt")).trim();
             System.out.println("Bench Id readed from file: " + benchId);
 
-            ChallengerMetricsFetcher.fetchAndSaveLatestMetrics(parallelism_level, benchId, kafka_streams_comparison);
+            ChallengerMetricsFetcher.fetchAndSaveLatestMetrics(parallelism_level, benchId);
             System.out.println("Metrics collected by the challenger with " + parallelism_level + " task manager.");
         }
     }

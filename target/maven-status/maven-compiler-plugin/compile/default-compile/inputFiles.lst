@@ -6,6 +6,7 @@
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/controller/Controller.java
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/query/Q3ClusteringMapFunction.java
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/ChallengerSource.java
+/home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/QueryMetricsSink.java
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/MainJob.java
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/model/Batch.java
 /home/alessandro/Documenti/GitHub/StreamProcessing/StreamProcessing/src/main/java/it/uniroma2/sabd/engineering/ChallengerMetricsFetcher.java

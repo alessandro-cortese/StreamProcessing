@@ -24,19 +24,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
-* * * * * * * * * * * * * * * * * * * * * *
-* Create a source for Flink               *
-* * * * * * * * * * * * * * * * * * * * * *
-*/
-
 public class ChallengerSource implements SourceFunction<Batch> {
 
-    private volatile boolean running = true;                        // <- used to interrupt the source in thread safe mode
-    private final static String API_URL = "http://gc25-challenger:8866";   // <- url of challenger
+    private volatile boolean running = true;
+    private final static String API_URL = "http://gc25-challenger:8866";
     public static String BENCH_ID = null;
     private static final Logger LOG = LoggerFactory.getLogger(ChallengerSource.class);
-    // Flink Source
+
+
     @Override
     public void run(SourceContext<Batch> ctx) throws Exception {
         CloseableHttpClient http = HttpClients.createDefault();
