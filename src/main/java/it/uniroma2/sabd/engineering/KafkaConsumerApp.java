@@ -75,18 +75,22 @@ public class KafkaConsumerApp {
 
                     if (batch.getBatch_id() == MAX_BATCHES) {
                         LOG.info("Last batch received: {}. Waiting 10s before closing the benchmark...", batch.getBatch_id());
+
+
                         new Thread(() -> {
                             try {
                                 Thread.sleep(10000); // Wait to ensure all consumers have finished
                                 ChallengerUploader.endBenchmark(batch.getBench_id());
                                 int partitions = Integer.parseInt(System.getenv().getOrDefault("KAFKA_TOPIC_PARTITIONS", "2"));
 
-                                // Export metrics with the correct parallelism
+                                // Export metrics with per-query throughput
                                 MetricsCollector.export(partitions);
 
-                                // Optional: Print summary statistics
+                                // Debug info
                                 LOG.info("Q1 Stats: {}", MetricsCollector.getStats("Q1"));
                                 LOG.info("Q2 Stats: {}", MetricsCollector.getStats("Q2"));
+                                LOG.info("Q1 Total Processing Time: {}ms", MetricsCollector.getTotalProcessingTime("Q1"));
+                                LOG.info("Q2 Total Processing Time: {}ms", MetricsCollector.getTotalProcessingTime("Q2"));
 
                             } catch (InterruptedException e) {
                                 LOG.error("Error during delay before closing benchmark", e);

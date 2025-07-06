@@ -7,6 +7,7 @@ public class Q1Saturation{
     private static final int UPPER_THRESHOLD = 65000;
 
     public Batch apply(Batch batch) {
+
         batch.decodeTIFF();
 
         int count = 0;

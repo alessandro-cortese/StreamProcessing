@@ -6,29 +6,42 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class MetricsCollector {
 
     private static final String CSV_FILE = "Results/query_metrics.csv";
     private static final Map<String, Stats> metrics = new ConcurrentHashMap<>();
 
-    // Track when each query starts processing its first batch
-    private static final Map<String, Long> queryFirstBatchStart = new ConcurrentHashMap<>();
-    // Track when each query finishes processing its last batch
-    private static final Map<String, Long> queryLastBatchEnd = new ConcurrentHashMap<>();
+    // Track per-query cumulative processing time across all consumers
+    private static final Map<String, AtomicLong> queryTotalProcessingTime = new ConcurrentHashMap<>();
+
+    /**
+     * Record a single query execution time
+     * @param query Query name (Q1, Q2, etc.)
+     * @param latencyMs Execution time in milliseconds
+     */
+    public static synchronized void record(String query, long latencyMs) {
+        // Record individual query stats
+        metrics.computeIfAbsent(query, k -> new Stats()).add(latencyMs);
+
+        // Accumulate total processing time for this query across all consumers
+        queryTotalProcessingTime.computeIfAbsent(query, k -> new AtomicLong(0))
+                .addAndGet(latencyMs);
+    }
 
     /**
      * Alternative method that accepts start and end times
-     * @param query Query name
-     * @param startNano Start time in nanoseconds
-     * @param endNano End time in nanoseconds
      */
     public static synchronized void recordWithTiming(String query, long startNano, long endNano) {
         long latencyMs = (endNano - startNano) / 1_000_000;
+
+        // Record individual query stats
         metrics.computeIfAbsent(query, k -> new Stats()).add(latencyMs);
 
-        queryFirstBatchStart.putIfAbsent(query, startNano);
-        queryLastBatchEnd.put(query, endNano);
+        // Accumulate total processing time for this query across all consumers
+        queryTotalProcessingTime.computeIfAbsent(query, k -> new AtomicLong(0))
+                .addAndGet(latencyMs);
     }
 
     public static synchronized void export(int parallelism) {
@@ -40,35 +53,42 @@ public class MetricsCollector {
 
         try (PrintWriter out = new PrintWriter(new FileWriter(CSV_FILE, true))) {
             if (writeHeader) {
-                out.println("query,parallelism,count,avg_latency_ms,max_latency_ms,throughput_events_per_sec");
+                out.println("query,parallelism,batches_processed,avg_latency_ms,max_latency_ms,throughput_events_per_sec");
             }
 
             for (Map.Entry<String, Stats> entry : metrics.entrySet()) {
                 String query = entry.getKey();
                 Stats s = entry.getValue();
 
-                // Calculate throughput based on actual processing time for this query
-                long firstBatchStartNano = queryFirstBatchStart.getOrDefault(query, 0L);
-                long lastBatchEndNano = queryLastBatchEnd.getOrDefault(query, 0L);
+                // Calculate per-query throughput
+                final int TOTAL_BATCHES = 3600; // Total batches processed by all consumers
+                double queryThroughput = 0.0;
 
-                double throughput = 0.0;
-                if (firstBatchStartNano > 0 && lastBatchEndNano > firstBatchStartNano) {
-                    long totalProcessingTimeMs = (lastBatchEndNano - firstBatchStartNano) / 1_000_000;
+                // Get total processing time for this query across all consumers
+                AtomicLong totalProcessingTimeAtomic = queryTotalProcessingTime.get(query);
+                if (totalProcessingTimeAtomic != null) {
+                    long totalProcessingTimeMs = totalProcessingTimeAtomic.get();
                     if (totalProcessingTimeMs > 0) {
-                        throughput = (s.count * 1000.0) / totalProcessingTimeMs; // events per second
+                        // Throughput = total batches processed / total time spent processing this query
+                        queryThroughput = (TOTAL_BATCHES * 1000.0) / totalProcessingTimeMs;
                     }
                 }
 
                 out.printf("%s,%d,%d,%.2f,%.2f,%.2f%n",
                         query,
                         parallelism,
-                        s.count,
+                        s.count, // Number of batches processed by this consumer for this query
                         s.getAverage(),
                         (double) s.max,
-                        throughput
+                        queryThroughput // Per-query throughput
                 );
+
+                System.out.printf("[MetricsCollector] %s: %d batches, %.2f avg latency, %.2f throughput%n",
+                        query, TOTAL_BATCHES, s.getAverage(), queryThroughput);
             }
+
             System.out.println("[MetricsCollector] Exported metrics to " + CSV_FILE);
+
         } catch (IOException e) {
             System.err.println("[MetricsCollector] Failed to export metrics: " + e.getMessage());
             e.printStackTrace();
@@ -76,19 +96,26 @@ public class MetricsCollector {
     }
 
     /**
-     * Get current statistics for a query (useful for debugging)
+     * Get current statistics for a query
      */
     public static synchronized Stats getStats(String query) {
         return metrics.get(query);
     }
 
     /**
-     * Clear all collected metrics (useful for testing)
+     * Get total processing time for a query (for debugging)
+     */
+    public static long getTotalProcessingTime(String query) {
+        AtomicLong total = queryTotalProcessingTime.get(query);
+        return total != null ? total.get() : 0;
+    }
+
+    /**
+     * Clear all collected metrics
      */
     public static synchronized void clear() {
         metrics.clear();
-        queryFirstBatchStart.clear();
-        queryLastBatchEnd.clear();
+        queryTotalProcessingTime.clear();
     }
 
     private static class Stats {
