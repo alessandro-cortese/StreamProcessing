@@ -13,6 +13,7 @@ public class CsvWriter {
 
     private static boolean q1HeaderWritten = false;
     private static boolean q2HeaderWritten = false;
+    private static boolean q3HeaderWritten = false;
 
     public static synchronized void writeQ1(Batch batch) {
         try (OutputStreamWriter writer = new OutputStreamWriter(
@@ -53,7 +54,7 @@ public class CsvWriter {
 
             for (int i = 1; i <= 5; i++) {
                 Object pos = top5.getOrDefault("P" + i, List.of(0, 0));
-                Object delta = top5.getOrDefault("\u03b4P" + i, 0);  // Usa escape Unicode come in Flink
+                Object delta = top5.getOrDefault("\u03b4P" + i, 0);
                 if (pos instanceof List<?> l && l.size() == 2) {
                     sb.append(String.format(",%s,%s,%s", l.get(0), l.get(1), delta));
                 } else {
@@ -64,6 +65,32 @@ public class CsvWriter {
             sb.append(String.format(",%d,%s\n", batch.getLatency_ms(), batch.getTimestamp()));
             writer.write(sb.toString());
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static synchronized void writeQ3(Batch batch) {
+        try (OutputStreamWriter writer = new OutputStreamWriter(
+                new FileOutputStream("Results/q3_results.csv", true),
+                StandardCharsets.UTF_8)) {
+            if (!q3HeaderWritten) {
+                writer.write(getHeaderQ3() + "\n");
+                q3HeaderWritten = true;
+            }
+
+
+            String clustersStr = "";
+            if (batch.getQ3_clusters() != null && !batch.getQ3_clusters().isEmpty()) {
+                clustersStr = String.join(";", batch.getQ3_clusters());
+            }
+
+            writer.write(String.format("%d,%s,%d,%d,%s\n",
+                    batch.getBatch_id(),
+                    batch.getPrint_id(),
+                    batch.getTile_id(),
+                    batch.getSaturated(),
+                    clustersStr));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -81,5 +108,9 @@ public class CsvWriter {
                 "P4_x,P4_y,\u03b4P4," +
                 "P5_x,P5_y,\u03b4P5," +
                 "latency_ms,timestamp";
+    }
+
+    private static String getHeaderQ3() {
+        return "batch_id,print_id,tile_id,saturated,centroids";
     }
 }

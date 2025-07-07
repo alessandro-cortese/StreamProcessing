@@ -17,21 +17,7 @@ public class MetricsCollector {
     private static final Map<String, AtomicLong> queryTotalProcessingTime = new ConcurrentHashMap<>();
 
     /**
-     * Record a single query execution time
-     * @param query Query name (Q1, Q2, etc.)
-     * @param latencyMs Execution time in milliseconds
-     */
-    public static synchronized void record(String query, long latencyMs) {
-        // Record individual query stats
-        metrics.computeIfAbsent(query, k -> new Stats()).add(latencyMs);
-
-        // Accumulate total processing time for this query across all consumers
-        queryTotalProcessingTime.computeIfAbsent(query, k -> new AtomicLong(0))
-                .addAndGet(latencyMs);
-    }
-
-    /**
-     * Alternative method that accepts start and end times
+     * Record method that accepts start and end times
      */
     public static synchronized void recordWithTiming(String query, long startNano, long endNano) {
         long latencyMs = (endNano - startNano) / 1_000_000;
@@ -77,10 +63,10 @@ public class MetricsCollector {
                 out.printf("%s,%d,%d,%.2f,%.2f,%.2f%n",
                         query,
                         parallelism,
-                        s.count, // Number of batches processed by this consumer for this query
+                        TOTAL_BATCHES,
                         s.getAverage(),
                         (double) s.max,
-                        queryThroughput // Per-query throughput
+                        queryThroughput
                 );
 
                 System.out.printf("[MetricsCollector] %s: %d batches, %.2f avg latency, %.2f throughput%n",

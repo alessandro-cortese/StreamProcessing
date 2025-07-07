@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import it.uniroma2.sabd.model.Batch;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,6 +46,32 @@ public class ChallengerUploader {
 
         } catch (Exception e) {
             LOG.error("Errore invio Q2 per batch {}: {}", batch.getBatch_id(), e.getMessage(), e);
+        }
+    }
+
+    public static void uploadQ3(Batch batch, String benchId) {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+
+            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.getBatch_id());
+            ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
+
+            Map<String, Object> resultMap = new HashMap<>();
+            resultMap.put("batch_id", batch.getBatch_id());
+            resultMap.put("print_id", batch.getPrint_id());
+            resultMap.put("tile_id", batch.getTile_id());
+            resultMap.put("saturated", batch.getSaturated());
+            resultMap.put("centroids", batch.getQ3_clusters());
+
+            byte[] msgpackData = mapper.writeValueAsBytes(resultMap);
+            HttpPost post = new HttpPost(url);
+            post.setEntity(new ByteArrayEntity(msgpackData, ContentType.create("application/msgpack")));
+
+            httpClient.execute(post, HTTPClient.toStringResponseHandler());
+
+            LOG.info("Q3: Result uploaded for batch_id={}, tile_id={}", batch.getBatch_id(), batch.getTile_id());
+
+        } catch (Exception e) {
+            LOG.error("Errore invio Q3 per batch {}: {}", batch.getBatch_id(), e.getMessage(), e);
         }
     }
 

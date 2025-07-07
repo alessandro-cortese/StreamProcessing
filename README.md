@@ -1,4 +1,4 @@
-# 🧪 Real-Time Defect Detection in L-PBF using Apache Flink
+# 🧪 Real-Time Defect Detection in L-PBF using Apache Kafka
 
 ## 📘 Project Overview
 
@@ -50,49 +50,49 @@ The dataset is provided through a REST API simulating real-time streaming, with 
 
 
 ---
+## ⚙️ Setup Instructions
 
-## 💾 Data Ingestion & Output
+1. **Prepare Dataset**  
+   Download and extract the following archives into the `challenger/` directory:
+~~~
+http://www.ce.uniroma2.it/courses/sabd2425/project/gc25-chall.tgz
+http://www.ce.uniroma2.it/courses/sabd2425/project/gc25-chall-data.tgz
+~~~
+After extraction, the structure should be:
 
-- Data is ingested as a **real-time stream** via REST API endpoints:
-- `/create`, `/start`, `/next_batch`, `/result`, `/end`
-- Each tile is processed in streaming using Apache Flink (Python or Java)
-- The output is submitted back to `LOCAL-CHALLENGER` for benchmarking
+~~~
+├── challenger
+│   └── gc25-chall
+│       ├── gc25-chall-data
+│       │   └── data
+│       │       ├── blobs
+│       │       │   ├── 10610961
+|       |       |   ...
+│       │       │   ├── 81334622
+│       │       │   ├── 81335618
+│       │       │   └── 81335635
+│       │       ├── conf
+│       │       ├── db
+│       │       └── snap.0000000004D90890
+│       ├── gc25-chall-data.tgz
+│       └── start_challenger.sh
+~~~
+2. **Start Architecture**  
+   Navigate to the `docker/` directory and launch the architecture with:
+~~~
+./start_architecture N
+~~~
+Replace N with the desired number of Kafka consumers. This value will also define the number of partitions for the corresponding Kafka topic (KAFKA_TOPIC_PARTITIONS, default: 2).
 
----
-
-## ⚙️ System Architecture
-
-- **Stream Processing Engine**: Apache Flink
-- **Streaming Source**: REST API (simulating live data)
-- **Output Destination**: Results submitted back to `LOCAL-CHALLENGER`
-- **Deployment**:
-- Local standalone node using **Docker Compose**
-- Optionally deployed on **cloud platforms** (e.g., AWS Flink)
-
----
-
-## 📈 Performance Evaluation
-
-- **Latency**: Processing time per tile
-- **Throughput**: Number of tiles processed per time unit
-- All metrics are collected and evaluated through `LOCAL-CHALLENGER`
-
----
-
-## 🧪 Optional Enhancements
-
-- Use **Kafka Streams** or **Spark Streaming** (instead of Flink)
-- Compare results in terms of latency/throughput across engines
-- Optimization ideas (for 3-member teams):
-- Pipeline data flow across Q1→Q3
-- Parallelize tile analysis across a single layer
-- Leverage spatial symmetry in deviation computation
-
----
+3.**Start the Local Challenger**
+   This will start the REST server exposing the OT image stream to the Kafka producer.
+~~~
+./start_challenger 
+~~~
 
 ## 📚 References
 
-[1] [Apache Flink](https://flink.apache.org/)  
+[1] [Apache Kafka](https://kafka.apache.org/)  
 [2] [DBSCAN (Wikipedia)](https://en.wikipedia.org/wiki/DBSCAN)  
 [3] [Benchmark Dataset & API](http://www.ce.uniroma2.it/courses/sabd2425/project/)  
 [4] [TIFF Format](https://en.wikipedia.org/wiki/Tagged_Image_File_Format)
@@ -107,7 +107,3 @@ The dataset is provided through a REST API simulating real-time streaming, with 
   - Alessandro Cortese
 
 
-
-/bin/kafka-topics --bootstrap-server kafka:9092 --describe --topic challenger-batches
-
-/bin/kafka-topics --bootstrap-server kafka:9092 --delete --topic challenger-batches

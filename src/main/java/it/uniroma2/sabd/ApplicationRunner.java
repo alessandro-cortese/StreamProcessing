@@ -9,7 +9,7 @@ public class ApplicationRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(ApplicationRunner.class);
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         if (args.length == 0) {
             LOG.error("No arguments provided. Usage: java -jar <jar_name>.jar [producer|consumer]");
             System.exit(1);

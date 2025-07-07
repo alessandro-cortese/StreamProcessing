@@ -19,7 +19,7 @@ public class BatchSerializer implements Serializer<Batch> {
 
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
-        // Nessuna configurazione specifica necessaria per ObjectMapper
+        // No config
     }
 
     @Override
@@ -28,7 +28,6 @@ public class BatchSerializer implements Serializer<Batch> {
             return null;
         }
         try {
-            // ObjectMapper converte l'oggetto Batch in un array di byte JSON
             return objectMapper.writeValueAsBytes(data);
         } catch (IOException e) {
             LOG.error("Errore durante la serializzazione di Batch per il topic {}: {}", topic, e.getMessage(), e);

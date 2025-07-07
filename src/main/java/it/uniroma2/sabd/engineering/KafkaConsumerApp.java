@@ -3,6 +3,7 @@ package it.uniroma2.sabd.engineering;
 import it.uniroma2.sabd.model.Batch;
 import it.uniroma2.sabd.query.Q1Saturation;
 import it.uniroma2.sabd.query.Q2OutlierDetection;
+import it.uniroma2.sabd.query.Q3Clustering;
 import it.uniroma2.sabd.utils.CsvWriter;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
@@ -49,7 +50,7 @@ public class KafkaConsumerApp {
 
         Q1Saturation q1 = new Q1Saturation();
         Q2OutlierDetection q2 = new Q2OutlierDetection();
-
+        Q3Clustering q3 = new Q3Clustering();
         long MAX_BATCHES = 3599;
         stream
                 .mapValues(batch -> {
@@ -65,14 +66,21 @@ public class KafkaConsumerApp {
                     long endQ2 = System.nanoTime();
                     MetricsCollector.recordWithTiming("Q2", startQ2, endQ2);
 
-                    return afterQ2;
+                    // Q3 Processing
+                    long startQ3 = System.nanoTime();
+                    Batch afterQ3 = q3.apply(afterQ2);
+                    long endQ3 = System.nanoTime();
+                    MetricsCollector.recordWithTiming("Q3", startQ3, endQ3);
+
+                    return afterQ3;
                 })
                 .peek((key, batch) -> {
                     CsvWriter.writeQ1(batch);
                     CsvWriter.writeQ2(batch);
+                    CsvWriter.writeQ3(batch);
 
-                    ChallengerUploader.uploadQ2(batch, batch.getBench_id());
-
+                    //ChallengerUploader.uploadQ2(batch, batch.getBench_id());
+                    ChallengerUploader.uploadQ3(batch, batch.getBench_id());
                     if (batch.getBatch_id() == MAX_BATCHES) {
                         LOG.info("Last batch received: {}. Waiting 10s before closing the benchmark...", batch.getBatch_id());
 

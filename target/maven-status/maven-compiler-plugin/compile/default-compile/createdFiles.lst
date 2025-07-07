@@ -10,6 +10,7 @@ it/uniroma2/sabd/engineering/KafkaConsumerApp$BatchSerde.class
 it/uniroma2/sabd/query/Q1Saturation.class
 it/uniroma2/sabd/model/BatchSerializer.class
 it/uniroma2/sabd/query/Q2OutlierDetection.class
+it/uniroma2/sabd/query/Q3Clustering.class
 it/uniroma2/sabd/engineering/ChallengerUploader.class
 it/uniroma2/sabd/ApplicationRunner.class
 it/uniroma2/sabd/model/Batch.class
