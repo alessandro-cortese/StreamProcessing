@@ -18,9 +18,9 @@ public class MainJob {
 
         DataStream<Batch> source = env.addSource(new ChallengerSource());
 
-        // Run to take metrics without optimisation
-        System.out.println("Start Pipeline without optimization");
-        execute_computation(env, source, false);
+//        // Run to take metrics without optimisation
+//        System.out.println("Start Pipeline without optimization");
+//        execute_computation(env, source, false);
 
         // Run to take metrics with optimisation
         System.out.println("Start Pipeline with optimization");
