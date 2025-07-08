@@ -159,8 +159,8 @@ public class ChallengerSource implements SourceFunction<Batch> {
             resultMap.put("batch_id", batch.batch_id);
             resultMap.put("print_id", batch.print_id);
             resultMap.put("tile_id", batch.tile_id);
-            resultMap.put("saturated", batch.saturated); // Dummy value per Q0
-            resultMap.put("centroids", new ArrayList<>()); // Nessun cluster per Q0
+            resultMap.put("saturated", batch.saturated);
+            resultMap.put("centroids", batch.q3_clusters);
 
             writeResults(false, batch, httpClient, url, mapper, resultMap);
             LOG.info("Q0: Result uploaded for batch_id={}, tile_id={}", batch.batch_id, batch.tile_id);

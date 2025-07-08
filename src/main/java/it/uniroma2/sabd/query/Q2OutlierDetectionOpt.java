@@ -18,7 +18,7 @@ public class Q2OutlierDetectionOpt extends KeyedProcessFunction<String, Batch, B
     private static final int OUTLIER_THRESHOLD = 6000;
     private static final int DISTANCE_THRESHOLD = 2;
     // The maximum distance to consider for dx, dy loops.
-    // In your original code, loops go up to 2 * DISTANCE_THRESHOLD in both directions.
+    // Loops go up to 2 * DISTANCE_THRESHOLD in both directions.
     private static final int MAX_COORD_OFFSET = DISTANCE_THRESHOLD * 2; 
 
     @Override
