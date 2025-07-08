@@ -50,45 +50,40 @@ The dataset is provided through a REST API simulating real-time streaming, with 
 
 
 ---
+## ⚙️ Setup Instructions
 
-## 💾 Data Ingestion & Output
+1. **Prepare Dataset**  
+   Download and extract the following archives into the `challenger/` directory:
+~~~
+http://www.ce.uniroma2.it/courses/sabd2425/project/gc25-chall.tgz
+http://www.ce.uniroma2.it/courses/sabd2425/project/gc25-chall-data.tgz
+~~~
+After extraction, the structure should be:
 
-- Data is ingested as a **real-time stream** via REST API endpoints:
-- `/create`, `/start`, `/next_batch`, `/result`, `/end`
-- Each tile is processed in streaming using Apache Flink (Python or Java)
-- The output is submitted back to `LOCAL-CHALLENGER` for benchmarking
+~~~
+├── challenger
+│   └── gc25-chall
+│       ├── gc25-chall-data
+│       │   └── data
+│       │       ├── blobs
+│       │       │   ├── 10610961
+|       |       |   ...
+│       │       │   ├── 81334622
+│       │       │   ├── 81335618
+│       │       │   └── 81335635
+│       │       ├── conf
+│       │       ├── db
+│       │       └── snap.0000000004D90890
+│       ├── gc25-chall-data.tgz
+│       └── start_challenger.sh
+~~~
+2. **Start Architecture**  
+   Navigate to the `docker/` directory and launch the architecture with:
+~~~
+./start_architecture 
+~~~
 
----
-
-## ⚙️ System Architecture
-
-- **Stream Processing Engine**: Apache Flink
-- **Streaming Source**: REST API (simulating live data)
-- **Output Destination**: Results submitted back to `LOCAL-CHALLENGER`
-- **Deployment**:
-- Local standalone node using **Docker Compose**
-- Optionally deployed on **cloud platforms** (e.g., AWS Flink)
-
----
-
-## 📈 Performance Evaluation
-
-- **Latency**: Processing time per tile
-- **Throughput**: Number of tiles processed per time unit
-- All metrics are collected and evaluated through `LOCAL-CHALLENGER`
-
----
-
-## 🧪 Optional Enhancements
-
-- Use **Kafka Streams** or **Spark Streaming** (instead of Flink)
-- Compare results in terms of latency/throughput across engines
-- Optimization ideas (for 3-member teams):
-- Pipeline data flow across Q1→Q3
-- Parallelize tile analysis across a single layer
-- Leverage spatial symmetry in deviation computation
-
----
+This will start even the REST server exposing the OT image stream to the Flink Cluster.
 
 ## 📚 References
 

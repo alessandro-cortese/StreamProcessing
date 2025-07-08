@@ -21,7 +21,6 @@ public class Q3ClusteringMapFunction implements MapFunction<Batch, Batch> {
             return batch;
         }
 
-
         List<double[]> pointsList = new ArrayList<>();
         for (List<Number> point : rawPoints) {
             if (point.size() == 2) {

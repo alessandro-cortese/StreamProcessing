@@ -135,7 +135,6 @@ public class Q2OutlierDetection extends KeyedProcessFunction<String, Batch, Batc
             return 0.0;
         }
 
-
         return (double) img[y][x];
     }
 
