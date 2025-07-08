@@ -24,31 +24,6 @@ public class ChallengerUploader {
     public static final String API_URL =
             System.getenv().getOrDefault("CHALLENGER_API_URL", "http://gc25-challenger:8866");
 
-    public static void uploadQ2(Batch batch, String benchId) {
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-
-            String url = String.format("%s/api/result/0/%s/%d", API_URL, benchId, batch.getBatch_id());
-            ObjectMapper mapper = new ObjectMapper(new MessagePackFactory());
-
-            Map<String, Object> resultMap = new HashMap<>();
-            resultMap.put("batch_id", batch.getBatch_id());
-            resultMap.put("print_id", batch.getPrint_id());
-            resultMap.put("tile_id", batch.getTile_id());
-            List<List<Number>> outliers = batch.getQ2_all_outliers();
-            resultMap.put("outliers", outliers != null ? outliers : List.of());
-
-            byte[] msgpackData = mapper.writeValueAsBytes(resultMap);
-            HttpPost post = new HttpPost(url);
-            post.setEntity(new ByteArrayEntity(msgpackData, ContentType.create("application/msgpack")));
-
-            httpClient.execute(post, HTTPClient.toStringResponseHandler());
-
-
-        } catch (Exception e) {
-            LOG.error("Errore invio Q2 per batch {}: {}", batch.getBatch_id(), e.getMessage(), e);
-        }
-    }
-
     public static void uploadQ3(Batch batch, String benchId) {
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
 
@@ -74,7 +49,6 @@ public class ChallengerUploader {
             LOG.error("Errore invio Q3 per batch {}: {}", batch.getBatch_id(), e.getMessage(), e);
         }
     }
-
 
     public static void endBenchmark(String benchId) {
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {

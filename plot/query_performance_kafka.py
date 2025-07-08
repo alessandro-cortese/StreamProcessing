@@ -2,20 +2,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-# === CONFIG ===
 file_path = "./query_metrics.csv"
 output_dir = "query_performance_charts_kafka"
 os.makedirs(output_dir, exist_ok=True)
 
-# === CARICA E PULISCI CSV ===
 df = pd.read_csv(file_path)
 df.columns = df.columns.str.strip()
 
-# === FORMATI DI VISUALIZZAZIONE ===
 def plot_metrics(df_subset, query_name):
     df_sorted = df_subset.sort_values(by='parallelism')
 
-    # === PLOT THROUGHPUT ===
     plt.figure(figsize=(10, 5))
     plt.plot(df_sorted['parallelism'], df_sorted['throughput_events_per_sec'],
              marker='o', color='blue', linewidth=2)
@@ -27,7 +23,6 @@ def plot_metrics(df_subset, query_name):
     plt.savefig(os.path.join(output_dir, f'{query_name}_throughput.png'), dpi=300)
     plt.close()
 
-    # === PLOT LATENCY ===
     plt.figure(figsize=(10, 5))
     plt.plot(df_sorted['parallelism'], df_sorted['avg_latency_ms'],
              marker='o', color='blue', linewidth=2)
@@ -39,10 +34,7 @@ def plot_metrics(df_subset, query_name):
     plt.savefig(os.path.join(output_dir, f'{query_name}_latency.png'), dpi=300)
     plt.close()
 
-# === PLOT PER OGNI QUERY ===
 for query in df['query'].unique():
     subset = df[df['query'] == query]
     if not subset.empty:
         plot_metrics(subset, query)
-
-print(f"Grafici generati con successo in '{output_dir}'")
