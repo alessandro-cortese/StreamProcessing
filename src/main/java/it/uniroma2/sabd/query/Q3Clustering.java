@@ -27,7 +27,6 @@ public class Q3Clustering implements Function<Batch, Batch> {
                 return batch;
             }
 
-
             List<double[]> pointsList = new ArrayList<>();
             for (List<Number> point : rawPoints) {
                 if (point != null && point.size() >= 2) {
@@ -79,7 +78,6 @@ public class Q3Clustering implements Function<Batch, Batch> {
             }
         }
 
-
         List<String> centroids = new ArrayList<>();
         for (Map.Entry<Integer, List<double[]>> entry : clusters.entrySet()) {
             List<double[]> cluster = entry.getValue();
@@ -93,7 +91,6 @@ public class Q3Clustering implements Function<Batch, Batch> {
             int size = cluster.size();
             double centroidX = sumX / size;
             double centroidY = sumY / size;
-
 
             String centroidJson = String.format(
                     "{\"x\": %.3f, \"y\": %.3f, \"count\": %d}",

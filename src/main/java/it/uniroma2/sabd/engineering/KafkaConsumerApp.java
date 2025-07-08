@@ -79,7 +79,6 @@ public class KafkaConsumerApp {
                     CsvWriter.writeQ2(batch);
                     CsvWriter.writeQ3(batch);
 
-                    //ChallengerUploader.uploadQ2(batch, batch.getBench_id());
                     ChallengerUploader.uploadQ3(batch, batch.getBench_id());
                     if (batch.getBatch_id() == MAX_BATCHES) {
                         LOG.info("Last batch received: {}. Waiting 10s before closing the benchmark...", batch.getBatch_id());
